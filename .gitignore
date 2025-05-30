@@ -1,1 +1,3 @@
-jupyter_book/build/
+jupyter_book/_build
+.DS_Store
+jupyter_book/.DS_Store
