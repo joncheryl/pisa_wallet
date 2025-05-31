@@ -58,9 +58,9 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'wallet_pisa';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Here’s my sample title" href="mymarkdownfile.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,6 +123,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,14 +180,12 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mymarkdownfile.html">Here’s my sample title</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">PISA vs Wallets vs Survey vs Social Capital measures.</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="fixed_gemini_test.html">Integrated Analysis: Lost Wallets, PISA Scores, and Social Capital Measures</a></li>
 </ul>
 
     </div>
@@ -384,6 +384,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">PISA vs Wallets vs Survey vs Social Capital measures.</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tannenbaum-point-1">Tannenbaum point 1.</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tannenbaum-point-2">Tannenbaum point 2.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-to-predict-wallet-response-given-predictors">Machine Learning to predict wallet response given predictors.</a></li>
 </ul>
 
             </nav>
@@ -403,7 +404,7 @@ document.write(`
 <li><p>wallet report rates are, in fact, correlated with survey measures of social capital, showing that survey data contains useful information.</p></li>
 <li><p>wallet report rates serve as a predictor in models of “Economic and Institutional Performance”, suggesting that social capital as measured by wallet report rates can “explain variation in economic development”.</p></li>
 </ul>
-<p>I was curious how education data would relate to these results. I found some international measures of educational achievement here: <a class="reference external" href="https://nces.ed.gov/surveys/pisa/idepisa/report.aspx">https://nces.ed.gov/surveys/pisa/idepisa/report.aspx</a>. I mostly just used the 2022 data which is notably missing observations for China, Ghana, India, Kenya, Russia, and South Africa. The 2018 data has data for China and Russia, although China is an extreme outlier (this probably deserves a note in an appendix) with the highest education scores and some of the lowest wallet reporting rates. It is noted in the Tannenbaum paper that China was a special case for wallet reporting rates. It should also be noted that Asian countries are not well represented in the wallet data set. The only east Asian countries are China, Malaysia, Thailand, and Indonesia and China is significantly different from the others.</p>
+<p>I was curious how education data would relate to these results. I found some international measures of educational achievement here: (reading data on page 54/55 of report <a class="reference external" href="https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html">https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html</a>. I mostly just used the 2022 data which is notably missing observations for China, Ghana, India, Kenya, Russia, and South Africa. The 2018 data has data for China and Russia, although China is an extreme outlier (this probably deserves a note in an appendix) with the highest education scores and some of the lowest wallet reporting rates. It is noted in the Tannenbaum paper that China was a special case for wallet reporting rates. It should also be noted that Asian countries are not well represented in the wallet data set. The only east Asian countries are China, Malaysia, Thailand, and Indonesia and China is significantly different from the others.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="tannenbaum-point-1">
 <h1>Tannenbaum point 1.<a class="headerlink" href="#tannenbaum-point-1" title="Link to this heading">#</a></h1>
@@ -416,7 +417,11 @@ document.write(`
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="tannenbaum-point-2">
 <h1>Tannenbaum point 2.<a class="headerlink" href="#tannenbaum-point-2" title="Link to this heading">#</a></h1>
-<p>There are four measures of “Economic and Institutional Performance” in the second part of the paper: GDP per capita (log_gdp), productivity(lof_tfp), government effectiveness (gee), and letter grade efficiency (letter_grading). If PISA scores are considered a fifth measure of the same sort, we find that wallet reporting rates are an even more effective predictor. When combined with any other measure of social capital, the coefficient for wallet reporting rates are always statistically significant with p&lt;0.01 and with R^2 greater than most of the other fit models. In fact, I suspect that for the single variable models (PISA ~ wallet_rate + C), that the R^2 is greater than for any of the other measures. I’m not sure why those regression results aren’t in the paper.</p>
+<p>There are four measures of “Economic and Institutional Performance” in the second part of the paper: GDP per capita (log_gdp), productivity(log_tfp), government effectiveness (gee), and letter grade efficiency (letter_grading). If PISA scores are considered a fifth measure of the same sort, we find that wallet reporting rates are an even more effective predictor. When combined with any other measure of social capital, the coefficient for wallet reporting rates are always statistically significant with p&lt;0.01 and with R^2 greater than most of the other fit models. In fact, I suspect that for the single variable models (PISA ~ wallet_rate + C), that the R^2 is greater than for any of the other measures. I’m not sure why those regression results aren’t in the paper.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="machine-learning-to-predict-wallet-response-given-predictors">
+<h1>Machine Learning to predict wallet response given predictors.<a class="headerlink" href="#machine-learning-to-predict-wallet-response-given-predictors" title="Link to this heading">#</a></h1>
+<p>I used all the variables I had access to: the experiment variables, the survey measures, the economic/institutional performance measures, the PISA scores. I couldn’t get anything to yield a better accuracy than about 0.687. This makes sense because it would be crazy if you could actually predict how honest someone would be at any given time with such little information, particularly information about someone’s past.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -449,15 +454,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="mymarkdownfile.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Here’s my sample title</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -477,6 +473,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">PISA vs Wallets vs Survey vs Social Capital measures.</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tannenbaum-point-1">Tannenbaum point 1.</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tannenbaum-point-2">Tannenbaum point 2.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-to-predict-wallet-response-given-predictors">Machine Learning to predict wallet response given predictors.</a></li>
 </ul>
 
   </nav></div>

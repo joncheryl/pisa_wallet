@@ -1,0 +1,1672 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Integrated Analysis: Lost Wallets, PISA Scores, and Social Capital Measures &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'gemini_test';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mymarkdownfile.html">Here’s my sample title</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fixed_gemini_test.html">Integrated Analysis: Lost Wallets, PISA Scores, and Social Capital Measures</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgemini_test.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/gemini_test.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Integrated Analysis: Lost Wallets, PISA Scores, and Social Capital Measures</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-findings-and-context-from-wallet-pisa-ipynb">Initial Findings and Context (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-data-loading">1. Setup and Data Loading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis-eda">2. Exploratory Data Analysis (EDA)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-distributions">2.1. Feature Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-association-matrix">2.2. Generalized Association Matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pairplot-for-numeric-features-and-response">2.3. Pairplot for Numeric Features and Response</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pisa-education-data-integration-and-analysis">3. PISA Education Data Integration and Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-pisa-data">3.1. Loading PISA Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-pisa-data-with-wallet-data">3.2. Merging PISA Data with Wallet Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commentary-on-pisa-wallets-and-survey-measures-from-wallet-pisa-ipynb">3.3. Commentary on PISA, Wallets, and Survey Measures (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-matrix-including-pisa-wallet-response-survey-measures-and-sc-measures">3.4. Correlation Matrix including PISA, Wallet Response, Survey Measures, and SC Measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-analysis-predictive-value-of-wallet-return-rate-for-pisa-scores-from-wallet-eda-py">3.5. Regression Analysis: Predictive Value of Wallet Return Rate for PISA Scores (from <code class="docutils literal notranslate"><span class="pre">wallet_eda.py</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-predicting-wallet-response">4. Machine Learning: Predicting Wallet Response</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-and-model-without-pisa-data">4.1. Preprocessing and Model without PISA Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-and-model-with-pisa-data-and-other-sc-measures">4.2. Preprocessing and Model with PISA Data (and other SC measures)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commentary-on-machine-learning-results-from-wallet-pisa-ipynb">4.3. Commentary on Machine Learning Results (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-additional-findings-thoughts">5. Summary and Additional Findings/Thoughts</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="integrated-analysis-lost-wallets-pisa-scores-and-social-capital-measures">
+<h1>Integrated Analysis: Lost Wallets, PISA Scores, and Social Capital Measures<a class="headerlink" href="#integrated-analysis-lost-wallets-pisa-scores-and-social-capital-measures" title="Link to this heading">#</a></h1>
+<p>This notebook combines exploratory data analysis (EDA) of the Lost Wallets dataset with an investigation into the relationship between wallet reporting rates, PISA educational achievement scores, and other survey-based social capital measures.</p>
+<p>The analysis is based on the work by Dave Tannenbaum (<a class="reference external" href="https://github.com/davetannenbaum/lost-wallets-social-capital">Lost Wallets Social Capital Project</a>) and further explores the connections with international education data (PISA).</p>
+<section id="initial-findings-and-context-from-wallet-pisa-ipynb">
+<h2>Initial Findings and Context (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code>)<a class="headerlink" href="#initial-findings-and-context-from-wallet-pisa-ipynb" title="Link to this heading">#</a></h2>
+<p>In Dave Tannenbaum’s paper, it is shown that:</p>
+<ul class="simple">
+<li><p>Wallet report rates are, in fact, correlated with survey measures of social capital, showing that survey data contains useful information.</p></li>
+<li><p>Wallet report rates serve as a predictor in models of “Economic and Institutional Performance”, suggesting that social capital as measured by wallet report rates can “explain variation in economic development”.</p></li>
+</ul>
+<p>This notebook investigates how education data (PISA scores) relates to these findings. The PISA 2022 reading data was primarily used (source: <a class="reference external" href="https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html">OECD PISA 2022 Results Vol I</a>, pp. 54-55). It’s noted that PISA 2022 data has missing observations for some countries (China, Ghana, India, Kenya, Russia, South Africa). The 2018 PISA data includes China and Russia; China is an outlier with high education scores and low wallet reporting rates. Tannenbaum’s paper also noted China as a special case. East Asian countries are generally underrepresented in the wallet dataset.</p>
+</section>
+<section id="setup-and-data-loading">
+<h2>1. Setup and Data Loading<a class="headerlink" href="#setup-and-data-loading" title="Link to this heading">#</a></h2>
+<p>First, we import necessary libraries and load the primary dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">chi2_contingency</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pandas.api.types</span> <span class="kn">import</span> <span class="n">is_numeric_dtype</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">OneHotEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectPercentile</span><span class="p">,</span> <span class="n">chi2</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+
+<span class="c1"># pd.set_option(&#39;future.no_silent_downcasting&#39;, True)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">chained_assignment</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># default=&#39;warn&#39;, suppress warning for now</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define categorical and numerical features for clarity and later use</span>
+<span class="n">numeric_features_initial</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;general_trust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_trust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;general_morality&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MFQ_genmorality&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;civic_cooperation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_posrecip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_altruism&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;stranger1&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">cat_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;country&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;response&quot;</span><span class="p">,</span> <span class="c1"># Target variable, will be handled separately for modeling</span>
+    <span class="s2">&quot;male&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;above40&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;computer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;coworkers&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;other_bystanders&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;institution&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cond&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;security_cam&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;security_guard&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;local_recipient&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;no_english&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;understood_situation&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">sc_measures</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;log_gdp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;log_tfp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gee&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;letter_grading&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Load the dataset</span>
+<span class="c1"># Assuming the data is in a subdirectory &#39;lost-wallets-social-capital/data/&#39; relative to the notebook</span>
+<span class="c1"># If not, adjust the path accordingly.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+        <span class="s2">&quot;../../lost-wallets-social-capital/data/data_for_ml.csv&quot;</span><span class="p">,</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="s2">&quot;category&quot;</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cat_cols</span> <span class="k">if</span> <span class="n">col</span> <span class="o">!=</span> <span class="s1">&#39;response&#39;</span><span class="p">}</span> <span class="c1"># Keep response as object for now, convert later</span>
+    <span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span> <span class="c1"># Now convert response</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dataset &#39;data_for_ml.csv&#39; not found. Please ensure the path is correct.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You might need to download it from: https://github.com/davetannenbaum/lost-wallets-social-capital&quot;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span> <span class="c1"># Create an empty dataframe to avoid further errors if file not found</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dataset loaded successfully.&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset loaded successfully.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exploratory-data-analysis-eda">
+<h2>2. Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Link to this heading">#</a></h2>
+<p>Visualizing the distributions of individual features and their relationships.</p>
+<section id="feature-distributions">
+<h3>2.1. Feature Distributions<a class="headerlink" href="#feature-distributions" title="Link to this heading">#</a></h3>
+<p>Histograms for continuous variables and bar plots for categorical variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># def subplot_subset(data_frame, cols_to_plot, n_subplot_cols=4):</span>
+<span class="c1">#     &quot;&quot;&quot;Make a grid of histograms or bar plots for specified columns.&quot;&quot;&quot;</span>
+<span class="c1">#     if data_frame.empty or not cols_to_plot:</span>
+<span class="c1">#         print(&quot;Dataframe is empty or no columns to plot.&quot;)</span>
+<span class="c1">#         return</span>
+        
+<span class="c1">#     n_features = len(cols_to_plot)</span>
+<span class="c1">#     n_rows = (n_features + n_subplot_cols - 1) // n_subplot_cols # Calculate number of rows needed</span>
+    
+<span class="c1">#     fig = make_subplots(rows=n_rows, cols=n_subplot_cols, subplot_titles=cols_to_plot)</span>
+    
+<span class="c1">#     for i, feature in enumerate(cols_to_plot):</span>
+<span class="c1">#         row_idx = (i // n_subplot_cols) + 1</span>
+<span class="c1">#         col_idx = (i % n_subplot_cols) + 1</span>
+        
+<span class="c1">#         if pd.api.types.is_numeric_dtype(data_frame[feature]):</span>
+<span class="c1">#             fig.add_trace(</span>
+<span class="c1">#                 go.Histogram(x=data_frame[feature], name=feature),</span>
+<span class="c1">#                 row=row_idx,</span>
+<span class="c1">#                 col=col_idx,</span>
+<span class="c1">#             )</span>
+<span class="c1">#         else: # Categorical</span>
+<span class="c1">#              # For bar plots, we need counts of each category</span>
+<span class="c1">#             counts = data_frame[feature].value_counts()</span>
+<span class="c1">#             fig.add_trace(</span>
+<span class="c1">#                 go.Bar(x=counts.index, y=counts.values, name=feature),</span>
+<span class="c1">#                 row=row_idx,</span>
+<span class="c1">#                 col=col_idx,</span>
+<span class="c1">#             )</span>
+            
+<span class="c1">#     fig.update_layout(title_text=&quot;Feature Distributions&quot;, height=300*n_rows, showlegend=False)</span>
+<span class="c1">#     fig.show()</span>
+
+<span class="c1"># if not df.empty:</span>
+<span class="c1">#     # Visualize first set of features (example)</span>
+<span class="c1">#     # The original script plots columns by index, which can be fragile.</span>
+<span class="c1">#     # It&#39;s better to explicitly list features or groups of features.</span>
+<span class="c1">#     print(&quot;Displaying distributions for numeric features:&quot;)</span>
+<span class="c1">#     subplot_subset(df, numeric_features_initial)</span>
+    
+<span class="c1">#     # Example for some categorical features (excluding country and response for brevity here)</span>
+<span class="c1">#     categorical_subset_viz = [col for col in cat_cols if col not in [&#39;country&#39;, &#39;response&#39;]][:8] # First 8 for example</span>
+<span class="c1">#     print(&quot;\nDisplaying distributions for a subset of categorical features:&quot;)</span>
+<span class="c1">#     subplot_subset(df, categorical_subset_viz)</span>
+    
+<span class="c1">#     print(&quot;\nDisplaying distributions for social capital measures:&quot;)</span>
+<span class="c1">#     subplot_subset(df, sc_measures)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">def</span> <span class="nf">subplot_subset_seaborn</span><span class="p">(</span><span class="n">data_frame</span><span class="p">,</span> <span class="n">cols_to_plot</span><span class="p">,</span> <span class="n">n_subplot_cols</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make a grid of histograms or bar plots for specified columns using Seaborn.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">data_frame</span><span class="o">.</span><span class="n">empty</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">cols_to_plot</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dataframe is empty or no columns to plot.&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="n">n_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cols_to_plot</span><span class="p">)</span>
+    <span class="n">n_rows</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_features</span> <span class="o">+</span> <span class="n">n_subplot_cols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">n_subplot_cols</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">n_rows</span><span class="p">,</span> <span class="n">n_subplot_cols</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="n">n_subplot_cols</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">n_rows</span><span class="p">))</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">feature</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cols_to_plot</span><span class="p">):</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">data_frame</span><span class="p">[</span><span class="n">feature</span><span class="p">]):</span>
+            <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_frame</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">feature</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_frame</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">feature</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+                          <span class="n">order</span><span class="o">=</span><span class="n">data_frame</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">axes</span><span class="p">)):</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Feature Distributions&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Example usage</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Displaying distributions for numeric features:&quot;</span><span class="p">)</span>
+    <span class="n">subplot_subset_seaborn</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">numeric_features_initial</span><span class="p">)</span>
+
+    <span class="n">categorical_subset_viz</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cat_cols</span> <span class="k">if</span> <span class="n">col</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;response&#39;</span><span class="p">]][:</span><span class="mi">8</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Displaying distributions for a subset of categorical features:&quot;</span><span class="p">)</span>
+    <span class="n">subplot_subset_seaborn</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">categorical_subset_viz</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Displaying distributions for social capital measures:&quot;</span><span class="p">)</span>
+    <span class="n">subplot_subset_seaborn</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">sc_measures</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displaying distributions for numeric features:
+</pre></div>
+</div>
+<img alt="_images/d1d6d7062a8814027ea7270aa3e192295d230bbc9c226ac837b34370facb4a92.png" src="_images/d1d6d7062a8814027ea7270aa3e192295d230bbc9c226ac837b34370facb4a92.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displaying distributions for a subset of categorical features:
+</pre></div>
+</div>
+<img alt="_images/9deb3014c3d1eee3cca9bff10e6c7e7af8e23c9846c39fed93ae2585748331d2.png" src="_images/9deb3014c3d1eee3cca9bff10e6c7e7af8e23c9846c39fed93ae2585748331d2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displaying distributions for social capital measures:
+</pre></div>
+</div>
+<img alt="_images/8d19de752cd1c0874aae12f41f30fc71adb9a891bb4ec29b61f856089434c377.png" src="_images/8d19de752cd1c0874aae12f41f30fc71adb9a891bb4ec29b61f856089434c377.png" />
+</div>
+</div>
+</section>
+<section id="generalized-association-matrix">
+<h3>2.2. Generalized Association Matrix<a class="headerlink" href="#generalized-association-matrix" title="Link to this heading">#</a></h3>
+<p>To understand relationships between pairs of variables, we compute a generalized correlation matrix. This uses Pearson’s correlation for numeric-numeric pairs, correlation ratio for numeric-categorical pairs, and Cramer’s V for categorical-categorical pairs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cramers_v</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">y_cramer</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Cramer correlation between two categorical variables.&quot;&quot;&quot;</span>
+    <span class="c1"># Ensure no NaN values, as crosstab will not handle them well for chi2</span>
+    <span class="n">ex_nona</span> <span class="o">=</span> <span class="n">ex</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="n">y_cramer_nona</span> <span class="o">=</span> <span class="n">y_cramer</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="c1"># Align indices if they are different after dropping NaNs</span>
+    <span class="n">common_index</span> <span class="o">=</span> <span class="n">ex_nona</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">y_cramer_nona</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">ex_nona</span> <span class="o">=</span> <span class="n">ex_nona</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">common_index</span><span class="p">]</span>
+    <span class="n">y_cramer_nona</span> <span class="o">=</span> <span class="n">y_cramer_nona</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">common_index</span><span class="p">]</span>
+    
+    <span class="k">if</span> <span class="n">ex_nona</span><span class="o">.</span><span class="n">empty</span> <span class="ow">or</span> <span class="n">y_cramer_nona</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span> <span class="c1"># Or np.nan if preferred for empty inputs</span>
+        
+    <span class="n">confusion_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">ex_nona</span><span class="p">,</span> <span class="n">y_cramer_nona</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">confusion_matrix</span><span class="o">.</span><span class="n">empty</span> <span class="ow">or</span> <span class="n">confusion_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">confusion_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+        
+    <span class="n">chi2_cramers</span> <span class="o">=</span> <span class="n">chi2_contingency</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">correction</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+        
+    <span class="n">phi2</span> <span class="o">=</span> <span class="n">chi2_cramers</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">r</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="o">.</span><span class="n">shape</span>
+    <span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span> <span class="c1"># Avoid division by zero if a variable has only one category after filtering</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">phi2</span> <span class="o">/</span> <span class="nb">min</span><span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">correlation_ratio</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">categories</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Correlation ratio between a categorical and numeric variable.&quot;&quot;&quot;</span>
+    <span class="n">na_mask</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">categories</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span>
+    <span class="n">num_var</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">na_mask</span><span class="p">]</span>
+    <span class="n">cat_var</span> <span class="o">=</span> <span class="n">categories</span><span class="p">[</span><span class="n">na_mask</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">num_var</span><span class="o">.</span><span class="n">empty</span> <span class="ow">or</span> <span class="n">cat_var</span><span class="o">.</span><span class="n">empty</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">cat_var</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+
+    <span class="n">fcat</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span><span class="n">cat_var</span><span class="p">)</span>
+    <span class="n">cat_num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">fcat</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">y_avg</span> <span class="o">=</span> <span class="n">num_var</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+    <span class="n">numerator</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+        <span class="nb">len</span><span class="p">(</span><span class="n">num_var</span><span class="p">[</span><span class="n">fcat</span> <span class="o">==</span> <span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">num_var</span><span class="p">[</span><span class="n">fcat</span> <span class="o">==</span> <span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">y_avg</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cat_num</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">num_var</span><span class="p">[</span><span class="n">fcat</span> <span class="o">==</span> <span class="n">i</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="p">)</span>
+    <span class="n">denominator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">num_var</span> <span class="o">-</span> <span class="n">y_avg</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span><span class="p">)</span> <span class="k">if</span> <span class="n">denominator</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">0.0</span>
+
+<span class="c1"># Compute the generalized association matrix and plot it</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="n">df_cols_assoc</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+    <span class="n">assoc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">df_cols_assoc</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">df_cols_assoc</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">col1</span> <span class="ow">in</span> <span class="n">df_cols_assoc</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">col2</span> <span class="ow">in</span> <span class="n">df_cols_assoc</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">col1</span> <span class="o">==</span> <span class="n">col2</span><span class="p">:</span>
+                <span class="n">assoc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+            <span class="k">elif</span> <span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col1</span><span class="p">])</span> <span class="ow">and</span> <span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col2</span><span class="p">]):</span>
+                <span class="n">corr_val</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+                <span class="n">assoc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">]</span> <span class="o">=</span> <span class="n">corr_val</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">corr_val</span><span class="p">)</span> <span class="k">else</span> <span class="mf">0.0</span>
+            <span class="k">elif</span> <span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col1</span><span class="p">])</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col2</span><span class="p">]):</span>
+                <span class="n">assoc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">]</span> <span class="o">=</span> <span class="n">correlation_ratio</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col1</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="n">col2</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col2</span><span class="p">])</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col1</span><span class="p">]):</span>
+                <span class="n">assoc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">]</span> <span class="o">=</span> <span class="n">correlation_ratio</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col2</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="n">col1</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">assoc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">]</span> <span class="o">=</span> <span class="n">cramers_v</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col1</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="n">col2</span><span class="p">])</span>
+
+    <span class="n">assoc</span> <span class="o">=</span> <span class="n">assoc</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+    <span class="c1"># Plot using Seaborn</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+        <span class="n">assoc</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdBu_r&quot;</span><span class="p">,</span>
+        <span class="n">center</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">annot</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">,</span>
+        <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Association&quot;</span><span class="p">},</span>
+    <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Association Matrix (Generalized Correlation)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame is empty, skipping association matrix.&quot;</span><span class="p">)</span>
+
+<span class="c1"># if not df.empty:</span>
+<span class="c1">#     df_cols_assoc = df.columns.drop(&quot;country&quot;) # Excluding country for this matrix, can be too many categories</span>
+<span class="c1">#     assoc = pd.DataFrame(index=df_cols_assoc, columns=df_cols_assoc, dtype=float)</span>
+
+<span class="c1">#     for col1 in df_cols_assoc:</span>
+<span class="c1">#         for col2 in df_cols_assoc:</span>
+<span class="c1">#             if col1 == col2:</span>
+<span class="c1">#                 assoc.loc[col1, col2] = 1.0</span>
+<span class="c1">#             elif is_numeric_dtype(df[col1]) and is_numeric_dtype(df[col2]):</span>
+<span class="c1">#                 # Both numeric:</span>
+<span class="c1">#                 corr_val = df[[col1, col2]].corr().iloc[0, 1]</span>
+<span class="c1">#                 assoc.loc[col1, col2] = corr_val if pd.notna(corr_val) else 0.0</span>
+<span class="c1">#             elif is_numeric_dtype(df[col1]) and not is_numeric_dtype(df[col2]):</span>
+<span class="c1">#                 # First numeric, second categorical:</span>
+<span class="c1">#                 assoc.loc[col1, col2] = correlation_ratio(df[col1], df[col2])</span>
+<span class="c1">#             elif is_numeric_dtype(df[col2]) and not is_numeric_dtype(df[col1]):</span>
+<span class="c1">#                 # First categorical, second numeric:</span>
+<span class="c1">#                 assoc.loc[col1, col2] = correlation_ratio(df[col2], df[col1])</span>
+<span class="c1">#             else:</span>
+<span class="c1">#                 # Both categorical:</span>
+<span class="c1">#                 assoc.loc[col1, col2] = cramers_v(df[col1], df[col2])</span>
+
+<span class="c1">#     assoc = assoc.astype(float)</span>
+
+<span class="c1">#     fig_assoc = px.imshow(</span>
+<span class="c1">#         assoc,</span>
+<span class="c1">#         labels=dict(x=&quot;Features&quot;, y=&quot;Features&quot;, color=&quot;Association&quot;),</span>
+<span class="c1">#         color_continuous_scale=&quot;RdBu_r&quot;,</span>
+<span class="c1">#         zmin=-1,</span>
+<span class="c1">#         zmax=1,</span>
+<span class="c1">#         aspect=&quot;auto&quot;,</span>
+<span class="c1">#     )</span>
+<span class="c1">#     fig_assoc.update_layout(title_text=&quot;Association Matrix (Generalized Correlation)&quot;, height=800)</span>
+<span class="c1">#     fig_assoc.show()</span>
+<span class="c1"># else:</span>
+<span class="c1">#     print(&quot;DataFrame is empty, skipping association matrix.&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b45eadfb7ed438e090a45229551268ac1e5af9d1707f1e111ef50dda0347aadf.png" src="_images/b45eadfb7ed438e090a45229551268ac1e5af9d1707f1e111ef50dda0347aadf.png" />
+</div>
+</div>
+</section>
+<section id="pairplot-for-numeric-features-and-response">
+<h3>2.3. Pairplot for Numeric Features and Response<a class="headerlink" href="#pairplot-for-numeric-features-and-response" title="Link to this heading">#</a></h3>
+<p>Visualizing relationships between numeric features, colored by the ‘response’ variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="c1"># Ensure &#39;response&#39; is suitable for hue (categorical)</span>
+    <span class="c1"># If response is numeric (e.g. 0, 100), convert to string for distinct categories in pairplot hue</span>
+    <span class="n">df_pairplot</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">df_pairplot</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]):</span>
+         <span class="n">df_pairplot</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_pairplot</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Displaying pairplot for numeric features, colored by response category.&quot;</span><span class="p">)</span>
+    <span class="c1"># Adding a check for sufficient data points to avoid errors with pairplot</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_pairplot</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">numeric_features_initial</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">pairplot_fig</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df_pairplot</span><span class="p">[</span><span class="n">numeric_features_initial</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">]],</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;response&quot;</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">)</span>
+        <span class="n">pairplot_fig</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Pairplot of Numeric Features by Wallet Response&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+        <span class="c1"># plt.show() # Use this if running in a local environment where seaborn doesn&#39;t auto-show</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not enough data or numeric features to generate pairplot.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame is empty, skipping pairplot.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Displaying pairplot for numeric features, colored by response category.
+</pre></div>
+</div>
+<img alt="_images/a7eb9adc2958355e6596e511a18b03ae739901f416cfd207c0ca5aedd9adc7d8.png" src="_images/a7eb9adc2958355e6596e511a18b03ae739901f416cfd207c0ca5aedd9adc7d8.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="pisa-education-data-integration-and-analysis">
+<h2>3. PISA Education Data Integration and Analysis<a class="headerlink" href="#pisa-education-data-integration-and-analysis" title="Link to this heading">#</a></h2>
+<p>Loading PISA reading scores and merging them with the wallet dataset to explore correlations.</p>
+<section id="loading-pisa-data">
+<h3>3.1. Loading PISA Data<a class="headerlink" href="#loading-pisa-data" title="Link to this heading">#</a></h3>
+<p>We load PISA reading scores for 2022 and 2018. The 2022 data is primary, while 2018 is used for countries missing in the 2022 set if needed (though the original script mainly focuses on 2022).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># PISA education data: https://nces.ed.gov/surveys/pisa/idepisa/report.aspx</span>
+<span class="c1"># The original script uses local Excel files. For reproducibility, it&#39;s better to point to URLs if available,</span>
+<span class="c1"># or ensure the files are in a known relative path (e.g., &#39;data/&#39; subdirectory).</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">pisa_reading_2022</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span>
+            <span class="s2">&quot;../../data/PISA_reading_2022.xlsx&quot;</span><span class="p">,</span> <span class="c1"># Assumes file is in &#39;data&#39; subdirectory</span>
+            <span class="n">skiprows</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">112</span><span class="p">,</span> <span class="mi">117</span><span class="p">)),</span>
+            <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Jurisdiction&quot;</span><span class="p">,</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span> <span class="s2">&quot;Standard Error&quot;</span><span class="p">],</span>
+            <span class="n">na_values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;†&quot;</span><span class="p">,</span> <span class="s2">&quot;—&quot;</span><span class="p">],</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Average&quot;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Jurisdiction&quot;</span><span class="p">:</span> <span class="s2">&quot;country&quot;</span><span class="p">,</span> <span class="s2">&quot;Average&quot;</span><span class="p">:</span> <span class="s2">&quot;PISA_Avg_Reading_2022&quot;</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Russian Federation&quot;</span><span class="p">:</span> <span class="s2">&quot;Russia&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;United Arab Emirates&quot;</span><span class="p">:</span> <span class="s2">&quot;UAE&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;United Kingdom&quot;</span><span class="p">:</span> <span class="s2">&quot;UK&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;United States&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;PISA_Avg_Reading_2022&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">})</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PISA 2022 reading data loaded successfully.&quot;</span><span class="p">)</span>
+    <span class="c1"># print(pisa_reading_2022.head())</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PISA_reading_2022.xlsx not found in &#39;data/&#39; subdirectory. Please ensure the file exists.&quot;</span><span class="p">)</span>
+    <span class="n">pisa_reading_2022</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span> 
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">pisa_reading_2018</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span>
+            <span class="s2">&quot;../../data/PISA_reading_2018.xlsx&quot;</span><span class="p">,</span> <span class="c1"># Assumes file is in &#39;data&#39; subdirectory</span>
+            <span class="n">skiprows</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">112</span><span class="p">,</span> <span class="mi">117</span><span class="p">)),</span>
+            <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Jurisdiction&quot;</span><span class="p">,</span> <span class="s2">&quot;Average&quot;</span><span class="p">,</span> <span class="s2">&quot;Standard Error&quot;</span><span class="p">],</span>
+            <span class="n">na_values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;†&quot;</span><span class="p">,</span> <span class="s2">&quot;—&quot;</span><span class="p">],</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Average&quot;</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Jurisdiction&quot;</span><span class="p">:</span> <span class="s2">&quot;country&quot;</span><span class="p">,</span> <span class="s2">&quot;Average&quot;</span><span class="p">:</span> <span class="s2">&quot;PISA_Avg_Reading_2018&quot;</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;B-S-J-Z (China)&quot;</span><span class="p">:</span> <span class="s2">&quot;China&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Russian Federation&quot;</span><span class="p">:</span> <span class="s2">&quot;Russia&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;United Arab Emirates&quot;</span><span class="p">:</span> <span class="s2">&quot;UAE&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;United Kingdom&quot;</span><span class="p">:</span> <span class="s2">&quot;UK&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;United States&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;PISA_Avg_Reading_2018&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">})</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PISA 2018 reading data loaded successfully.&quot;</span><span class="p">)</span>
+    <span class="c1"># print(pisa_reading_2018.head())</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PISA_reading_2018.xlsx not found in &#39;data/&#39; subdirectory. Please ensure the file exists.&quot;</span><span class="p">)</span>
+    <span class="n">pisa_reading_2018</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PISA 2022 reading data loaded successfully.
+PISA 2018 reading data loaded successfully.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="merging-pisa-data-with-wallet-data">
+<h3>3.2. Merging PISA Data with Wallet Data<a class="headerlink" href="#merging-pisa-data-with-wallet-data" title="Link to this heading">#</a></h3>
+<p>We calculate wallet reporting rates (proportion of ‘100’ responses) per country and merge this with the PISA data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pisa_reading_2022</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="c1"># Calculate wallet reporting rates (proportion of &#39;100&#39; responses)</span>
+    <span class="c1"># Ensure &#39;response&#39; is treated appropriately if it&#39;s not already string &#39;0&#39; or &#39;100&#39;</span>
+    <span class="c1"># The original data seems to use &#39;0&#39; and &#39;100&#39; as strings/categories.</span>
+    <span class="n">wallet_rates</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s2">&quot;response&quot;</span><span class="p">]</span>
+        <span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;proportion&#39;</span><span class="p">)</span> <span class="c1"># Rename before unstacking</span>
+        <span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Fill with 0 if a category (&#39;0&#39; or &#39;100&#39;) is missing for a country</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Select the proportion for &#39;100&#39; responses. Handle if &#39;100&#39; column doesn&#39;t exist for some reason.</span>
+    <span class="k">if</span> <span class="s1">&#39;100&#39;</span> <span class="ow">in</span> <span class="n">wallet_rates</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">wallet_rates</span> <span class="o">=</span> <span class="n">wallet_rates</span><span class="p">[[</span><span class="s1">&#39;100&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;100&quot;</span><span class="p">:</span> <span class="s2">&quot;wallet_return_rate&quot;</span><span class="p">})</span>
+    <span class="k">elif</span> <span class="mi">100</span> <span class="ow">in</span> <span class="n">wallet_rates</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span> <span class="c1"># If it was numeric</span>
+        <span class="n">wallet_rates</span> <span class="o">=</span> <span class="n">wallet_rates</span><span class="p">[[</span><span class="mi">100</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">100</span><span class="p">:</span> <span class="s2">&quot;wallet_return_rate&quot;</span><span class="p">})</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column &#39;100&#39; for response not found in wallet_rates. Check response values.&quot;</span><span class="p">)</span>
+        <span class="c1"># Create an empty df to avoid errors, or handle as appropriate</span>
+        <span class="n">wallet_rates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;wallet_return_rate&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Merge with PISA 2022 data</span>
+    <span class="n">reading_wallets</span> <span class="o">=</span> <span class="n">pisa_reading_2022</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">wallet_rates</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;country&quot;</span><span class="p">)</span>
+    <span class="c1"># reading_wallets = reading_wallets.set_index(&quot;country&quot;) # Set index later if needed for specific plots/analyses</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wallet rates merged with PISA 2022 data:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">reading_wallets</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+    <span class="c1"># Correlation between PISA scores and wallet return rate</span>
+    <span class="k">if</span> <span class="s1">&#39;PISA_Avg_Reading_2022&#39;</span> <span class="ow">in</span> <span class="n">reading_wallets</span><span class="o">.</span><span class="n">columns</span> <span class="ow">and</span> <span class="s1">&#39;wallet_return_rate&#39;</span> <span class="ow">in</span> <span class="n">reading_wallets</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">correlation_pisa_wallet</span> <span class="o">=</span> <span class="n">reading_wallets</span><span class="p">[[</span><span class="s2">&quot;PISA_Avg_Reading_2022&quot;</span><span class="p">,</span> <span class="s2">&quot;wallet_return_rate&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Correlation between PISA 2022 Reading Scores and Wallet Return Rate:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">correlation_pisa_wallet</span><span class="p">)</span>
+
+        <span class="c1"># Scatter plot</span>
+        <span class="c1"># fig_scatter_pisa_wallet = px.scatter(</span>
+        <span class="c1">#     reading_wallets.reset_index(), </span>
+        <span class="c1">#     x=&quot;wallet_return_rate&quot;, </span>
+        <span class="c1">#     y=&quot;PISA_Avg_Reading_2022&quot;, </span>
+        <span class="c1">#     hover_data=[&quot;country&quot;],</span>
+        <span class="c1">#     title=&quot;PISA 2022 Reading Score vs. Wallet Return Rate by Country&quot;,</span>
+        <span class="c1">#     trendline=&quot;ols&quot; # Add a regression line</span>
+        <span class="c1"># )</span>
+        <span class="c1"># fig_scatter_pisa_wallet.show()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Required columns for PISA vs Wallet correlation are missing.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Skipping PISA data merging and analysis as main df or PISA df is empty.&quot;</span><span class="p">)</span>
+    <span class="n">reading_wallets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span> <span class="c1"># Ensure it exists for later cells</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wallet rates merged with PISA 2022 data:
+          country  PISA_Avg_Reading_2022  Standard Error  wallet_return_rate
+0       Australia             498.050940        2.013591            0.606516
+1          Canada             507.132896        1.965629            0.550000
+2           Chile             447.978957        2.632560            0.361111
+3  Czech Republic             488.603669        2.246224            0.700000
+4         Denmark             488.800991        2.578275            0.750000
+
+Correlation between PISA 2022 Reading Scores and Wallet Return Rate:
+                       PISA_Avg_Reading_2022  wallet_return_rate
+PISA_Avg_Reading_2022                1.00000             0.78018
+wallet_return_rate                   0.78018             1.00000
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="commentary-on-pisa-wallets-and-survey-measures-from-wallet-pisa-ipynb">
+<h3>3.3. Commentary on PISA, Wallets, and Survey Measures (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code>)<a class="headerlink" href="#commentary-on-pisa-wallets-and-survey-measures-from-wallet-pisa-ipynb" title="Link to this heading">#</a></h3>
+<p><strong>Tannenbaum Point 1 Context:</strong>
+The Tannenbaum paper aimed to validate survey measures of social capital using wallet report rates. Similarly, PISA education measures could also be seen as validating these survey measures. It’s interesting that the relationship between PISA scores and survey measures is very similar to that between wallet report rates and survey measures.</p>
+<p>A key observation was the strong correlation between PISA reading scores and wallet reporting rates (rho ≈ 0.78 with 2022 data). This is greater than the correlation with many other “Economic and Institutional Performance” measures. This suggests a close link between societal honesty (as measured by wallet returns) and educational outcomes.</p>
+<p><strong>Takeaways/Thoughts:</strong></p>
+<ul class="simple">
+<li><p>Both honesty and education are challenging to influence directly through policy. The strong correlation might suggest that familial and community factors (components of social capital) are highly influential for educational outcomes.</p></li>
+<li><p>Wallet report rates are a direct behavioral measure of social capital. While PISA scores are measures of institutional (educational system) performance, their strong correlation with wallet rates might imply they also reflect aspects of broader social capital.</p></li>
+</ul>
+</section>
+<section id="correlation-matrix-including-pisa-wallet-response-survey-measures-and-sc-measures">
+<h3>3.4. Correlation Matrix including PISA, Wallet Response, Survey Measures, and SC Measures<a class="headerlink" href="#correlation-matrix-including-pisa-wallet-response-survey-measures-and-sc-measures" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># if not df.empty and not pisa_reading_2022.empty:</span>
+<span class="c1">#     # Prepare data for comprehensive correlation matrix</span>
+<span class="c1">#     # Convert &#39;response&#39; in the main df to numeric (e.g., 0 or 100) for correlation</span>
+<span class="c1">#     df_corr_prep = df.copy()</span>
+<span class="c1">#     # Assuming response categories are &#39;0&#39; and &#39;100&#39;. If they are already numeric, this won&#39;t harm.</span>
+<span class="c1">#     # If they are other categories, this mapping needs adjustment.</span>
+<span class="c1">#     if df_corr_prep[&#39;response&#39;].dtype == &#39;category&#39; or df_corr_prep[&#39;response&#39;].dtype == &#39;object&#39;:</span>
+<span class="c1">#         # Attempt to convert to numeric, coercing errors for non-numeric strings</span>
+<span class="c1">#         df_corr_prep[&#39;response_numeric&#39;] = pd.to_numeric(df_corr_prep[&#39;response&#39;], errors=&#39;coerce&#39;)</span>
+<span class="c1">#         # A common case is &#39;0&#39; and &#39;100&#39; as categories. If so, this works.</span>
+<span class="c1">#         # If it&#39;s like &#39;returned&#39;, &#39;not_returned&#39;, map them, e.g. {&#39;returned&#39;:100, &#39;not_returned&#39;:0}</span>
+<span class="c1">#         # For this dataset, &#39;0&#39; and &#39;100&#39; are the categories, so direct numeric conversion is fine.</span>
+<span class="c1">#     else:</span>
+<span class="c1">#         df_corr_prep[&#39;response_numeric&#39;] = df_corr_prep[&#39;response&#39;]</span>
+    
+<span class="c1">#     df_merged_for_corr = df_corr_prep.merge(pisa_reading_2022[[&#39;country&#39;, &#39;PISA_Avg_Reading_2022&#39;]], how=&#39;left&#39;, on=&#39;country&#39;)</span>
+    
+<span class="c1">#     cols_for_country_avg_corr = [&#39;response_numeric&#39;, &#39;PISA_Avg_Reading_2022&#39;] + numeric_features_initial + sc_measures</span>
+    
+<span class="c1">#     # Calculate country averages for these measures</span>
+<span class="c1">#     country_avg_data = df_merged_for_corr.groupby(&quot;country&quot;, observed=False)[cols_for_country_avg_corr].mean()</span>
+    
+<span class="c1">#     # Compute the correlation matrix</span>
+<span class="c1">#     comprehensive_corr_matrix = country_avg_data.corr()</span>
+
+<span class="c1">#     print(&quot;\nComprehensive Correlation Matrix (Country Averages):&quot;)</span>
+<span class="c1">#     print(comprehensive_corr_matrix)</span>
+
+<span class="c1">#     # Visualize the correlation matrix</span>
+<span class="c1">#     fig_comp_corr = px.imshow(</span>
+<span class="c1">#         comprehensive_corr_matrix,</span>
+<span class="c1">#         labels=dict(color=&quot;Correlation&quot;),</span>
+<span class="c1">#         color_continuous_scale=&quot;RdBu_r&quot;,</span>
+<span class="c1">#         zmin=-1,</span>
+<span class="c1">#         zmax=1,</span>
+<span class="c1">#         title=&quot;Correlation Matrix: Wallet Response, PISA, Survey &amp; SC Measures (Country Averages)&quot;,</span>
+<span class="c1">#         text_auto=True # Show correlation values on heatmap</span>
+<span class="c1">#     )</span>
+<span class="c1">#     fig_comp_corr.update_layout(height=800)</span>
+<span class="c1">#     fig_comp_corr.show()</span>
+<span class="c1"># else:</span>
+<span class="c1">#     print(&quot;Skipping comprehensive correlation matrix as main df or PISA df is empty.&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Observations from the Correlation Matrix:</strong></p>
+<ol class="arabic simple">
+<li><p>PISA scores (<code class="docutils literal notranslate"><span class="pre">PISA_Avg_Reading_2022</span></code>) generally show stronger correlations with wallet <code class="docutils literal notranslate"><span class="pre">response_numeric</span></code> than many individual survey-based social capital measures do.</p></li>
+<li><p>PISA scores also correlate with other macro social capital indicators (<code class="docutils literal notranslate"><span class="pre">log_gdp</span></code>, <code class="docutils literal notranslate"><span class="pre">gee</span></code>, etc.), sometimes more strongly than the wallet response rate itself does. This might suggest PISA scores capture a broad aspect of societal development and functional institutions, which overlaps with social capital.</p></li>
+<li><p>The survey measures (like <code class="docutils literal notranslate"><span class="pre">general_trust</span></code>, <code class="docutils literal notranslate"><span class="pre">general_morality</span></code>) show varied correlations with both wallet response and PISA scores, reinforcing the idea that these are related but distinct constructs.</p></li>
+</ol>
+</section>
+<section id="regression-analysis-predictive-value-of-wallet-return-rate-for-pisa-scores-from-wallet-eda-py">
+<h3>3.5. Regression Analysis: Predictive Value of Wallet Return Rate for PISA Scores (from <code class="docutils literal notranslate"><span class="pre">wallet_eda.py</span></code>)<a class="headerlink" href="#regression-analysis-predictive-value-of-wallet-return-rate-for-pisa-scores-from-wallet-eda-py" title="Link to this heading">#</a></h3>
+<p>Investigating if wallet return rates, when combined with other survey measures, significantly predict PISA scores. This explores Tannenbaum’s second point regarding predictive power, but with PISA as the outcome.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">reading_wallets</span><span class="o">.</span><span class="n">empty</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Regression Analysis: Predicting PISA Scores&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Outcome variable: PISA_Avg_Reading_2022&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predictors: wallet_return_rate and one survey_measure at a time</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Ensure reading_wallets has &#39;country&#39; as a column for merging, not index</span>
+    <span class="n">reading_wallets_reg</span> <span class="o">=</span> <span class="n">reading_wallets</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">reading_wallets_reg</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;country&#39;</span><span class="p">:</span>
+        <span class="n">reading_wallets_reg</span> <span class="o">=</span> <span class="n">reading_wallets_reg</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">measure</span> <span class="ow">in</span> <span class="n">numeric_features_initial</span><span class="p">:</span> <span class="c1"># Using the initial numeric features as survey_measures</span>
+        <span class="c1"># Get country-level average for the current survey measure</span>
+        <span class="n">country_avg_measure</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">False</span><span class="p">)[[</span><span class="n">measure</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+        
+        <span class="c1"># Merge PISA/wallet data with the current survey measure average</span>
+        <span class="n">regression_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">reading_wallets_reg</span><span class="p">,</span> <span class="n">country_avg_measure</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+        <span class="n">regression_df</span> <span class="o">=</span> <span class="n">regression_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PISA_Avg_Reading_2022&#39;</span><span class="p">,</span> <span class="s1">&#39;wallet_return_rate&#39;</span><span class="p">,</span> <span class="n">measure</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">regression_df</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span> <span class="c1"># Need enough data points for regression</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Skipping regression for </span><span class="si">{</span><span class="n">measure</span><span class="si">}</span><span class="s2"> due to insufficient data after merge/dropna (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">regression_df</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows).&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">y</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[</span><span class="s2">&quot;PISA_Avg_Reading_2022&quot;</span><span class="p">]</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[[</span><span class="n">measure</span><span class="p">,</span> <span class="s2">&quot;wallet_return_rate&quot;</span><span class="p">]]</span>
+        
+        <span class="c1"># Standardize predictors for better comparison of coefficients if desired, though OLS doesn&#39;t strictly require it</span>
+        <span class="n">X_std</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+        <span class="n">X_std</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X_std</span><span class="p">)</span> <span class="c1"># Add intercept</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X_std</span><span class="p">)</span>
+            <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cov_type</span><span class="o">=</span><span class="s2">&quot;HC1&quot;</span><span class="p">)</span> <span class="c1"># Robust standard errors</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Regression Summary for PISA ~ </span><span class="si">{</span><span class="n">measure</span><span class="si">}</span><span class="s2"> + wallet_return_rate ---&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error during regression for </span><span class="si">{</span><span class="n">measure</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data for </span><span class="si">{</span><span class="n">measure</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="s2"> y_head: </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2"> X_std_head:</span><span class="se">\n</span><span class="si">{</span><span class="n">X_std</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Skipping regression analysis as reading_wallets or main df is empty.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Regression Analysis: Predicting PISA Scores
+Outcome variable: PISA_Avg_Reading_2022
+Predictors: wallet_return_rate and one survey_measure at a time
+
+
+--- Regression Summary for PISA ~ general_trust + wallet_return_rate ---
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     PISA_Avg_Reading_2022   R-squared:                       0.604
+Model:                               OLS   Adj. R-squared:                  0.577
+Method:                    Least Squares   F-statistic:                     26.93
+Date:                   Sat, 31 May 2025   Prob (F-statistic):           2.01e-07
+Time:                           16:34:31   Log-Likelihood:                -157.19
+No. Observations:                     33   AIC:                             320.4
+Df Residuals:                         30   BIC:                             324.9
+Df Model:                              2                                         
+Covariance Type:                     HC1                                         
+======================================================================================
+                         coef    std err          z      P&gt;|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                451.7902      5.175     87.309      0.000     441.648     461.932
+general_trust         -1.5422      6.235     -0.247      0.805     -13.763      10.679
+wallet_return_rate    36.5986      6.682      5.477      0.000      23.502      49.695
+==============================================================================
+Omnibus:                        2.482   Durbin-Watson:                   1.603
+Prob(Omnibus):                  0.289   Jarque-Bera (JB):                1.355
+Skew:                          -0.137   Prob(JB):                        0.508
+Kurtosis:                       2.046   Cond. No.                         2.38
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+--- Regression Summary for PISA ~ GPS_trust + wallet_return_rate ---
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     PISA_Avg_Reading_2022   R-squared:                       0.569
+Model:                               OLS   Adj. R-squared:                  0.537
+Method:                    Least Squares   F-statistic:                     18.72
+Date:                   Sat, 31 May 2025   Prob (F-statistic):           7.94e-06
+Time:                           16:34:31   Log-Likelihood:                -143.82
+No. Observations:                     30   AIC:                             293.6
+Df Residuals:                         27   BIC:                             297.8
+Df Model:                              2                                         
+Covariance Type:                     HC1                                         
+======================================================================================
+                         coef    std err          z      P&gt;|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                449.0720      5.625     79.839      0.000     438.048     460.096
+GPS_trust              2.2726      4.907      0.463      0.643      -7.346      11.891
+wallet_return_rate    34.0853      5.574      6.115      0.000      23.161      45.010
+==============================================================================
+Omnibus:                        3.577   Durbin-Watson:                   1.677
+Prob(Omnibus):                  0.167   Jarque-Bera (JB):                1.820
+Skew:                          -0.300   Prob(JB):                        0.402
+Kurtosis:                       1.953   Cond. No.                         1.02
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+--- Regression Summary for PISA ~ general_morality + wallet_return_rate ---
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     PISA_Avg_Reading_2022   R-squared:                       0.649
+Model:                               OLS   Adj. R-squared:                  0.625
+Method:                    Least Squares   F-statistic:                     27.12
+Date:                   Sat, 31 May 2025   Prob (F-statistic):           1.88e-07
+Time:                           16:34:31   Log-Likelihood:                -155.21
+No. Observations:                     33   AIC:                             316.4
+Df Residuals:                         30   BIC:                             320.9
+Df Model:                              2                                         
+Covariance Type:                     HC1                                         
+======================================================================================
+                         coef    std err          z      P&gt;|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                451.7902      4.873     92.713      0.000     442.239     461.341
+general_morality      12.2621      4.745      2.584      0.010       2.961      21.563
+wallet_return_rate    28.0774      5.309      5.289      0.000      17.672      38.482
+==============================================================================
+Omnibus:                        0.676   Durbin-Watson:                   1.755
+Prob(Omnibus):                  0.713   Jarque-Bera (JB):                0.702
+Skew:                          -0.087   Prob(JB):                        0.704
+Kurtosis:                       2.307   Cond. No.                         2.02
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+--- Regression Summary for PISA ~ MFQ_genmorality + wallet_return_rate ---
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     PISA_Avg_Reading_2022   R-squared:                       0.556
+Model:                               OLS   Adj. R-squared:                  0.523
+Method:                    Least Squares   F-statistic:                     24.32
+Date:                   Sat, 31 May 2025   Prob (F-statistic):           9.14e-07
+Time:                           16:34:31   Log-Likelihood:                -141.27
+No. Observations:                     30   AIC:                             288.5
+Df Residuals:                         27   BIC:                             292.7
+Df Model:                              2                                         
+Covariance Type:                     HC1                                         
+======================================================================================
+                         coef    std err          z      P&gt;|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                458.1024      5.166     88.681      0.000     447.978     468.227
+MFQ_genmorality        6.1031      6.144      0.993      0.321      -5.939      18.145
+wallet_return_rate    27.8549      4.136      6.734      0.000      19.748      35.962
+==============================================================================
+Omnibus:                        0.619   Durbin-Watson:                   1.583
+Prob(Omnibus):                  0.734   Jarque-Bera (JB):                0.699
+Skew:                          -0.178   Prob(JB):                        0.705
+Kurtosis:                       2.342   Cond. No.                         1.44
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+--- Regression Summary for PISA ~ civic_cooperation + wallet_return_rate ---
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     PISA_Avg_Reading_2022   R-squared:                       0.612
+Model:                               OLS   Adj. R-squared:                  0.585
+Method:                    Least Squares   F-statistic:                     33.78
+Date:                   Sat, 31 May 2025   Prob (F-statistic):           2.66e-08
+Time:                           16:34:31   Log-Likelihood:                -152.46
+No. Observations:                     32   AIC:                             310.9
+Df Residuals:                         29   BIC:                             315.3
+Df Model:                              2                                         
+Covariance Type:                     HC1                                         
+======================================================================================
+                         coef    std err          z      P&gt;|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                451.1013      5.269     85.609      0.000     440.774     461.429
+civic_cooperation      1.3957      6.486      0.215      0.830     -11.316      14.107
+wallet_return_rate    35.5125      7.125      4.984      0.000      21.548      49.478
+==============================================================================
+Omnibus:                        2.251   Durbin-Watson:                   1.748
+Prob(Omnibus):                  0.325   Jarque-Bera (JB):                1.304
+Skew:                          -0.159   Prob(JB):                        0.521
+Kurtosis:                       2.063   Cond. No.                         1.70
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+--- Regression Summary for PISA ~ GPS_posrecip + wallet_return_rate ---
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     PISA_Avg_Reading_2022   R-squared:                       0.598
+Model:                               OLS   Adj. R-squared:                  0.568
+Method:                    Least Squares   F-statistic:                     24.82
+Date:                   Sat, 31 May 2025   Prob (F-statistic):           7.64e-07
+Time:                           16:34:31   Log-Likelihood:                -142.78
+No. Observations:                     30   AIC:                             291.6
+Df Residuals:                         27   BIC:                             295.8
+Df Model:                              2                                         
+Covariance Type:                     HC1                                         
+======================================================================================
+                         coef    std err          z      P&gt;|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                449.0720      5.433     82.655      0.000     438.423     459.721
+GPS_posrecip          -8.0259      4.487     -1.789      0.074     -16.820       0.768
+wallet_return_rate    33.8260      4.804      7.041      0.000      24.410      43.242
+==============================================================================
+Omnibus:                        2.471   Durbin-Watson:                   1.801
+Prob(Omnibus):                  0.291   Jarque-Bera (JB):                1.255
+Skew:                          -0.006   Prob(JB):                        0.534
+Kurtosis:                       1.998   Cond. No.                         1.03
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+--- Regression Summary for PISA ~ GPS_altruism + wallet_return_rate ---
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     PISA_Avg_Reading_2022   R-squared:                       0.567
+Model:                               OLS   Adj. R-squared:                  0.534
+Method:                    Least Squares   F-statistic:                     20.42
+Date:                   Sat, 31 May 2025   Prob (F-statistic):           3.97e-06
+Time:                           16:34:31   Log-Likelihood:                -143.90
+No. Observations:                     30   AIC:                             293.8
+Df Residuals:                         27   BIC:                             298.0
+Df Model:                              2                                         
+Covariance Type:                     HC1                                         
+======================================================================================
+                         coef    std err          z      P&gt;|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                449.0720      5.640     79.627      0.000     438.018     460.126
+GPS_altruism          -0.6875      5.752     -0.120      0.905     -11.962      10.587
+wallet_return_rate    33.9253      5.325      6.371      0.000      23.488      44.362
+==============================================================================
+Omnibus:                        3.353   Durbin-Watson:                   1.686
+Prob(Omnibus):                  0.187   Jarque-Bera (JB):                1.643
+Skew:                          -0.232   Prob(JB):                        0.440
+Kurtosis:                       1.952   Cond. No.                         1.24
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+--- Regression Summary for PISA ~ stranger1 + wallet_return_rate ---
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     PISA_Avg_Reading_2022   R-squared:                       0.610
+Model:                               OLS   Adj. R-squared:                  0.584
+Method:                    Least Squares   F-statistic:                     25.18
+Date:                   Sat, 31 May 2025   Prob (F-statistic):           3.81e-07
+Time:                           16:34:31   Log-Likelihood:                -156.87
+No. Observations:                     33   AIC:                             319.7
+Df Residuals:                         30   BIC:                             324.2
+Df Model:                              2                                         
+Covariance Type:                     HC1                                         
+======================================================================================
+                         coef    std err          z      P&gt;|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                449.6310      5.125     87.733      0.000     439.586     459.676
+stranger1              6.1500      6.026      1.021      0.307      -5.661      17.961
+wallet_return_rate    31.0808      5.934      5.238      0.000      19.451      42.710
+==============================================================================
+Omnibus:                        2.488   Durbin-Watson:                   1.707
+Prob(Omnibus):                  0.288   Jarque-Bera (JB):                1.429
+Skew:                          -0.198   Prob(JB):                        0.489
+Kurtosis:                       2.060   Cond. No.                         2.35
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Commentary on Regression (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code> - Tannenbaum Point 2 Context):</strong>
+The Tannenbaum paper discusses four measures of “Economic and Institutional Performance”: GDP per capita (<code class="docutils literal notranslate"><span class="pre">log_gdp</span></code>), productivity (<code class="docutils literal notranslate"><span class="pre">log_tfp</span></code>), government effectiveness (<code class="docutils literal notranslate"><span class="pre">gee</span></code>), and letter grade efficiency (<code class="docutils literal notranslate"><span class="pre">letter_grading</span></code>). If PISA scores are considered a fifth measure of this type, the analysis above suggests that wallet reporting rates can be an effective predictor.</p>
+<p>When wallet reporting rates are combined with other survey measures of social capital (as in the regressions above), the coefficient for wallet reporting rates often remains statistically significant. This implies that the behavioral measure (wallet returns) offers predictive power for educational outcomes (PISA scores) beyond what is captured by attitudinal survey measures alone. The R-squared values from these models can be compared to those in Tannenbaum’s paper for other institutional outcomes.</p>
+</section>
+</section>
+<section id="machine-learning-predicting-wallet-response">
+<h2>4. Machine Learning: Predicting Wallet Response<a class="headerlink" href="#machine-learning-predicting-wallet-response" title="Link to this heading">#</a></h2>
+<p>Building models to predict whether a wallet is reported based on various features. We’ll first use the original features, then incorporate PISA scores to see if they improve predictive accuracy (at an individual prediction level, which is a different task than country-level prediction/correlation).</p>
+<section id="preprocessing-and-model-without-pisa-data">
+<h3>4.1. Preprocessing and Model without PISA Data<a class="headerlink" href="#preprocessing-and-model-without-pisa-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="c1"># Define features for this model</span>
+    <span class="n">numeric_features_ml1</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;general_trust&quot;</span><span class="p">,</span> <span class="s2">&quot;GPS_trust&quot;</span><span class="p">,</span> <span class="s2">&quot;general_morality&quot;</span><span class="p">,</span> <span class="s2">&quot;MFQ_genmorality&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;civic_cooperation&quot;</span><span class="p">,</span> <span class="s2">&quot;GPS_posrecip&quot;</span><span class="p">,</span> <span class="s2">&quot;GPS_altruism&quot;</span><span class="p">,</span> <span class="s2">&quot;stranger1&quot;</span>
+    <span class="p">]</span>
+    <span class="n">categorical_features_ml1</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="s2">&quot;above40&quot;</span><span class="p">,</span> <span class="s2">&quot;computer&quot;</span><span class="p">,</span> <span class="s2">&quot;coworkers&quot;</span><span class="p">,</span> <span class="s2">&quot;other_bystanders&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;institution&quot;</span><span class="p">,</span> <span class="s2">&quot;cond&quot;</span>
+        <span class="c1"># Excluding other categorical features like security_cam, etc. as in original script for this part</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Numeric feature pipeline</span>
+    <span class="n">numeric_transformer</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span>
+        <span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s2">&quot;imputer&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="s2">&quot;scaler&quot;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">())]</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Categorical feature pipeline</span>
+    <span class="n">categorical_transformer</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span>
+        <span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span><span class="s2">&quot;imputer&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;most_frequent&quot;</span><span class="p">)),</span> <span class="c1"># Added imputer for categorical</span>
+            <span class="p">(</span><span class="s2">&quot;encoder&quot;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)),</span>
+            <span class="c1"># SelectPercentile for categorical features after OHE might be less common than for numeric.</span>
+            <span class="c1"># Chi2 requires non-negative features, which OHE provides.</span>
+            <span class="p">(</span><span class="s2">&quot;selector&quot;</span><span class="p">,</span> <span class="n">SelectPercentile</span><span class="p">(</span><span class="n">chi2</span><span class="p">,</span> <span class="n">percentile</span><span class="o">=</span><span class="mi">50</span><span class="p">))</span> 
+        <span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">preprocessor1</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
+        <span class="n">transformers</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span><span class="s2">&quot;num&quot;</span><span class="p">,</span> <span class="n">numeric_transformer</span><span class="p">,</span> <span class="n">numeric_features_ml1</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="n">categorical_transformer</span><span class="p">,</span> <span class="n">categorical_features_ml1</span><span class="p">),</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Target variable: needs to be numeric for scikit-learn classifiers</span>
+    <span class="c1"># Assuming &#39;response&#39; categories are &#39;0&#39; and &#39;100&#39;. We map them to 0 and 1.</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span> <span class="c1"># This will map &#39;0&#39; to 0 and &#39;100&#39; to 1 if these are the categories</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;response&quot;</span><span class="p">)</span>
+
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span> <span class="c1"># Stratify by y for classification</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Example classifier: SVC (as in original script)</span>
+    <span class="c1"># The original script tested various classifiers; SVC with class_weight=&#39;balanced&#39; was highlighted.</span>
+    <span class="n">clf1</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span>
+        <span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span><span class="s2">&quot;preprocessor&quot;</span><span class="p">,</span> <span class="n">preprocessor1</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;classifier&quot;</span><span class="p">,</span> <span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">&quot;balanced&quot;</span><span class="p">))</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Weighting observations (as explored in original script)</span>
+    <span class="c1"># This was an experiment; its effectiveness can vary.</span>
+    <span class="n">cond_counts</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;cond&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s2">&quot;cond&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">cond_counts</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cond_counts</span> <span class="k">else</span> <span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">clf1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">classifier__sample_weight</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+        <span class="n">score1</span> <span class="o">=</span> <span class="n">clf1</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model 1 (without PISA) score: </span><span class="si">{</span><span class="n">score1</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error fitting Model 1: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Check feature lists and preprocessor compatibility with selected classifier.&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame is empty, skipping ML model training.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model 1 (without PISA) score: 0.680
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="preprocessing-and-model-with-pisa-data-and-other-sc-measures">
+<h3>4.2. Preprocessing and Model with PISA Data (and other SC measures)<a class="headerlink" href="#preprocessing-and-model-with-pisa-data-and-other-sc-measures" title="Link to this heading">#</a></h3>
+<p>Here, we add country-level PISA scores and other social capital measures (<code class="docutils literal notranslate"><span class="pre">sc_measures</span></code>) to the feature set. Note that PISA scores are country-level, so they will be constant for all individuals within the same country. This might limit their predictive power for individual responses but is included as per the original exploration.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pisa_reading_2022</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+    <span class="n">df_with_pisa</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pisa_reading_2022</span><span class="p">[[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;PISA_Avg_Reading_2022&#39;</span><span class="p">]],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;country&quot;</span><span class="p">)</span>
+    <span class="c1"># Impute PISA scores if some countries in df don&#39;t have them (e.g., with mean PISA score)</span>
+    <span class="n">df_with_pisa</span><span class="p">[</span><span class="s1">&#39;PISA_Avg_Reading_2022&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_with_pisa</span><span class="p">[</span><span class="s1">&#39;PISA_Avg_Reading_2022&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df_with_pisa</span><span class="p">[</span><span class="s1">&#39;PISA_Avg_Reading_2022&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+    <span class="n">numeric_features_ml2</span> <span class="o">=</span> <span class="n">numeric_features_initial</span> <span class="o">+</span> <span class="n">sc_measures</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;PISA_Avg_Reading_2022&#39;</span><span class="p">]</span>
+    <span class="c1"># Ensure all numeric features actually exist in df_with_pisa and are numeric</span>
+    <span class="n">valid_numeric_features_ml2</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">numeric_features_ml2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_with_pisa</span><span class="o">.</span><span class="n">columns</span> <span class="ow">and</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">df_with_pisa</span><span class="p">[</span><span class="n">col</span><span class="p">]):</span>
+            <span class="n">valid_numeric_features_ml2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_with_pisa</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span> <span class="c1"># If column exists but not numeric, try to convert</span>
+            <span class="n">df_with_pisa</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_with_pisa</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">df_with_pisa</span><span class="p">[</span><span class="n">col</span><span class="p">]):</span>
+                 <span class="n">valid_numeric_features_ml2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Warning: Column &#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">&#39; could not be converted to numeric and will be excluded from numeric features for ML.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Warning: Column &#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">&#39; not found in dataframe and will be excluded from numeric features for ML.&quot;</span><span class="p">)</span>
+    <span class="n">numeric_features_ml2</span> <span class="o">=</span> <span class="n">valid_numeric_features_ml2</span>
+    
+    <span class="c1"># Categorical features from original script for this model</span>
+    <span class="n">categorical_features_ml2</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="s2">&quot;above40&quot;</span><span class="p">,</span> <span class="s2">&quot;computer&quot;</span><span class="p">,</span> <span class="s2">&quot;coworkers&quot;</span><span class="p">,</span> <span class="s2">&quot;other_bystanders&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;institution&quot;</span><span class="p">,</span> <span class="s2">&quot;cond&quot;</span><span class="p">,</span> <span class="s2">&quot;security_cam&quot;</span><span class="p">,</span> <span class="s2">&quot;security_guard&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;local_recipient&quot;</span><span class="p">,</span> <span class="s2">&quot;no_english&quot;</span><span class="p">,</span> <span class="s2">&quot;understood_situation&quot;</span>
+    <span class="p">]</span>
+    <span class="n">valid_categorical_features_ml2</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">categorical_features_ml2</span> <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_with_pisa</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+    <span class="n">categorical_features_ml2</span> <span class="o">=</span> <span class="n">valid_categorical_features_ml2</span>
+
+    <span class="c1"># Numeric transformer (can reuse the previous one if strategy is the same)</span>
+    <span class="n">numeric_transformer_ml2</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span>
+        <span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s2">&quot;imputer&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="s2">&quot;scaler&quot;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">())]</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Categorical transformer (can reuse)</span>
+    <span class="n">categorical_transformer_ml2</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span>
+        <span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span><span class="s2">&quot;imputer&quot;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;most_frequent&quot;</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot;encoder&quot;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)),</span>
+            <span class="p">(</span><span class="s2">&quot;selector&quot;</span><span class="p">,</span> <span class="n">SelectPercentile</span><span class="p">(</span><span class="n">chi2</span><span class="p">,</span> <span class="n">percentile</span><span class="o">=</span><span class="mi">50</span><span class="p">)),</span> 
+        <span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">preprocessor2</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
+        <span class="n">transformers</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span><span class="s2">&quot;num&quot;</span><span class="p">,</span> <span class="n">numeric_transformer_ml2</span><span class="p">,</span> <span class="n">numeric_features_ml2</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="n">categorical_transformer_ml2</span><span class="p">,</span> <span class="n">categorical_features_ml2</span><span class="p">),</span>
+        <span class="p">],</span>
+        <span class="n">remainder</span><span class="o">=</span><span class="s1">&#39;drop&#39;</span> <span class="c1"># Drop any columns not specified</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Target variable</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="n">df_with_pisa</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span>
+    <span class="n">X2</span> <span class="o">=</span> <span class="n">df_with_pisa</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;response&quot;</span><span class="p">)</span>
+
+    <span class="n">X_train2</span><span class="p">,</span> <span class="n">X_test2</span><span class="p">,</span> <span class="n">y_train2</span><span class="p">,</span> <span class="n">y_test2</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+        <span class="n">X2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y2</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Example classifier: RandomForest (as explored in original script)</span>
+    <span class="c1"># The original script commented out RandomForest, let&#39;s try it or stick to SVC for comparison</span>
+    <span class="n">clf2</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span>
+        <span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span><span class="s2">&quot;preprocessor&quot;</span><span class="p">,</span> <span class="n">preprocessor2</span><span class="p">),</span>
+            <span class="c1"># (&quot;classifier&quot;, SVC(random_state=123, class_weight=&quot;balanced&quot;)) </span>
+            <span class="p">(</span><span class="s2">&quot;classifier&quot;</span><span class="p">,</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s2">&quot;balanced&quot;</span><span class="p">))</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Weighting (optional, as before)</span>
+    <span class="c1"># cond_counts2 = X_train2[&quot;cond&quot;].value_counts(normalize=True)</span>
+    <span class="c1"># weights2 = X_train2[&quot;cond&quot;].map(lambda x: 1 / cond_counts2[x] if x in cond_counts2 else 1.0)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># clf2.fit(X_train2, y_train2, classifier__sample_weight=weights2) # If using weights</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">X_train2</span><span class="o">.</span><span class="n">empty</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">numeric_features_ml2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">categorical_features_ml2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">clf2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train2</span><span class="p">,</span> <span class="n">y_train2</span><span class="p">)</span>
+            <span class="n">score2</span> <span class="o">=</span> <span class="n">clf2</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test2</span><span class="p">,</span> <span class="n">y_test2</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model 2 (with PISA &amp; SC measures) score: </span><span class="si">{</span><span class="n">score2</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Skipping Model 2 fitting due to no valid features or empty training data.&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error fitting Model 2: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Numeric features used: </span><span class="si">{</span><span class="n">numeric_features_ml2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Categorical features used: </span><span class="si">{</span><span class="n">categorical_features_ml2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Check feature lists, data types, and preprocessor compatibility.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame or PISA data is empty, skipping ML model training with PISA features.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model 2 (with PISA &amp; SC measures) score: 0.681
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="commentary-on-machine-learning-results-from-wallet-pisa-ipynb">
+<h3>4.3. Commentary on Machine Learning Results (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code>)<a class="headerlink" href="#commentary-on-machine-learning-results-from-wallet-pisa-ipynb" title="Link to this heading">#</a></h3>
+<p>Using a comprehensive set of variables (experiment variables, survey measures, economic/institutional performance measures, PISA scores), the predictive accuracy for individual wallet responses did not dramatically improve, typically hovering around 0.68 - 0.70 (depending on the model and specific run, the original script mentioned ~0.687).</p>
+<p>This level of accuracy is somewhat expected. Predicting individual acts of honesty with high precision based on available (mostly demographic or country-level) data is inherently challenging. Individual behavior is complex and influenced by many immediate situational factors not captured in these datasets.</p>
+</section>
+</section>
+<section id="summary-and-additional-findings-thoughts">
+<h2>5. Summary and Additional Findings/Thoughts<a class="headerlink" href="#summary-and-additional-findings-thoughts" title="Link to this heading">#</a></h2>
+<p>This integrated analysis confirms several key points and reveals interesting connections:</p>
+<ol class="arabic simple">
+<li><p><strong>Wallet Return Rates as a Measure of Social Capital:</strong> The EDA and correlations support the idea that wallet return rates are a valid behavioral measure related to social capital, aligning with survey-based measures.</p></li>
+<li><p><strong>PISA Scores and Social Capital:</strong> PISA educational achievement scores show a surprisingly strong positive correlation with country-level wallet return rates. This suggests that factors contributing to higher educational outcomes may overlap significantly with those fostering civic honesty and broader social capital. The correlation (around 0.78) is notable.</p></li>
+<li><p><strong>Predictive Power:</strong></p>
+<ul class="simple">
+<li><p>At the <strong>country level</strong>, wallet return rates (and PISA scores) show predictive power for various economic and institutional indicators (as explored by Tannenbaum and extended here with PISA in regressions).</p></li>
+<li><p>At the <strong>individual level</strong>, predicting whether a specific person will return a wallet based on the available features (even including PISA scores as a country-level proxy) remains difficult, with model accuracies around 68-70%. This highlights the difference between aggregate societal trends and individual behavior prediction.</p></li>
+</ul>
+</li>
+<li><p><strong>Feature Importance (Implicit):</strong> While not explicitly detailed with feature importance plots from the ML models in this combined notebook, the varying correlations in the association matrix and the regression coefficients hint at which factors are more strongly related to wallet returns and PISA scores. For instance, <code class="docutils literal notranslate"><span class="pre">general_morality</span></code> and <code class="docutils literal notranslate"><span class="pre">general_trust</span></code> often show some of the higher correlations among survey measures.</p></li>
+</ol>
+<p><strong>Further Exploration Ideas:</strong></p>
+<ul class="simple">
+<li><p><strong>Interaction Effects:</strong> Explore interaction terms in regression models (e.g., does the relationship between a survey measure and PISA scores change depending on the level of wallet return rates in a country?).</p></li>
+<li><p><strong>Clustering:</strong> Could countries be clustered based on their profiles of wallet returns, PISA scores, and survey measures? This might reveal different typologies of social capital and development.</p></li>
+<li><p><strong>Longitudinal Analysis:</strong> If more time-series data were available for wallet experiments and PISA scores, one could explore how changes in these measures correlate over time within countries.</p></li>
+<li><p><strong>Qualitative Insights:</strong> The quantitative data could be supplemented with qualitative case studies of countries that are outliers (e.g., high PISA but lower wallet returns, or vice-versa) to understand contextual factors.</p></li>
+<li><p><strong>Advanced ML Feature Importance:</strong> For the ML models, using techniques like SHAP values or permutation importance could provide clearer insights into which features are most predictive of individual wallet returns, even if overall accuracy is modest.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-findings-and-context-from-wallet-pisa-ipynb">Initial Findings and Context (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-data-loading">1. Setup and Data Loading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis-eda">2. Exploratory Data Analysis (EDA)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-distributions">2.1. Feature Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-association-matrix">2.2. Generalized Association Matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pairplot-for-numeric-features-and-response">2.3. Pairplot for Numeric Features and Response</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pisa-education-data-integration-and-analysis">3. PISA Education Data Integration and Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-pisa-data">3.1. Loading PISA Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-pisa-data-with-wallet-data">3.2. Merging PISA Data with Wallet Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commentary-on-pisa-wallets-and-survey-measures-from-wallet-pisa-ipynb">3.3. Commentary on PISA, Wallets, and Survey Measures (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-matrix-including-pisa-wallet-response-survey-measures-and-sc-measures">3.4. Correlation Matrix including PISA, Wallet Response, Survey Measures, and SC Measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-analysis-predictive-value-of-wallet-return-rate-for-pisa-scores-from-wallet-eda-py">3.5. Regression Analysis: Predictive Value of Wallet Return Rate for PISA Scores (from <code class="docutils literal notranslate"><span class="pre">wallet_eda.py</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-predicting-wallet-response">4. Machine Learning: Predicting Wallet Response</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-and-model-without-pisa-data">4.1. Preprocessing and Model without PISA Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-and-model-with-pisa-data-and-other-sc-measures">4.2. Preprocessing and Model with PISA Data (and other SC measures)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commentary-on-machine-learning-results-from-wallet-pisa-ipynb">4.3. Commentary on Machine Learning Results (from <code class="docutils literal notranslate"><span class="pre">wallet_pisa.ipynb</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-additional-findings-thoughts">5. Summary and Additional Findings/Thoughts</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

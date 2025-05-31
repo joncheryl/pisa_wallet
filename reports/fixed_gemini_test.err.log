@@ -1,0 +1,73 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gussie/Library/Python/3.12/lib/python/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pandas as pd
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+import plotly.express as px
+from scipy.stats import chi2_contingency
+import numpy as np
+from pandas.api.types import is_numeric_dtype
+import statsmodels.api as sm
+import seaborn as sns
+
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.feature_selection import SelectPercentile, chi2
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+
+pd.set_option('future.no_silent_downcasting', True)
+pd.options.mode.chained_assignment = None # default='warn', suppress warning for now
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mOptionError[0m                               Traceback (most recent call last)
+Cell [0;32mIn[1], line 21[0m
+[1;32m     18[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlinear_model[39;00m [38;5;28;01mimport[39;00m LogisticRegression
+[1;32m     19[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mensemble[39;00m [38;5;28;01mimport[39;00m RandomForestClassifier
+[0;32m---> 21[0m [43mpd[49m[38;5;241;43m.[39;49m[43mset_option[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mfuture.no_silent_downcasting[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[1;32m     22[0m pd[38;5;241m.[39moptions[38;5;241m.[39mmode[38;5;241m.[39mchained_assignment [38;5;241m=[39m [38;5;28;01mNone[39;00m [38;5;66;03m# default='warn', suppress warning for now[39;00m
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/_config/config.py:272[0m, in [0;36mCallableDynamicDoc.__call__[0;34m(self, *args, **kwds)[0m
+[1;32m    271[0m [38;5;28;01mdef[39;00m [38;5;21m__call__[39m([38;5;28mself[39m, [38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwds) [38;5;241m-[39m[38;5;241m>[39m T:
+[0;32m--> 272[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[38;5;18;43m__func__[39;49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwds[49m[43m)[49m
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/_config/config.py:167[0m, in [0;36m_set_option[0;34m(*args, **kwargs)[0m
+[1;32m    164[0m     [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m([38;5;124mf[39m[38;5;124m'[39m[38;5;124m_set_option() got an unexpected keyword argument [39m[38;5;124m"[39m[38;5;132;01m{[39;00mkwarg[38;5;132;01m}[39;00m[38;5;124m"[39m[38;5;124m'[39m)
+[1;32m    166[0m [38;5;28;01mfor[39;00m k, v [38;5;129;01min[39;00m [38;5;28mzip[39m(args[::[38;5;241m2[39m], args[[38;5;241m1[39m::[38;5;241m2[39m]):
+[0;32m--> 167[0m     key [38;5;241m=[39m [43m_get_single_key[49m[43m([49m[43mk[49m[43m,[49m[43m [49m[43msilent[49m[43m)[49m
+[1;32m    169[0m     o [38;5;241m=[39m _get_registered_option(key)
+[1;32m    170[0m     [38;5;28;01mif[39;00m o [38;5;129;01mand[39;00m o[38;5;241m.[39mvalidator:
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/_config/config.py:132[0m, in [0;36m_get_single_key[0;34m(pat, silent)[0m
+[1;32m    130[0m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m silent:
+[1;32m    131[0m         _warn_if_deprecated(pat)
+[0;32m--> 132[0m     [38;5;28;01mraise[39;00m OptionError([38;5;124mf[39m[38;5;124m"[39m[38;5;124mNo such keys(s): [39m[38;5;132;01m{[39;00m[38;5;28mrepr[39m(pat)[38;5;132;01m}[39;00m[38;5;124m"[39m)
+[1;32m    133[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(keys) [38;5;241m>[39m [38;5;241m1[39m:
+[1;32m    134[0m     [38;5;28;01mraise[39;00m OptionError([38;5;124m"[39m[38;5;124mPattern matched multiple keys[39m[38;5;124m"[39m)
+
+[0;31mOptionError[0m: No such keys(s): 'future.no_silent_downcasting'
+
