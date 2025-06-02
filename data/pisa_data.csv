@@ -1,0 +1,244 @@
+mean_score,country,subject
+575.0,Singapore,math
+552.0,Macao (China),math
+547.0,Chinese Taipei,math
+540.0,Hong Kong (China)*,math
+536.0,Japan,math
+527.0,Korea,math
+510.0,Estonia,math
+508.0,Switzerland,math
+497.0,Canada*,math
+493.0,Netherlands*,math
+492.0,Ireland*,math
+489.0,Belgium,math
+489.0,Denmark*,math
+489.0,UK,math
+489.0,Poland,math
+487.0,Austria,math
+487.0,Australia*,math
+487.0,Czech Republic,math
+485.0,Slovenia,math
+484.0,Finland,math
+483.0,Latvia*,math
+482.0,Sweden,math
+479.0,New Zealand*,math
+475.0,Lithuania,math
+475.0,Germany,math
+474.0,France,math
+473.0,Spain,math
+473.0,Hungary,math
+472.0,Portugal,math
+471.0,Italy,math
+469.0,Viet Nam,math
+468.0,Norway,math
+466.0,Malta,math
+465.0,USA,math
+464.0,Slovak Republic,math
+463.0,Croatia,math
+459.0,Iceland,math
+458.0,Israel,math
+453.0,Türkiye,math
+442.0,Brunei Darussalam,math
+441.0,Ukrainian regions (18 of 27),math
+440.0,Serbia,math
+431.0,UAE,math
+430.0,Greece,math
+428.0,Romania,math
+425.0,Kazakhstan,math
+425.0,Mongolia,math
+418.0,Cyprus,math
+417.0,Bulgaria,math
+414.0,Moldova,math
+414.0,Qatar,math
+412.0,Chile,math
+409.0,Uruguay,math
+409.0,Malaysia,math
+406.0,Montenegro,math
+397.0,Baku (Azerbaijan),math
+395.0,Mexico,math
+394.0,Thailand,math
+391.0,Peru,math
+390.0,Georgia,math
+389.0,Saudi Arabia,math
+389.0,North Macedonia,math
+385.0,Costa Rica,math
+383.0,Colombia,math
+379.0,Brazil,math
+378.0,Argentina,math
+377.0,Jamaica*,math
+368.0,Albania,math
+366.0,Palestinian Authority,math
+366.0,Indonesia,math
+365.0,Morocco,math
+364.0,Uzbekistan,math
+361.0,Jordan,math
+357.0,Panama*,math
+355.0,Kosovo,math
+355.0,Philippines,math
+344.0,Guatemala,math
+343.0,El Salvador,math
+339.0,Dominican Republic,math
+338.0,Paraguay,math
+336.0,Cambodia,math
+543.0,Singapore,reading
+516.0,Ireland*,reading
+516.0,Japan,reading
+515.0,Korea,reading
+515.0,Chinese Taipei,reading
+511.0,Estonia,reading
+510.0,Macao (China),reading
+507.0,Canada*,reading
+504.0,USA,reading
+501.0,New Zealand*,reading
+500.0,Hong Kong (China)*,reading
+498.0,Australia*,reading
+494.0,UK,reading
+490.0,Finland,reading
+489.0,Denmark*,reading
+489.0,Poland,reading
+489.0,Czech Republic,reading
+487.0,Sweden,reading
+483.0,Switzerland,reading
+482.0,Italy,reading
+480.0,Austria,reading
+480.0,Germany,reading
+479.0,Belgium,reading
+477.0,Portugal,reading
+477.0,Norway,reading
+475.0,Croatia,reading
+475.0,Latvia*,reading
+474.0,Spain,reading
+474.0,France,reading
+474.0,Israel,reading
+473.0,Hungary,reading
+472.0,Lithuania,reading
+469.0,Slovenia,reading
+462.0,Viet Nam**,reading
+459.0,Netherlands*,reading
+456.0,Türkiye,reading
+448.0,Chile,reading
+447.0,Slovak Republic,reading
+445.0,Malta,reading
+440.0,Serbia,reading
+438.0,Greece,reading
+436.0,Iceland,reading
+430.0,Uruguay,reading
+429.0,Brunei Darussalam,reading
+428.0,Romania,reading
+428.0,Ukrainian regions (18 of 27),reading
+419.0,Qatar,reading
+417.0,UAE,reading
+415.0,Mexico,reading
+415.0,Costa Rica,reading
+411.0,Moldova,reading
+410.0,Brazil,reading
+410.0,Jamaica*,reading
+409.0,Colombia,reading
+408.0,Peru,reading
+405.0,Montenegro,reading
+404.0,Bulgaria,reading
+401.0,Argentina,reading
+392.0,Panama*,reading
+388.0,Malaysia,reading
+386.0,Kazakhstan,reading
+383.0,Saudi Arabia,reading
+381.0,Cyprus,reading
+379.0,Thailand,reading
+378.0,Mongolia,reading
+374.0,Guatemala,reading
+374.0,Georgia,reading
+373.0,Paraguay,reading
+365.0,Baku (Azerbaijan),reading
+365.0,El Salvador,reading
+359.0,Indonesia,reading
+359.0,North Macedonia,reading
+358.0,Albania,reading
+351.0,Dominican Republic,reading
+349.0,Palestinian Authority,reading
+347.0,Philippines,reading
+342.0,Kosovo,reading
+342.0,Jordan,reading
+339.0,Morocco,reading
+336.0,Uzbekistan,reading
+329.0,Cambodia,reading
+561.0,Singapore,science
+547.0,Japan,science
+543.0,Macao (China),science
+537.0,Chinese Taipei,science
+528.0,Korea,science
+526.0,Estonia,science
+520.0,Hong Kong (China)*,science
+515.0,Canada*,science
+511.0,Finland,science
+507.0,Australia*,science
+504.0,New Zealand*,science
+504.0,Ireland*,science
+503.0,Switzerland,science
+500.0,Slovenia,science
+500.0,UK,science
+499.0,USA,science
+499.0,Poland,science
+498.0,Czech Republic,science
+494.0,Latvia*,science
+494.0,Denmark*,science
+494.0,Sweden,science
+492.0,Germany,science
+491.0,Austria,science
+491.0,Belgium,science
+488.0,Netherlands*,science
+487.0,France,science
+486.0,Hungary,science
+485.0,Spain,science
+484.0,Lithuania,science
+484.0,Portugal,science
+483.0,Croatia,science
+478.0,Norway,science
+477.0,Italy,science
+476.0,Türkiye,science
+472.0,Viet Nam,science
+466.0,Malta,science
+465.0,Israel,science
+462.0,Slovak Republic,science
+450.0,Ukrainian regions (18 of 27),science
+447.0,Serbia,science
+447.0,Iceland,science
+446.0,Brunei Darussalam,science
+444.0,Chile,science
+441.0,Greece,science
+435.0,Uruguay,science
+432.0,Qatar,science
+432.0,UAE,science
+428.0,Romania,science
+423.0,Kazakhstan,science
+421.0,Bulgaria,science
+417.0,Moldova,science
+416.0,Malaysia,science
+412.0,Mongolia,science
+411.0,Colombia,science
+411.0,Costa Rica,science
+411.0,Cyprus,science
+410.0,Mexico,science
+409.0,Thailand,science
+408.0,Peru,science
+406.0,Argentina,science
+403.0,Montenegro,science
+403.0,Brazil,science
+403.0,Jamaica*,science
+390.0,Saudi Arabia,science
+388.0,Panama*,science
+384.0,Georgia,science
+383.0,Indonesia,science
+380.0,Baku (Azerbaijan),science
+380.0,North Macedonia,science
+376.0,Albania,science
+375.0,Jordan,science
+373.0,El Salvador,science
+373.0,Guatemala,science
+369.0,Palestinian Authority,science
+368.0,Paraguay,science
+365.0,Morocco,science
+360.0,Dominican Republic,science
+357.0,Kosovo,science
+356.0,Philippines,science
+355.0,Uzbekistan,science
+347.0,Cambodia,science
