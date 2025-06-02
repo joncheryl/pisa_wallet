@@ -18,7 +18,7 @@ from sklearn.preprocessing import StandardScaler
 # Data Wrangling
 # ---------------------------------------------------------------------
 
-os.chdir("lost-wallets-social-capital/data/")
+# os.chdir("data/")
 
 # Add Integrated Values Survey (WVS/EVS combined) data set
 ivs = pd.read_stata("IVS.dta")
@@ -298,9 +298,9 @@ sc_measures = [
     "letter_grading",
 ]
 
-data_for_ml = data1[
+select_data = data1[
     ["country"] + ["response"] + paper_predictors + cat_variables + sc_measures
 ]
-data_for_ml.to_csv("data_for_ml.csv", index=False)
+select_data.to_csv("tannenbaum_data.csv", index=False)
 
 # %%

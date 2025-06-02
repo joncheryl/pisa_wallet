@@ -7,21 +7,21 @@ mean_score,country,subject
 527.0,Korea,math
 510.0,Estonia,math
 508.0,Switzerland,math
-497.0,Canada*,math
-493.0,Netherlands*,math
+497.0,Canada,math
+493.0,Netherlands,math
 492.0,Ireland*,math
 489.0,Belgium,math
-489.0,Denmark*,math
+489.0,Denmark,math
 489.0,UK,math
 489.0,Poland,math
 487.0,Austria,math
-487.0,Australia*,math
+487.0,Australia,math
 487.0,Czech Republic,math
 485.0,Slovenia,math
 484.0,Finland,math
 483.0,Latvia*,math
 482.0,Sweden,math
-479.0,New Zealand*,math
+479.0,New Zealand,math
 475.0,Lithuania,math
 475.0,Germany,math
 474.0,France,math
@@ -87,14 +87,14 @@ mean_score,country,subject
 515.0,Chinese Taipei,reading
 511.0,Estonia,reading
 510.0,Macao (China),reading
-507.0,Canada*,reading
+507.0,Canada,reading
 504.0,USA,reading
-501.0,New Zealand*,reading
+501.0,New Zealand,reading
 500.0,Hong Kong (China)*,reading
-498.0,Australia*,reading
+498.0,Australia,reading
 494.0,UK,reading
 490.0,Finland,reading
-489.0,Denmark*,reading
+489.0,Denmark,reading
 489.0,Poland,reading
 489.0,Czech Republic,reading
 487.0,Sweden,reading
@@ -114,7 +114,7 @@ mean_score,country,subject
 472.0,Lithuania,reading
 469.0,Slovenia,reading
 462.0,Viet Nam**,reading
-459.0,Netherlands*,reading
+459.0,Netherlands,reading
 456.0,Türkiye,reading
 448.0,Chile,reading
 447.0,Slovak Republic,reading
@@ -168,10 +168,10 @@ mean_score,country,subject
 528.0,Korea,science
 526.0,Estonia,science
 520.0,Hong Kong (China)*,science
-515.0,Canada*,science
+515.0,Canada,science
 511.0,Finland,science
-507.0,Australia*,science
-504.0,New Zealand*,science
+507.0,Australia,science
+504.0,New Zealand,science
 504.0,Ireland*,science
 503.0,Switzerland,science
 500.0,Slovenia,science
@@ -180,12 +180,12 @@ mean_score,country,subject
 499.0,Poland,science
 498.0,Czech Republic,science
 494.0,Latvia*,science
-494.0,Denmark*,science
+494.0,Denmark,science
 494.0,Sweden,science
 492.0,Germany,science
 491.0,Austria,science
 491.0,Belgium,science
-488.0,Netherlands*,science
+488.0,Netherlands,science
 487.0,France,science
 486.0,Hungary,science
 485.0,Spain,science

@@ -5,6 +5,7 @@ Reading mean PISA scores in pdf from
 https://www.oecd.org/en/publications/pisa-2022-results-volume-i_53f23881-en.html
 """
 
+# %%
 import pandas as pd
 import tabula
 
@@ -63,8 +64,21 @@ pisa_2022 = (
             "United Arab Emirates": "UAE",
             "United Kingdom*": "UK",
             "United States*": "USA",
+            "Australia*": "Australia",
+            "Canada*": "Canada",
+            "China*": "China",
+            "Denmark*": "Denmark",
+            "Ghana*": "Ghana",
+            "India*": "India",
+            "Kenya*": "Kenya",
+            "Netherlands*": "Netherlands",
+            "New Zealand*": "New Zealand",
+            "Russia*": "Russia",
+            "South Africa*": "South Africa",
+            "Turkey*": "Turkey",
         }
     )
 )
 
+# %%
 pisa_2022.to_csv("data/pisa_data.csv", index=False)
