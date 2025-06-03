@@ -2,8 +2,11 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: introduction
 chapters:
+- file: pisa_survey
+- file: pisa_econ
+- file: pisa_ml
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks
