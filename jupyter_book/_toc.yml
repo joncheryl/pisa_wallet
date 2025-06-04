@@ -7,8 +7,4 @@ chapters:
 - file: pisa_survey
 - file: pisa_econ
 - file: pisa_ml
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
-- file: mymarkdownfile
 - file: fixed_gemini_test
