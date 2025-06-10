@@ -4,7 +4,5 @@
 format: jb-book
 root: introduction
 chapters:
-- file: pisa_survey
-- file: pisa_econ
+- file: pisa_paper
 - file: pisa_ml
-- file: fixed_gemini_test
