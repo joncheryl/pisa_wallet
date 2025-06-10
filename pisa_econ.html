@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>PISA as a Predictor of Economic and Institutional Performance &#8212; Education Dataset vs Civic Honesty</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pisa_econ';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="introduction.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Education Dataset vs Civic Honesty - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Education Dataset vs Civic Honesty - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pisa_survey.html">Tannenbaum Paper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pisa_ml.html">Machine Learning Stuff</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/joncheryl/pisa_wallet" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/joncheryl/pisa_wallet/issues/new?title=Issue%20on%20page%20%2Fpisa_econ.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/pisa_econ.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>PISA as a Predictor of Economic and Institutional Performance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-results">Regression Results</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pisa-as-a-predictor-of-economic-and-institutional-performance">
+<h1>PISA as a Predictor of Economic and Institutional Performance<a class="headerlink" href="#pisa-as-a-predictor-of-economic-and-institutional-performance" title="Link to this heading">#</a></h1>
+<p>How well do PISA scores (as compared to lost wallet reporting rates) explain variation in economic development?</p>
+<p>There are four measures of “Economic and Institutional Performance” in the second part of the paper: GDP per capita (<code class="docutils literal notranslate"><span class="pre">log_gdp</span></code>), productivity(<code class="docutils literal notranslate"><span class="pre">log_tfp</span></code>), government effectiveness (<code class="docutils literal notranslate"><span class="pre">gee</span></code>), and letter grade efficiency (<code class="docutils literal notranslate"><span class="pre">letter_grading</span></code>). If PISA scores are considered a fifth measure of the same sort, we find that wallet reporting rates are an equally effective predictor. When combined with any other measure of social capital, the coefficient for wallet reporting rates are always statistically significant with p&lt;0.01 and with <span class="math notranslate nohighlight">\(R^2\)</span> greater than most of the other fit models.</p>
+<section id="regression-results">
+<h2>Regression Results<a class="headerlink" href="#regression-results" title="Link to this heading">#</a></h2>
+<p>The table below seeks to replicate part of Table 2 from <strong>Tannenbaum</strong> and adds two new columns (Model 9 and Model 10) which contain the respective OLS model results where PISA scores are predicted. Models 7 and 8 are recreated here to show that the table is generated with the same process that generated Table 2 in <strong>Tannenbaum</strong>.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">great_tables</span> <span class="kn">import</span> <span class="n">GT</span>
+
+<span class="c1"># Data import</span>
+<span class="n">survey_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;general_trust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_trust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;general_morality&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MFQ_genmorality&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;civic_cooperation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_posrecip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_altruism&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;stranger1&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">econ_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;log_gdp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;log_tfp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gee&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;letter_grading&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">&quot;../data/tannenbaum_data.csv&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Add PISA data</span>
+<span class="n">pisa</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/pisa_data.csv&quot;</span><span class="p">)</span>
+<span class="n">pisa</span> <span class="o">=</span> <span class="n">pisa</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">pisa</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2015</span><span class="p">]</span>
+<span class="n">pisa</span> <span class="o">=</span> <span class="n">pisa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)[</span><span class="s1">&#39;pisa_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pisa</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;country&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># p-value stars to award to each parameter coef estimate.</span>
+<span class="k">def</span> <span class="nf">stars</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">elif</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;*&quot;</span>
+    <span class="k">elif</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;**&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;***&quot;</span>
+
+
+<span class="c1"># Run regression for each survey measure.</span>
+<span class="k">def</span> <span class="nf">get_model_results_no_pred</span><span class="p">(</span><span class="n">survey_measure</span><span class="p">,</span> <span class="n">econ_measure</span><span class="p">):</span>
+    <span class="n">regression_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">)[[</span><span class="n">econ_measure</span><span class="p">,</span> <span class="n">survey_measure</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[</span><span class="n">econ_measure</span><span class="p">]</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[[</span><span class="n">survey_measure</span><span class="p">]]</span>
+
+    <span class="c1"># Standardize predictors</span>
+    <span class="n">X_std</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    <span class="n">X_std</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X_std</span><span class="p">)</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X_std</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cov_type</span><span class="o">=</span><span class="s2">&quot;HC1&quot;</span><span class="p">)</span>  <span class="c1"># Robust standard errors same as in Tannenbaum</span>
+    <span class="n">result_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+                    <span class="p">[</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}{</span><span class="n">stars</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">results</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+                    <span class="p">],</span>
+                    <span class="n">index</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span>
+                <span class="p">),</span>
+                <span class="s2">&quot;se&quot;</span><span class="p">:</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">),</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span> <span class="s2">&quot;se&quot;</span><span class="p">:</span> <span class="nb">object</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">result_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s2">&quot;&lt;i&gt;N&lt;i&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">result_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s2">&quot;&lt;i&gt;R&lt;i&gt;&lt;sup&gt;2&lt;/sup&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">results</span><span class="o">.</span><span class="n">rsquared</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">result_df</span> <span class="o">=</span> <span class="n">result_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">result_df</span><span class="p">[</span><span class="s2">&quot;measure&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">survey_measure</span>
+
+    <span class="k">return</span> <span class="n">result_df</span>
+
+
+<span class="c1"># Run regression for each survey measure with predictor variable.</span>
+<span class="k">def</span> <span class="nf">get_model_results</span><span class="p">(</span><span class="n">survey_measure</span><span class="p">,</span> <span class="n">econ_measure</span><span class="p">):</span>
+    <span class="n">regression_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">)[[</span><span class="s2">&quot;response&quot;</span><span class="p">,</span> <span class="n">econ_measure</span><span class="p">,</span> <span class="n">survey_measure</span><span class="p">]]</span>
+        <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[</span><span class="n">econ_measure</span><span class="p">]</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[[</span><span class="n">survey_measure</span><span class="p">,</span> <span class="s2">&quot;response&quot;</span><span class="p">]]</span>
+
+    <span class="c1"># Standardize predictors</span>
+    <span class="n">X_std</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    <span class="n">X_std</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X_std</span><span class="p">)</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X_std</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cov_type</span><span class="o">=</span><span class="s2">&quot;HC1&quot;</span><span class="p">)</span>  <span class="c1"># Robust standard errors same as in Tannenbaum</span>
+
+    <span class="n">result_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+                    <span class="p">[</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}{</span><span class="n">stars</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">results</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+                    <span class="p">],</span>
+                    <span class="n">index</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span>
+                <span class="p">),</span>
+                <span class="s2">&quot;se&quot;</span><span class="p">:</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">),</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span> <span class="s2">&quot;se&quot;</span><span class="p">:</span> <span class="nb">object</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">result_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s2">&quot;&lt;i&gt;N&lt;i&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">result_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s2">&quot;&lt;i&gt;R&lt;i&gt;&lt;sup&gt;2&lt;/sup&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">results</span><span class="o">.</span><span class="n">rsquared</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">result_df</span> <span class="o">=</span> <span class="n">result_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">result_df</span><span class="p">[</span><span class="s2">&quot;measure&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">survey_measure</span>
+
+    <span class="k">return</span> <span class="n">result_df</span>
+
+
+<span class="n">model_7_results</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">get_model_results_no_pred</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="s2">&quot;letter_grading&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span>
+<span class="p">]</span>
+<span class="n">model_7</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">model_7_results</span><span class="p">)</span>
+<span class="n">model_7</span> <span class="o">=</span> <span class="n">model_7</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Model 7&quot;</span><span class="p">})</span>
+
+<span class="n">model_8_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_model_results</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="s2">&quot;letter_grading&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span><span class="p">]</span>
+<span class="n">model_8</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">model_8_results</span><span class="p">)</span>
+<span class="n">model_8</span> <span class="o">=</span> <span class="n">model_8</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Model 8&quot;</span><span class="p">})</span>
+
+<span class="n">model_9_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_model_results_no_pred</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="s2">&quot;pisa_score&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span><span class="p">]</span>
+<span class="n">model_9</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">model_9_results</span><span class="p">)</span>
+<span class="n">model_9</span> <span class="o">=</span> <span class="n">model_9</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Model 9&quot;</span><span class="p">})</span>
+
+<span class="n">model_10_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_model_results</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="s2">&quot;pisa_score&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span><span class="p">]</span>
+<span class="n">model_10</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">model_10_results</span><span class="p">)</span>
+<span class="n">model_10</span> <span class="o">=</span> <span class="n">model_10</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Model 10&quot;</span><span class="p">})</span>
+
+<span class="c1"># Combine results and make pretty.</span>
+<span class="n">display_df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">model_7</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">model_8</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;level_0&quot;</span><span class="p">,</span> <span class="s2">&quot;level_1&quot;</span><span class="p">,</span> <span class="s2">&quot;measure&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">model_9</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;level_0&quot;</span><span class="p">,</span> <span class="s2">&quot;level_1&quot;</span><span class="p">,</span> <span class="s2">&quot;measure&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">model_10</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;level_0&quot;</span><span class="p">,</span> <span class="s2">&quot;level_1&quot;</span><span class="p">,</span> <span class="s2">&quot;measure&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="p">)</span>
+
+<span class="n">display_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;level_0&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">display_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;level_0&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+    <span class="n">display_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;level_0&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">display_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;level_0&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(),</span> <span class="s2">&quot;&quot;</span>
+<span class="p">)</span>
+
+<span class="n">display_df</span>
+<span class="p">(</span>
+    <span class="n">GT</span><span class="p">(</span><span class="n">display_df</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">tab_header</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;TABLE 2.—PREDICTIVE VALUE OF WALLET REPORTING RATES&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">tab_stub</span><span class="p">(</span><span class="n">rowname_col</span><span class="o">=</span><span class="s2">&quot;level_0&quot;</span><span class="p">,</span> <span class="n">groupname_col</span><span class="o">=</span><span class="s2">&quot;measure&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">tab_spanner</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Letter grade efficiency&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Model 7&quot;</span><span class="p">,</span> <span class="s2">&quot;Model 8&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">tab_spanner</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;PISA Score&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Model 9&quot;</span><span class="p">,</span> <span class="s2">&quot;Model 10&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">tab_options</span><span class="p">(</span>
+        <span class="n">table_body_hlines_style</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">cols_align</span><span class="p">(</span><span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Model 7&quot;</span><span class="p">,</span> <span class="s2">&quot;Model 8&quot;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="abgaisaplm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>
+#abgaisaplm table {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+#abgaisaplm thead, tbody, tfoot, tr, td, th { border-style: none; }
+ tr { background-color: transparent; }
+#abgaisaplm p { margin: 0; padding: 0; }
+ #abgaisaplm .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
+ #abgaisaplm .gt_caption { padding-top: 4px; padding-bottom: 4px; }
+ #abgaisaplm .gt_title { color: #333333; font-size: 125%; font-weight: initial; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
+ #abgaisaplm .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 3px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
+ #abgaisaplm .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #abgaisaplm .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #abgaisaplm .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #abgaisaplm .gt_col_heading { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
+ #abgaisaplm .gt_column_spanner_outer { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
+ #abgaisaplm .gt_column_spanner_outer:first-child { padding-left: 0; }
+ #abgaisaplm .gt_column_spanner_outer:last-child { padding-right: 0; }
+ #abgaisaplm .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; overflow-x: hidden; display: inline-block; width: 100%; }
+ #abgaisaplm .gt_spanner_row { border-bottom-style: hidden; }
+ #abgaisaplm .gt_group_heading { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; text-align: left; }
+ #abgaisaplm .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: middle; }
+ #abgaisaplm .gt_from_md> :first-child { margin-top: 0; }
+ #abgaisaplm .gt_from_md> :last-child { margin-bottom: 0; }
+ #abgaisaplm .gt_row { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; }
+ #abgaisaplm .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
+ #abgaisaplm .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
+ #abgaisaplm .gt_row_group_first td { border-top-width: 2px; }
+ #abgaisaplm .gt_row_group_first th { border-top-width: 2px; }
+ #abgaisaplm .gt_striped { background-color: rgba(128,128,128,0.05); }
+ #abgaisaplm .gt_table_body { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #abgaisaplm .gt_sourcenotes { color: #333333; background-color: #FFFFFF; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
+ #abgaisaplm .gt_sourcenote { font-size: 90%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
+ #abgaisaplm .gt_left { text-align: left; }
+ #abgaisaplm .gt_center { text-align: center; }
+ #abgaisaplm .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
+ #abgaisaplm .gt_font_normal { font-weight: normal; }
+ #abgaisaplm .gt_font_bold { font-weight: bold; }
+ #abgaisaplm .gt_font_italic { font-style: italic; }
+ #abgaisaplm .gt_super { font-size: 65%; }
+ #abgaisaplm .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
+ #abgaisaplm .gt_asterisk { font-size: 100%; vertical-align: 0; }
+ 
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+
+  <tr class="gt_heading">
+    <td colspan="5" class="gt_heading gt_title gt_font_normal">TABLE 2.—PREDICTIVE VALUE OF WALLET REPORTING RATES</td>
+  </tr>
+<tr class="gt_col_headings gt_spanner_row">
+  <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id=""></th>
+  <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Letter-grade-efficiency">
+    <span class="gt_column_spanner">Letter grade efficiency</span>
+  </th>
+  <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="PISA-Score">
+    <span class="gt_column_spanner">PISA Score</span>
+  </th>
+</tr>
+<tr class="gt_col_headings">
+  <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Model-7">Model 7</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Model-8">Model 8</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Model-9">Model 9</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Model-10">Model 10</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">general_trust</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">general_trust</th>
+    <td class="gt_row gt_center">0.077*</td>
+    <td class="gt_row gt_center">-0.013</td>
+    <td class="gt_row gt_right">26.665***</td>
+    <td class="gt_row gt_right">9.099</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.041)</td>
+    <td class="gt_row gt_center">(0.040)</td>
+    <td class="gt_row gt_right">(4.461)</td>
+    <td class="gt_row gt_right">(6.632)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.148***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">24.956***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.050)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(5.819)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">39</td>
+    <td class="gt_row gt_center">39</td>
+    <td class="gt_row gt_right">32</td>
+    <td class="gt_row gt_right">32</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.078</td>
+    <td class="gt_row gt_center">0.263</td>
+    <td class="gt_row gt_right">0.455</td>
+    <td class="gt_row gt_right">0.656</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">GPS_trust</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">GPS_trust</th>
+    <td class="gt_row gt_center">-0.016</td>
+    <td class="gt_row gt_center">-0.018</td>
+    <td class="gt_row gt_right">3.309</td>
+    <td class="gt_row gt_right">4.477</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.050)</td>
+    <td class="gt_row gt_center">(0.039)</td>
+    <td class="gt_row gt_right">(7.499)</td>
+    <td class="gt_row gt_right">(3.642)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.125***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">31.574***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.041)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.851)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_right">29</td>
+    <td class="gt_row gt_right">29</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.003</td>
+    <td class="gt_row gt_center">0.213</td>
+    <td class="gt_row gt_right">0.007</td>
+    <td class="gt_row gt_right">0.628</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">general_morality</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">general_morality</th>
+    <td class="gt_row gt_center">0.080**</td>
+    <td class="gt_row gt_center">-0.012</td>
+    <td class="gt_row gt_right">25.366***</td>
+    <td class="gt_row gt_right">9.868**</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.036)</td>
+    <td class="gt_row gt_center">(0.047)</td>
+    <td class="gt_row gt_right">(4.857)</td>
+    <td class="gt_row gt_right">(4.125)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.150***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">25.321***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.055)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.718)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">38</td>
+    <td class="gt_row gt_center">38</td>
+    <td class="gt_row gt_right">32</td>
+    <td class="gt_row gt_right">32</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.083</td>
+    <td class="gt_row gt_center">0.268</td>
+    <td class="gt_row gt_right">0.412</td>
+    <td class="gt_row gt_right">0.669</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">MFQ_genmorality</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">MFQ_genmorality</th>
+    <td class="gt_row gt_center">0.118***</td>
+    <td class="gt_row gt_center">0.069*</td>
+    <td class="gt_row gt_right">13.271*</td>
+    <td class="gt_row gt_right">2.465</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.041)</td>
+    <td class="gt_row gt_center">(0.041)</td>
+    <td class="gt_row gt_right">(7.993)</td>
+    <td class="gt_row gt_right">(3.818)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.107***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">31.432***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.032)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.616)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">35</td>
+    <td class="gt_row gt_center">35</td>
+    <td class="gt_row gt_right">31</td>
+    <td class="gt_row gt_right">31</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.219</td>
+    <td class="gt_row gt_center">0.360</td>
+    <td class="gt_row gt_right">0.110</td>
+    <td class="gt_row gt_right">0.656</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">civic_cooperation</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">civic_cooperation</th>
+    <td class="gt_row gt_center">0.089*</td>
+    <td class="gt_row gt_center">0.038</td>
+    <td class="gt_row gt_right">19.470***</td>
+    <td class="gt_row gt_right">2.093</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.045)</td>
+    <td class="gt_row gt_center">(0.059)</td>
+    <td class="gt_row gt_right">(5.560)</td>
+    <td class="gt_row gt_right">(4.312)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.130**</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">30.727***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.054)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(4.505)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">37</td>
+    <td class="gt_row gt_center">37</td>
+    <td class="gt_row gt_right">31</td>
+    <td class="gt_row gt_right">31</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.100</td>
+    <td class="gt_row gt_center">0.283</td>
+    <td class="gt_row gt_right">0.235</td>
+    <td class="gt_row gt_right">0.633</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">GPS_posrecip</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">GPS_posrecip</th>
+    <td class="gt_row gt_center">0.009</td>
+    <td class="gt_row gt_center">0.003</td>
+    <td class="gt_row gt_right">3.255</td>
+    <td class="gt_row gt_right">1.411</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.040)</td>
+    <td class="gt_row gt_center">(0.044)</td>
+    <td class="gt_row gt_right">(7.924)</td>
+    <td class="gt_row gt_right">(4.321)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.125***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">31.325***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.042)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.888)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_right">29</td>
+    <td class="gt_row gt_right">29</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.001</td>
+    <td class="gt_row gt_center">0.209</td>
+    <td class="gt_row gt_right">0.007</td>
+    <td class="gt_row gt_right">0.617</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">GPS_altruism</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">GPS_altruism</th>
+    <td class="gt_row gt_center">-0.033</td>
+    <td class="gt_row gt_center">-0.006</td>
+    <td class="gt_row gt_right">0.699</td>
+    <td class="gt_row gt_right">3.908</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.037)</td>
+    <td class="gt_row gt_center">(0.037)</td>
+    <td class="gt_row gt_right">(8.108)</td>
+    <td class="gt_row gt_right">(5.177)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.124***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">31.803***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.040)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.547)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_right">29</td>
+    <td class="gt_row gt_right">29</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.015</td>
+    <td class="gt_row gt_center">0.209</td>
+    <td class="gt_row gt_right">0.000</td>
+    <td class="gt_row gt_right">0.625</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">stranger1</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">stranger1</th>
+    <td class="gt_row gt_center">0.091**</td>
+    <td class="gt_row gt_center">0.001</td>
+    <td class="gt_row gt_right">28.408***</td>
+    <td class="gt_row gt_right">12.071***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.036)</td>
+    <td class="gt_row gt_center">(0.062)</td>
+    <td class="gt_row gt_right">(4.186)</td>
+    <td class="gt_row gt_right">(4.536)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.140**</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">23.480***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.061)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(4.237)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">39</td>
+    <td class="gt_row gt_center">39</td>
+    <td class="gt_row gt_right">32</td>
+    <td class="gt_row gt_right">32</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.110</td>
+    <td class="gt_row gt_center">0.263</td>
+    <td class="gt_row gt_right">0.508</td>
+    <td class="gt_row gt_right">0.687</td>
+  </tr>
+</tbody>
+
+
+</table>
+
+</div>
+        </div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-results">Regression Results</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Sherrill
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

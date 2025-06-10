@@ -1,0 +1,1399 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tannenbaum Paper &#8212; Education Dataset vs Civic Honesty</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pisa_survey';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Machine Learning Stuff" href="pisa_ml.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="introduction.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Education Dataset vs Civic Honesty - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Education Dataset vs Civic Honesty - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tannenbaum Paper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pisa_ml.html">Machine Learning Stuff</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/joncheryl/pisa_wallet" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/joncheryl/pisa_wallet/issues/new?title=Issue%20on%20page%20%2Fpisa_survey.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/pisa_survey.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tannenbaum Paper</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pisa-vs-survey-data">PISA vs. Survey Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pisa-as-a-predictor-of-economic-and-institutional-performance">PISA as a Predictor of Economic and Institutional Performance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-results">Regression Results</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tannenbaum-paper">
+<h1>Tannenbaum Paper<a class="headerlink" href="#tannenbaum-paper" title="Link to this heading">#</a></h1>
+<section id="pisa-vs-survey-data">
+<h2>PISA vs. Survey Data<a class="headerlink" href="#pisa-vs-survey-data" title="Link to this heading">#</a></h2>
+<p>The Tannenbaum paper aimed to validate survey measures of social capital using their correlation with wallet report rates. Since PISA education scores are not explicit and direct measurements of social capital, it’s not clear that they could also be seen as validating the survey measures referenced in the paper. However, as can be seen below, the correlations are surprisingly consistent between wallet reporting rates/PISA scores and survey measures. This suggests that they not only contain the same <em>amount</em> of information about social capital but also the same <em>type</em> of information about social capital.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+
+<span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;plotly_white&quot;</span>
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;sphinx_gallery&quot;</span>
+
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="c1"># Data import</span>
+<span class="n">survey_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;general_trust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_trust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;general_morality&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MFQ_genmorality&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;civic_cooperation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_posrecip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_altruism&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;stranger1&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">cat_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;country&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;response&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;male&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;above40&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;computer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;coworkers&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;other_bystanders&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;institution&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cond&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;security_cam&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;security_guard&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;local_recipient&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;no_english&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;understood_situation&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">sc_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;log_gdp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;log_tfp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gee&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;letter_grading&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Import Tannenbaum data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">&quot;../data/tannenbaum_data.csv&quot;</span><span class="p">,</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="s2">&quot;category&quot;</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cat_cols</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="c1"># Import PISA data</span>
+<span class="n">pisa</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/pisa_data.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;mean_score&quot;</span><span class="p">:</span> <span class="s2">&quot;pisa_score&quot;</span><span class="p">})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pisa</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;country&quot;</span><span class="p">)</span>
+
+<span class="c1"># Columns we want to see correlations for.</span>
+<span class="n">cols_for_country_avg_corr</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">,</span> <span class="s2">&quot;pisa_score&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">survey_cols</span>
+
+<span class="n">df_corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">})</span>
+
+<span class="c1"># Calculate country averages for these measures</span>
+<span class="n">country_avg_data</span> <span class="o">=</span> <span class="n">df_corr</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">)[</span><span class="n">cols_for_country_avg_corr</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Compute the correlation matrix</span>
+<span class="n">comprehensive_corr_matrix</span> <span class="o">=</span> <span class="n">country_avg_data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="c1"># Show correlations of interest</span>
+<span class="n">comprehensive_corr_matrix</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">(</span>
+    <span class="p">[[</span><span class="s2">&quot;Correlation (r)&quot;</span><span class="p">],</span> <span class="n">comprehensive_corr_matrix</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">comprehensive_corr_matrix</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="8" halign="left">Correlation (r)</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>general_trust</th>
+      <th>GPS_trust</th>
+      <th>general_morality</th>
+      <th>MFQ_genmorality</th>
+      <th>civic_cooperation</th>
+      <th>GPS_posrecip</th>
+      <th>GPS_altruism</th>
+      <th>stranger1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>response</th>
+      <td>0.603736</td>
+      <td>0.023510</td>
+      <td>0.612047</td>
+      <td>0.461323</td>
+      <td>0.391755</td>
+      <td>0.050279</td>
+      <td>-0.214705</td>
+      <td>0.645001</td>
+    </tr>
+    <tr>
+      <th>pisa_score</th>
+      <td>0.633428</td>
+      <td>0.122152</td>
+      <td>0.659558</td>
+      <td>0.364130</td>
+      <td>0.395210</td>
+      <td>-0.156832</td>
+      <td>-0.159437</td>
+      <td>0.665572</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reshape dataframe for graphing ease.</span>
+<span class="n">df_reshaped</span> <span class="o">=</span> <span class="n">country_avg_data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span>
+    <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">,</span> <span class="s2">&quot;response&quot;</span><span class="p">,</span> <span class="s2">&quot;pisa_score&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c1"># Calculate sample size for each survey measure and wallet report rates </span>
+<span class="n">ens_wallet</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">col</span><span class="p">:</span> <span class="n">country_avg_data</span><span class="p">[[</span><span class="s2">&quot;response&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span>
+    <span class="p">},</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># Wallet report rate vs survey measure facet plot.</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">df_reshaped</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;response&quot;</span><span class="p">,</span>
+    <span class="n">facet_col</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span>
+    <span class="n">facet_col_wrap</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">trendline</span><span class="o">=</span><span class="s2">&quot;ols&quot;</span><span class="p">,</span>
+    <span class="n">facet_col_spacing</span><span class="o">=</span><span class="mf">0.06</span><span class="p">,</span>
+    <span class="n">facet_row_spacing</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">showline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s2">&quot;darkgray&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">showline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s2">&quot;darkgray&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">for_each_annotation</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">a</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">+</span> <span class="s2">&quot; (N=&quot;</span>
+        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ens_wallet</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+        <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>                <div id="35c53c58-f103-40d7-9579-cf58eb1c6d1e" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("35c53c58-f103-40d7-9579-cf58eb1c6d1e")) {                    Plotly.newPlot(                        "35c53c58-f103-40d7-9579-cf58eb1c6d1e",                        [{"hovertemplate":"variable=general_trust\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"hQ0CCDxS4r+z6Elssl\u002fwPwwDOJJJi\u002fW\u002fKM36yNys7D\u002fy93CJgOLlv6gSZr3qUPo\u002fxQYmcfn84b9pYr35CEfLv36KMmW50wFAgyolpm\u002fp1b9jW3SZ6OraP\u002fD9kcoBW\u002fW\u002fHHVXpEHc5r8gYpl7H9O0v0sdvkMp3ti\u002fBEKZ9PcV2b+PgJcn8UiYP38VCEZxi7g\u002fGDBf\u002fvQ1878eIDtesjbwv\u002fJi34w+bOS\u002fl5TZ8ULZ6b9K+xNqmCb5P2RwH+3UIvU\u002fzBhH7B2IAUB9qoLFu+n0v410cUL4G9a\u002fWLCz9Urg57+xNC00DMPsv2lCl3stUce\u002fgh8avODo5b+k9P6A43Tgv2Xr5uVI7L4\u002faEQbrjZY\u002fz\u002fhbbd3RSH0PzTFj3QfKNI\u002fE++QSMe58L8AAAAAAAD4f6bfCgoVido\u002fAPPCgSH84T8="},"xaxis":"x5","y":{"dtype":"f8","bdata":"AAAAAADAR0A3JdqUaFNOQNTqTqs7rURAAAAAAACAS0DkOI7jOA5CQAAAAAAAgCxAq6qqqqqqTUAAAAAAAIBRQAAAAAAAwFJAnxertBX+S0AAAAAAAABOQK2ixkiBuzNAAAAAAACgRkAAAAAAAIBAQAAAAAAAADlAVVVVVVVVR0AAAAAAAOBEQAAAAAAAgDFAMTYLqj0nMUAAAAAAAEAzQAAAAAAAADVATivunWSpMUAAAAAAANBRQAAAAAAAsFFAq6qqqqqqUkAAAAAAAIArQAAAAAAA8FBAAAAAAABARUAAAAAAAGBLQHDyN\u002fmb\u002fEpAVVVVVVVVS0Ct7rS60+pAQAAAAAAAAEtAAAAAAACQUkDEwQ4HOxxTQAAAAAAAAEBAAAAAAADAPkAAAAAAAIA5QCIuN3kOUExAZmZmZmZmSkA="},"yaxis":"y5","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003eresponse = 11.7451 * value + 45.9976\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.364497\u003cbr\u003e\u003cbr\u003evariable=general_trust\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"DAM4kkmL9b\u002fw\u002fZHKAVv1v32qgsW76fS\u002fGDBf\u002fvQ1878T75BIx7nwvx4gO16yNvC\u002fsTQtNAzD7L+XlNnxQtnpv1iws\u002fVK4Oe\u002fHHVXpEHc5r+CHxq84Ojlv\u002fL3cImA4uW\u002f8mLfjD5s5L+FDQIIPFLiv8UGJnH5\u002fOG\u002fpPT+gON04L8EQpn09xXZv0sdvkMp3ti\u002fjXRxQvgb1r+DKiWmb+nVv2livfkIR8u\u002faUKXey1Rx78gYpl7H9O0v4+AlyfxSJg\u002ffxUIRnGLuD9l6+blSOy+PzTFj3QfKNI\u002fpt8KChWJ2j9jW3SZ6OraPwDzwoEh\u002fOE\u002fKM36yNys7D+z6Elssl\u002fwP+Ftt3dFIfQ\u002fZHAf7dQi9T9K+xNqmCb5P6gSZr3qUPo\u002faEQbrjZY\u002fz\u002fMGEfsHYgBQH6KMmW50wFA"},"xaxis":"x5","y":{"dtype":"f8","bdata":"nbbfKcwuPkA6MSgRPVI+QJl6lYxjpT5AecKCI0flP0A1\u002fKVAI9xAQDRdrMI\u002fDEFAiV61gHO4QUCMSGW9UEFCQB7xaU78nUJAv7sS47TNQkBIq4\u002fgXvpCQOyIqWmK+0JA7inlJDlAQ0D21yT+9KJDQNAQP4maskNAi4gp1I76Q0AwdumRbLJEQGwZOX6Lt0RAxMqUBlj4REBeg1IR+\u002fxEQKnPe0NRv0VAot9vFtXtRUDAq8hIZoVGQEpQP8lYI0dAs\u002f4BN9WPR0DYA\u002f8iSrVHQIzqFIYyqkhAAq3k6ANvSUCvVofd\u002fXdJQOWGh86gTEpAgboeM91CTEDXi9KcLwJNQGffa6odY05Amjf8LabBTkCX\u002fVq0bx1QQBdJBe8uVFBAujbmemxAUUBNcaWlIu9RQAyeW8DiClJA"},"yaxis":"y5","type":"scatter"},{"hovertemplate":"variable=GPS_trust\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"glTbSY5q67+p0ajwEJTyP1oHM3YIy6W\u002fhEXBQNlM7j9g62qM1UnXv6QYaD5hZAFAs3B4upTO2D+HjLnTc0j9vwAAAAAAAPh\u002fGxmtGiAm5r81aRzG5TDgv+Uy3eOoTeq\u002fO0LujHXz9r8MMuCHmRDrv7PEW6DiUfA\u002fjFSsV3B7z7+++tmnbB\u002fVv7OKJI+BguI\u002fSArI8pZ4+78AAAAAAAD4f9xiKstwTve\u002f+QW7NA0a2b\u002fkGKfGGYXyPwAAAAAAAPh\u002fAAAAAAAA+H\u002fStAiByMnav98eO\u002fafy+O\u002fgVeor7AN0z\u002flpaEWtbvsv5ceAeRdReS\u002fQVJu+5h55b9Kz1CUDVXmv9Nm2yuFwu0\u002fuzMpTCMW8z\u002frXnGXI4LUP8QxwjKRvPU\u002fFI3zaDrv3j+GzxYr393\u002fP6tEVTs88+w\u002fk80w\u002fXUu4j8="},"xaxis":"x6","y":{"dtype":"f8","bdata":"AAAAAADAR0A3JdqUaFNOQNTqTqs7rURAAAAAAACAS0DkOI7jOA5CQAAAAAAAgCxAq6qqqqqqTUAAAAAAAIBRQAAAAAAAwFJAnxertBX+S0AAAAAAAABOQK2ixkiBuzNAAAAAAACgRkAAAAAAAIBAQAAAAAAAADlAVVVVVVVVR0AAAAAAAOBEQAAAAAAAgDFAMTYLqj0nMUAAAAAAAEAzQAAAAAAAADVATivunWSpMUAAAAAAANBRQAAAAAAAsFFAq6qqqqqqUkAAAAAAAIArQAAAAAAA8FBAAAAAAABARUAAAAAAAGBLQHDyN\u002fmb\u002fEpAVVVVVVVVS0Ct7rS60+pAQAAAAAAAAEtAAAAAAACQUkDEwQ4HOxxTQAAAAAAAAEBAAAAAAADAPkAAAAAAAIA5QCIuN3kOUExAZmZmZmZmSkA="},"yaxis":"y6","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003eresponse = 0.42973 * value + 43.8817\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.000553\u003cbr\u003e\u003cbr\u003evariable=GPS_trust\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"h4y503NI\u002fb9ICsjylnj7v9xiKstwTve\u002fO0LujHXz9r\u002flpaEWtbvsv4JU20mOauu\u002fDDLgh5kQ67\u002flMt3jqE3qv0rPUJQNVea\u002fGxmtGiAm5r9BUm77mHnlv5ceAeRdReS\u002f3x479p\u002fL4781aRzG5TDgv9K0CIHIydq\u002f+QW7NA0a2b9g62qM1UnXv7762adsH9W\u002fjFSsV3B7z79aBzN2CMulv4FXqK+wDdM\u002f615xlyOC1D+zcHi6lM7YPxSN82g6794\u002fk80w\u002fXUu4j+ziiSPgYLiP6tEVTs88+w\u002f02bbK4XC7T+ERcFA2UzuP7PEW6DiUfA\u002f5BinxhmF8j+p0ajwEJTyP7szKUwjFvM\u002fxDHCMpG89T+GzxYr393\u002fP6QYaD5hZAFA"},"xaxis":"x6","y":{"dtype":"f8","bdata":"UuVGwS6MRUAha8ZwaZJFQHhQZLC6oEVAJCPud\u002fOhRUAkBVl7dr9FQMOMpwS6wUVAp4Q7pVTCRUCVW0m7o8NFQNP9TjJ3ykVAlfuA3MfKRUCN1zls8MtFQKakJz8CzkVAbLjfgtPORUDhOOWaBdVFQIrojlzU2UVA57bgakfbRUB+5cVk1txFQJlz7+Ky3kVADK7o91LjRUBHFgX7gu5FQBX0I4c6AUZAK1f2oXoCRkDuNAxrLAZGQGKWcJtwC0ZAasIq\u002fhoQRkBakLJ1qxBGQOZSb6qdIkZAU7TJ+AEkRkCTJU2\u002f7yRGQBV05T71KEZARRxRfYUwRkBfwj3wuDBGQPEIoBp4MkZA\u002fZw+b5Q7RkBrjCrMZ15GQPE7WXpvaEZA"},"yaxis":"y6","type":"scatter"},{"hovertemplate":"variable=general_morality\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"R54u+K\u002ff2L9m0JdCM7f1Py865HS9\u002fuW\u002fHZpK\u002fEuP4D+vldNaIXrWP3aD8j4RoPS\u002fuDHytx4aob+djkJcJmXuv6jGCoFmkfU\u002fwMFqfA0l8z+nt2nOFhXjPx5Da90BkLu\u002fA8JyX6EJAMDYLoL+QobLv34Uwh5X4\u002fu\u002fTuzOfI7N9D+CDC8UFvfcv9ImU7VB7vO\u002fAAAAAAAA+H9PSvtFw\u002f7RP17UIRE1beC\u002f2YXRN46O5r96q+JmY4L3Pzp6P7xmz\u002fM\u002fbA0bXkg+0T84IxRIJZHWvz5Ua+VqZvA\u002fOXp3uZOt078x6Xtq08jvv7lhtaT3POO\u002f9eW4Bg9g8b+kNS855ZbivybBikK3FMg\u002fPl2YfXR4AEAlojkfl7X5P8f929\u002ficfS\u002fTBlBSWR31L8AAAAAAAD4fz9SojH9pfA\u002f5EMZCoowhD8="},"xaxis":"x7","y":{"dtype":"f8","bdata":"AAAAAADAR0A3JdqUaFNOQNTqTqs7rURAAAAAAACAS0DkOI7jOA5CQAAAAAAAgCxAq6qqqqqqTUAAAAAAAIBRQAAAAAAAwFJAnxertBX+S0AAAAAAAABOQK2ixkiBuzNAAAAAAACgRkAAAAAAAIBAQAAAAAAAADlAVVVVVVVVR0AAAAAAAOBEQAAAAAAAgDFAMTYLqj0nMUAAAAAAAEAzQAAAAAAAADVATivunWSpMUAAAAAAANBRQAAAAAAAsFFAq6qqqqqqUkAAAAAAAIArQAAAAAAA8FBAAAAAAABARUAAAAAAAGBLQHDyN\u002fmb\u002fEpAVVVVVVVVS0Ct7rS60+pAQAAAAAAAAEtAAAAAAACQUkDEwQ4HOxxTQAAAAAAAAEBAAAAAAADAPkAAAAAAAIA5QCIuN3kOUExAZmZmZmZmSkA="},"yaxis":"y7","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003eresponse = 11.7083 * value + 46.7567\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.374601\u003cbr\u003e\u003cbr\u003evariable=general_morality\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"A8JyX6EJAMB+FMIeV+P7v3aD8j4RoPS\u002fx\u002f3b3+Jx9L\u002fSJlO1Qe7zv\u002fXluAYPYPG\u002fMel7atPI77+djkJcJmXuv9mF0TeOjua\u002fLzrkdL3+5b+5YbWk9zzjv6Q1LznlluK\u002fXtQhETVt4L+CDC8UFvfcv0eeLviv39i\u002fOCMUSCWR1r9MGUFJZHfUvzl6d7mTrdO\u002f2C6C\u002fkKGy78eQ2vdAZC7v7gx8rceGqG\u002f5EMZCoowhD8mwYpCtxTIP2wNG15IPtE\u002fT0r7RcP+0T+vldNaIXrWPx2aSvxLj+A\u002fp7dpzhYV4z8+VGvlambwPz9SojH9pfA\u002fwMFqfA0l8z86ej+8Zs\u002fzP07sznyOzfQ\u002fqMYKgWaR9T9m0JdCM7f1P3qr4mZjgvc\u002fJaI5H5e1+T8+XZh9dHgAQA=="},"xaxis":"x7","y":{"dtype":"f8","bdata":"OIokn\u002fdIN0DIwi5OXVk6QN0e+dHrqT9AOycPDrfLP0AgEqDIBBZAQKwCBhphBUFA\u002ftLyH0mQQUAJPFWOWtFBQBK5qLVxQENAfNL2CsFaQ0BQAwec3ttDQA5LsUhA+kNA3TiNP4tfREDzNy5vlrpEQExVGe9kGkVAvAj+ZmlQRUCCYGvCmYFFQDeCx5EPlEVAPIx5uJYeRkAqt76Bf79GQBVmh1LLLkdA2wDMkaBvR0BHB+qtzHpIQCaRbM2h9EhA1eY2Bz0GSUCASppzMG9JQPc1ABFmaEpA3Wk8j4reSkBcw+S5\u002fGBNQEyFfjs\u002feE1A43MK+RFiTkDipwHnZaBOQN\u002f5VLFj\u002fU5AImWSqQtFT0CAE7c74FJPQFXpaLDi+k9A3uE04HlkUECArSIIKbdRQA=="},"yaxis":"y7","type":"scatter"},{"hovertemplate":"variable=MFQ_genmorality\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"tjKCoegi4D\u002fLlz7fsT7cP1zHBizlneU\u002fDfhm\u002fFOw0L\u002fim5uSaPmuP4Cd5KQm1wHAWeZX9SEX8j+YbjCxhS\u002fUv8FCS0QrrtQ\u002fKpobj3oG6T+jBH0QWsjyPwAAAAAAAPh\u002fa7ygTjWp5z\u002fXlALRNqHUv+hY4YYesPm\u002faZeuED818b8JSw+DmibsPwAAAAAAAPh\u002fvfyxmVhu9r86CtE4Cu\u002ffv+kVvTr5euI\u002fAAAAAAAA+H\u002f2V4kUmLDoP1H5qc21R9s\u002fLJsTM2oRcj9QaS0TPOMEwEXTo1wSwuE\u002fQuAWEk9i2z82amu2n8vBP\u002fB\u002fJH+8tuO\u002fAAAAAAAA+H8DyhWIRuPeP+WJR68hZ+c\u002fuNsKgOE\u002fsL+OSdSIc0S7P5uTzhQhefm\u002fN7+wAJFi\u002fz8AAAAAAAD4fwLaYh09kOw\u002fJc9SnzwZ878="},"xaxis":"x8","y":{"dtype":"f8","bdata":"AAAAAADAR0A3JdqUaFNOQNTqTqs7rURAAAAAAACAS0DkOI7jOA5CQAAAAAAAgCxAq6qqqqqqTUAAAAAAAIBRQAAAAAAAwFJAnxertBX+S0AAAAAAAABOQK2ixkiBuzNAAAAAAACgRkAAAAAAAIBAQAAAAAAAADlAVVVVVVVVR0AAAAAAAOBEQAAAAAAAgDFAMTYLqj0nMUAAAAAAAEAzQAAAAAAAADVATivunWSpMUAAAAAAANBRQAAAAAAAsFFAq6qqqqqqUkAAAAAAAIArQAAAAAAA8FBAAAAAAABARUAAAAAAAGBLQHDyN\u002fmb\u002fEpAVVVVVVVVS0Ct7rS60+pAQAAAAAAAAEtAAAAAAACQUkDEwQ4HOxxTQAAAAAAAAEBAAAAAAADAPkAAAAAAAIA5QCIuN3kOUExAZmZmZmZmSkA="},"yaxis":"y8","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003eresponse = 8.62053 * value + 48.1242\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.212819\u003cbr\u003e\u003cbr\u003evariable=MFQ_genmorality\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"UGktEzzjBMCAneSkJtcBwOhY4YYesPm\u002fm5POFCF5+b+9\u002fLGZWG72vyXPUp88GfO\u002faZeuED818b\u002fwfyR\u002fvLbjvzoK0TgK79+\u002f15QC0Tah1L+YbjCxhS\u002fUvw34ZvxTsNC\u002fuNsKgOE\u002fsL8smxMzahFyP+Kbm5Jo+a4\u002fjknUiHNEuz82amu2n8vBP8FCS0QrrtQ\u002fUfmpzbVH2z9C4BYST2LbP8uXPt+xPtw\u002fA8oViEbj3j+2MoKh6CLgP0XTo1wSwuE\u002f6RW9Ovl64j9cxwYs5Z3lP+WJR68hZ+c\u002fa7ygTjWp5z\u002f2V4kUmLDoPyqaG496Buk\u002fCUsPg5om7D8C2mIdPZDsP1nmV\u002fUhF\u002fI\u002fowR9EFrI8j83v7AAkWL\u002fPw=="},"xaxis":"x8","y":{"dtype":"f8","bdata":"+Npx68mdOUCHJUlbYeY8QJNNS7tXJEFAVlc\u002fEygzQUDJlJQ99ARCQIisRUDG6kJAyWOfRShtQ0DMFBeFHmhFQG3e8lFS6UVAzKm47DasRkAeqrcX37NGQCGgzy4p8EZAojXCb9rJR0Bv5mOqwhRIQGuvm4mlUkhARKWPM2yFSECRDcF+TKlIQPkc+KpxdElAFRMHIzvmSUCFk\u002fe5BehJQDbJhWnd9klAxx1FYG4kSkDlMVQNTzxKQJ9JSL86dEpAqaY4jSKNSkCRqz37SPlKQO+Bb3TfNktABX266sU\u002fS0CT8OMDQGNLQNKx\u002fX\u002fRbktA32cufZfaS0C7xxYD0uhLQBArIwl770xAtqXa0DgfTUATAEIVK0JQQA=="},"yaxis":"y8","type":"scatter"},{"hovertemplate":"variable=civic_cooperation\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"piV097a2y78Qj3wALWvvP4OnfU292+W\u002fbE9qqjnQ0T+v7jhks2j3v6uvZ4dRxcI\u002fifGRzAmq579JF8mHHoX3v8wFC\u002ffVj\u002fY\u002fhgJssiH57b9wRvJVjcHoPxeVDNFfet0\u002faGrSehDy5T8xI9ERdu\u002fhP0IHX6uU1b6\u002fAAAAAAAA+H9HTpCc3ATvP2IqPVd53Pa\u002fAAAAAAAA+H8PJ87BhNz\u002fv2WjHkMkhQPA7NC+tSFg8T9yp3h6AzfxP25iCdCy9ew\u002fFXr1zKgE8D+cwHVUtkbwv3rGp9My8Ns\u002fh6dlZJVA5j8G37PPnTbmP5WctQzoIva\u002fd3nTK2lO679sShRh0\u002f\u002flv903iQPEEcM\u002fpfPvw9S32j\u002fkvJKoRfroP+a8JBTmOOS\u002fXLvnHDXJ9D8AAAAAAAD4fz5pHAftW+k\u002fDJmKr7ap3T8="},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAADAR0A3JdqUaFNOQNTqTqs7rURAAAAAAACAS0DkOI7jOA5CQAAAAAAAgCxAq6qqqqqqTUAAAAAAAIBRQAAAAAAAwFJAnxertBX+S0AAAAAAAABOQK2ixkiBuzNAAAAAAACgRkAAAAAAAIBAQAAAAAAAADlAVVVVVVVVR0AAAAAAAOBEQAAAAAAAgDFAMTYLqj0nMUAAAAAAAEAzQAAAAAAAADVATivunWSpMUAAAAAAANBRQAAAAAAAsFFAq6qqqqqqUkAAAAAAAIArQAAAAAAA8FBAAAAAAABARUAAAAAAAGBLQHDyN\u002fmb\u002fEpAVVVVVVVVS0Ct7rS60+pAQAAAAAAAAEtAAAAAAACQUkDEwQ4HOxxTQAAAAAAAAEBAAAAAAADAPkAAAAAAAIA5QCIuN3kOUExAZmZmZmZmSkA="},"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003eresponse = 7.59476 * value + 46.7591\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.153472\u003cbr\u003e\u003cbr\u003evariable=civic_cooperation\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"ZaMeQySFA8APJ87BhNz\u002fv0kXyYcehfe\u002fr+44ZLNo979iKj1Xedz2v5WctQzoIva\u002fnMB1VLZG8L+GAmyyIfntv3d50ytpTuu\u002fifGRzAmq579sShRh0\u002f\u002flv4OnfU292+W\u002f5rwkFOY45L+mJXT3trbLv0IHX6uU1b6\u002fq69nh1HFwj\u002fdN4kDxBHDP2xPaqo50NE\u002fpfPvw9S32j96xqfTMvDbPxeVDNFfet0\u002fDJmKr7ap3T8xI9ERdu\u002fhP2hq0noQ8uU\u002fBt+zz5025j+Hp2VklUDmP3BG8lWNweg\u002f5LySqEX66D8+aRwH7VvpP25iCdCy9ew\u002fR06QnNwE7z8Qj3wALWvvPxV69cyoBPA\u002fcqd4egM38T\u002fs0L61IWDxP1y75xw1yfQ\u002fzAUL99WP9j8="},"xaxis":"x","y":{"dtype":"f8","bdata":"ZN9WjlE6PEDQc5idp6I\u002fQHjAaIoizEFAzH\u002fHMeHSQUAhaOkZKfRBQB\u002fLhdMzIEJAFXu3uUCEQ0DSTW3Im9JDQMbqQy6gI0RAGLHPwUSSREAnrtqu2MREQBBwr\u002fIgyURAqeaK7NT6REA8dGZ1r45GQJWe1S4T7EZAkTtuVbnvR0CbMIju\u002ffFHQOqE5be9b0hAd1FA1P\u002f2SEAgHQ+KiAlJQF\u002fE0uDrIElAzN6V8LojSUA1pMpABoJJQFMh6HbZ+0lA\u002fgKhAvwDSkDF9S\u002fNKgVKQCD3O846UUpAnB2Z5\u002fVXSkBNDEOIjGNKQInsphfv0EpArB+PzX0PS0CzWQwBohtLQLO9BjxmLktAq0lJuRt3S0BSl8H63YBLQJB8SGAUUExAUBnNtvq7TEA="},"yaxis":"y","type":"scatter"},{"hovertemplate":"variable=GPS_posrecip\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"xj0L969t4D\u002fDWynqN4jOP3lp7ZyNkvE\u002fvQV5FxYO5D\u002forbg\u002f+R26P8qyxN+b1Pc\u002f2uFeLg1B4z8a4QHho6zsvwAAAAAAAPh\u002fQplxMUZB1r+wR1Zn7efLv1WFrVDevOS\u002fI0vEk9SZu7\u002f4lPzK78H1v5DNjY6uB94\u002fXhQ+o5iWcr+ef\u002fJwZxDiP2T48KBA4+4\u002fE8gDpcdK7r8AAAAAAAD4f6bnsQfIJQnArQevkqBv+z\u002fxQvLXiFjbvwAAAAAAAPh\u002fAAAAAAAA+H\u002fz4L6IZqDOvxMA6CypYt6\u002ffDaApDMK4z9qm\u002fOjnE\u002fVv5IMGL5PmdC\u002fSEAddXzN8j\u002fZ\u002fs4qYSsEwM70vaD4sO8\u002fHE+zTgkSrr8QR6X5XxzaP16VTUWtj+4\u002fjVikHL889b\u002fZ2caa\u002f+nPP2n2+DTzWLe\u002fMTXXR4S55D8="},"xaxis":"x2","y":{"dtype":"f8","bdata":"AAAAAADAR0A3JdqUaFNOQNTqTqs7rURAAAAAAACAS0DkOI7jOA5CQAAAAAAAgCxAq6qqqqqqTUAAAAAAAIBRQAAAAAAAwFJAnxertBX+S0AAAAAAAABOQK2ixkiBuzNAAAAAAACgRkAAAAAAAIBAQAAAAAAAADlAVVVVVVVVR0AAAAAAAOBEQAAAAAAAgDFAMTYLqj0nMUAAAAAAAEAzQAAAAAAAADVATivunWSpMUAAAAAAANBRQAAAAAAAsFFAq6qqqqqqUkAAAAAAAIArQAAAAAAA8FBAAAAAAABARUAAAAAAAGBLQHDyN\u002fmb\u002fEpAVVVVVVVVS0Ct7rS60+pAQAAAAAAAAEtAAAAAAACQUkDEwQ4HOxxTQAAAAAAAAEBAAAAAAADAPkAAAAAAAIA5QCIuN3kOUExAZmZmZmZmSkA="},"yaxis":"y2","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003eresponse = 0.919031 * value + 43.8817\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.002528\u003cbr\u003e\u003cbr\u003evariable=GPS_posrecip\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"puexB8glCcDZ\u002fs4qYSsEwPiU\u002fMrvwfW\u002fjVikHL889b8TyAOlx0ruvxrhAeGjrOy\u002fVYWtUN685L8TAOgsqWLev\u002fFC8teIWNu\u002fQplxMUZB1r9qm\u002fOjnE\u002fVv5IMGL5PmdC\u002f8+C+iGagzr+wR1Zn7efLvyNLxJPUmbu\u002fafb4NPNYt78cT7NOCRKuv14UPqOYlnK\u002f6K24P\u002fkduj\u002fDWynqN4jOP9nZxpr\u002f6c8\u002fEEel+V8c2j+QzY2OrgfeP8Y9C\u002fevbeA\u002fnn\u002fycGcQ4j98NoCkMwrjP9rhXi4NQeM\u002fvQV5FxYO5D8xNddHhLnkP16VTUWtj+4\u002fZPjwoEDj7j\u002fO9L2g+LDvP3lp7ZyNkvE\u002fSEAddXzN8j\u002fKssTfm9T3P60Hr5Kgb\u002fs\u002f"},"xaxis":"x2","y":{"dtype":"f8","bdata":"v1y+CBJ\u002fREDY6a93RchEQKqH3sziUEVAVtAVDLZURUCt9GXSfoFFQLCEJEBxh0VA1YRSS56kRUA7Le2wALlFQGIQbu+WvkVABOKBaPLHRUCEETaZrslFQNQpYNpX0kVAagigx7TURUD6lTDcNNdFQB+j4X0r5EVAwxVb2R\u002fmRUDWw6Oq8elFQHqgLK9R8EVACfVnqNr8RUCzCRqy6QxGQH53mtQuDkZAwE21pNggRkAij5PIDChGQKILxPk+LUZAT9vcOkIzRkCAEViE2DZGQHXaxSaiN0ZAQJd84pM6RkAmtYgVCj1GQIEdyiYzYUZA7yPEYmZiRkB9piCiWmVGQC4wwNIMckZAGz7OSRh7RkDxw0OID6BGQC9xhMqRukZA"},"yaxis":"y2","type":"scatter"},{"hovertemplate":"variable=GPS_altruism\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"0nefphXc0T+1uBh2jeDlP\u002ftluyzWkfo\u002fbRVT0Cld7T+KrB3uQizCv4Eml\u002fnQnfw\u002fBrhFWXI4oL+JfQVyBTkGwAAAAAAAAPh\u002fR8xfVpIF179e3n6Z2A+gP25JPYfSZeE\u002fyaMt83Cj1r8PZ0jE9ejkv5C366tjk+A\u002feKXvgL\u002fZ6r8FrhysEZT0PyGYr2doqec\u002fIT8dOpbn6b8AAAAAAAD4f9IBcRHTBQPAomp\u002fQ9Bb\u002fz+rfAVztCDavwAAAAAAAPh\u002fAAAAAAAA+H8BeOTPVg3Nv6DjZlZ+R++\u002faq53635L1j\u002fkOejx4Abiv\u002fIZpu0\u002f65q\u002fzlYB76rY6b8SVj3vLFLqvz80+APlm8u\u002f8zt+SNZu1b8Plx2IDn3fP96VwcM8WtG\u002fT1I5hfgO5r\u002f6qWSuxsLlP3pNVQ9AFdI\u002fXkx+zLKj9z8="},"xaxis":"x3","y":{"dtype":"f8","bdata":"AAAAAADAR0A3JdqUaFNOQNTqTqs7rURAAAAAAACAS0DkOI7jOA5CQAAAAAAAgCxAq6qqqqqqTUAAAAAAAIBRQAAAAAAAwFJAnxertBX+S0AAAAAAAABOQK2ixkiBuzNAAAAAAACgRkAAAAAAAIBAQAAAAAAAADlAVVVVVVVVR0AAAAAAAOBEQAAAAAAAgDFAMTYLqj0nMUAAAAAAAEAzQAAAAAAAADVATivunWSpMUAAAAAAANBRQAAAAAAAsFFAq6qqqqqqUkAAAAAAAIArQAAAAAAA8FBAAAAAAABARUAAAAAAAGBLQHDyN\u002fmb\u002fEpAVVVVVVVVS0Ct7rS60+pAQAAAAAAAAEtAAAAAAACQUkDEwQ4HOxxTQAAAAAAAAEBAAAAAAADAPkAAAAAAAIA5QCIuN3kOUExAZmZmZmZmSkA="},"yaxis":"y3","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003eresponse = -3.92447 * value + 43.8817\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.046098\u003cbr\u003e\u003cbr\u003evariable=GPS_altruism\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"iX0FcgU5BsDSAXER0wUDwKDjZlZ+R++\u002feKXvgL\u002fZ6r8SVj3vLFLqvyE\u002fHTqW5+m\u002fzlYB76rY6b9PUjmF+A7mvw9nSMT16OS\u002f5Dno8eAG4r+rfAVztCDav0fMX1aSBde\u002fyaMt83Cj1r\u002fzO35I1m7Vv96VwcM8WtG\u002fAXjkz1YNzb8\u002fNPgD5ZvLv4qsHe5CLMK\u002fBrhFWXI4oL\u002fyGabtP+uav17efpnYD6A\u002f0nefphXc0T96TVUPQBXSP2qud+t+S9Y\u002fD5cdiA593z+Qt+urY5PgP25JPYfSZeE\u002f+qlkrsbC5T+1uBh2jeDlPyGYr2doqec\u002fbRVT0Cld7T8FrhysEZT0P15Mfsyyo\u002fc\u002f+2W7LNaR+j+BJpf50J38P6Jqf0PQW\u002f8\u002f"},"xaxis":"x3","y":{"dtype":"f8","bdata":"DYxzb0BkS0Csw5TaUZtKQPzL8PLe20dAk0Yzj1mWR0CjjfVbCY5HQMJhvySAh0dAQhb58ZWGR0AeJZ\u002fEH0tHQB0g12wYOUdAmrahHtYLR0B+4waQ7b1GQG168ZyMpUZAfG7LZIqiRkBpqvYtFJlGQNnQHy8NeUZA8klz8t1iRkDPw\u002fASNF1GQH7W6v8rOEZACGSyYsQARkAUrCLpDv5FQMow4iUY4UVA3StnWqxkRUD1Dt+p62JFQLyzeJXcQUVA8by5orP5RECb7fkrpuxEQGIWOdK+30RAMdueBkGbREBr7jOZbZlEQJvMmPFpfURAMGXs4+YjRECaijBqx2pDQMtN28msCkNAfkDIpK2uQkAz9aXpam5CQI8nbzBTGEJA"},"yaxis":"y3","type":"scatter"},{"hovertemplate":"variable=stranger1\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"Q1lCvHmltb81DuU91u7xPzaqTwEn19G\u002fbJLO\u002fUYK8j85KM\u002fWl2Pqv1bZ\u002fzdxW7q\u002fqoW1\u002ffe12b8AAAAAAAD4f\u002fCKHE++Yfc\u002fMY7ptwnCpz\u002f2KuHRD3bwPxZOgTqp390\u002fU3nopItD8L\u002fAMwQlmP7Zvzqc\u002fYDkjvW\u002fFlTkxGktxL8k1cF9eejrvxx3f+hlPN8\u002fQdyjlH3P5L9EvbpBtgf4v2qavj4mevi\u002fkwg6tHaV4r8HZMN4HzX2P4mGT8ftCvk\u002f0atoGw7fAkB19umgPmv4v2yfBvzKqNe\u002fsAl53sb\u002fmT+0HaFfCLLbv6ErCBKPzNc\u002f2MgTe5eFzj9r9bo2mnnwv7\u002fnbdaV2d4\u002fUMVDo+sw3D\u002fUYgXa49bwPzH5FexbnQLAlFu3PHSR2L8nGOqCtLfxP5id8zmubOA\u002fOKsyVBpR4T8="},"xaxis":"x4","y":{"dtype":"f8","bdata":"AAAAAADAR0A3JdqUaFNOQNTqTqs7rURAAAAAAACAS0DkOI7jOA5CQAAAAAAAgCxAq6qqqqqqTUAAAAAAAIBRQAAAAAAAwFJAnxertBX+S0AAAAAAAABOQK2ixkiBuzNAAAAAAACgRkAAAAAAAIBAQAAAAAAAADlAVVVVVVVVR0AAAAAAAOBEQAAAAAAAgDFAMTYLqj0nMUAAAAAAAEAzQAAAAAAAADVATivunWSpMUAAAAAAANBRQAAAAAAAsFFAq6qqqqqqUkAAAAAAAIArQAAAAAAA8FBAAAAAAABARUAAAAAAAGBLQHDyN\u002fmb\u002fEpAVVVVVVVVS0Ct7rS60+pAQAAAAAAAAEtAAAAAAACQUkDEwQ4HOxxTQAAAAAAAAEBAAAAAAADAPkAAAAAAAIA5QCIuN3kOUExAZmZmZmZmSkA="},"yaxis":"y4","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003eresponse = 12.4597 * value + 44.8566\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.416027\u003cbr\u003e\u003cbr\u003evariable=stranger1\u003cbr\u003evalue=%{x}\u003cbr\u003eresponse=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"MfkV7FudAsBqmr4+Jnr4v3X26aA+a\u002fi\u002fRL26QbYH+L86nP2A5I71v2v1ujaaefC\u002fU3nopItD8L8k1cF9eejrvzkoz9aXY+q\u002fQdyjlH3P5L+TCDq0dpXiv7QdoV8Istu\u002fwDMEJZj+2b+qhbX997XZv5Rbtzx0kdi\u002fbJ8G\u002fMqo1782qk8BJ9fRvxZU5MRpLcS\u002fVtn\u002fN3Fbur9DWUK8eaW1v7AJed7G\u002f5k\u002fMY7ptwnCpz\u002fYyBN7l4XOP6ErCBKPzNc\u002fUMVDo+sw3D8WToE6qd\u002fdP7\u002fnbdaV2d4\u002fHHd\u002f6GU83z+YnfM5rmzgPzirMlQaUeE\u002f9irh0Q928D\u002fUYgXa49bwPycY6oK0t\u002fE\u002fNQ7lPdbu8T9sks79RgryPwdkw3gfNfY\u002f8IocT75h9z+Jhk\u002fH7Qr5P9GraBsO3wJA"},"xaxis":"x4","y":{"dtype":"f8","bdata":"OEu4QuG6L0DIApdIp8s5QHjcIJ1C1zlANbhW6cQkOkBVStxUkBE8QHoE+Dp1A0BAE4DreYEYQEB3XcR3vf5AQPY9TMpySkFAZ46RenlgQkB1VH7Xcs9CQBELFJF9u0NA7dkqZeDlQ0DOV\u002fss8uxDQBeYK3FrCURA8GUOMxEgREAfFDIHErFEQKstDhE9ckVAoRaQ8HDJRUB+HEPoyeZFQAV6SHIilkZAacZSY6W3RkDKliYN7+lHQI8vM8eyvkhAl+aVGiUsSUCz7r\u002fdElZJQL9H\u002fc5mbklALLbaJwV4SUCPHgvqN6BJQGxbaCuwzElAZG75kHLWTEBt\u002f4IkJvxMQMcY+hivU01A6no0eyZpTUBGKCGr1XNNQNO+we85E09A6not90aIT0AWUVQl6hZQQF679Zncj1JA"},"yaxis":"y4","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"bgcolor":"white","angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"ternary":{"bgcolor":"white","aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8","gridwidth":2},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8","gridwidth":2},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"white","subunitcolor":"#C8D4E3","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,0.20500000000000002],"title":{"text":"value"},"showline":true,"linecolor":"darkgray"},"yaxis":{"anchor":"x","domain":[0.0,0.425],"title":{"text":"response"},"showline":true,"linecolor":"darkgray"},"xaxis2":{"anchor":"y2","domain":[0.265,0.47000000000000003],"matches":"x","title":{"text":"value"},"showline":true,"linecolor":"darkgray"},"yaxis2":{"anchor":"x2","domain":[0.0,0.425],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis3":{"anchor":"y3","domain":[0.53,0.7350000000000001],"matches":"x","title":{"text":"value"},"showline":true,"linecolor":"darkgray"},"yaxis3":{"anchor":"x3","domain":[0.0,0.425],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis4":{"anchor":"y4","domain":[0.7949999999999999,1.0],"matches":"x","title":{"text":"value"},"showline":true,"linecolor":"darkgray"},"yaxis4":{"anchor":"x4","domain":[0.0,0.425],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis5":{"anchor":"y5","domain":[0.0,0.20500000000000002],"matches":"x","showticklabels":false,"showline":true,"linecolor":"darkgray"},"yaxis5":{"anchor":"x5","domain":[0.575,1.0],"matches":"y","title":{"text":"response"},"showline":true,"linecolor":"darkgray"},"xaxis6":{"anchor":"y6","domain":[0.265,0.47000000000000003],"matches":"x","showticklabels":false,"showline":true,"linecolor":"darkgray"},"yaxis6":{"anchor":"x6","domain":[0.575,1.0],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis7":{"anchor":"y7","domain":[0.53,0.7350000000000001],"matches":"x","showticklabels":false,"showline":true,"linecolor":"darkgray"},"yaxis7":{"anchor":"x7","domain":[0.575,1.0],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis8":{"anchor":"y8","domain":[0.7949999999999999,1.0],"matches":"x","showticklabels":false,"showline":true,"linecolor":"darkgray"},"yaxis8":{"anchor":"x8","domain":[0.575,1.0],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"annotations":[{"font":{},"showarrow":false,"text":"civic_cooperation (N=37)","x":0.10250000000000001,"xanchor":"center","xref":"paper","y":0.425,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"GPS_posrecip (N=36)","x":0.36750000000000005,"xanchor":"center","xref":"paper","y":0.425,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"GPS_altruism (N=36)","x":0.6325000000000001,"xanchor":"center","xref":"paper","y":0.425,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"stranger1 (N=39)","x":0.8975,"xanchor":"center","xref":"paper","y":0.425,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"general_trust (N=39)","x":0.10250000000000001,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"GPS_trust (N=36)","x":0.36750000000000005,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"general_morality (N=38)","x":0.6325000000000001,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"MFQ_genmorality (N=35)","x":0.8975,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"}],"legend":{"tracegroupgap":0},"margin":{"t":60}},                        {"responsive": true}                    )                };            </script>        </div></div></div>
+</div>
+<p>The facet plot above is a replication of Figure 3 from <strong>Tannenbaum</strong> and can be compared with the plot below that has PISA scores instead of wallet return rates on the y-axes.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate sample size for each survey measure and PISA </span>
+<span class="n">ens_pisa</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">col</span><span class="p">:</span> <span class="n">country_avg_data</span><span class="p">[[</span><span class="s2">&quot;pisa_score&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span>
+    <span class="p">},</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># PISA vs Survey measure facet plot</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">df_reshaped</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;pisa_score&quot;</span><span class="p">,</span>
+    <span class="n">facet_col</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span>
+    <span class="n">facet_col_wrap</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">trendline</span><span class="o">=</span><span class="s2">&quot;ols&quot;</span><span class="p">,</span>
+    <span class="n">facet_col_spacing</span><span class="o">=</span><span class="mf">0.06</span><span class="p">,</span>
+    <span class="n">facet_row_spacing</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">showline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s2">&quot;darkgray&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">showline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s2">&quot;darkgray&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">for_each_annotation</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">a</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">+</span> <span class="s2">&quot; (N=&quot;</span>
+        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ens_pisa</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+        <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>                <div id="72127121-a48e-4f5d-936f-fe57e84941b0" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("72127121-a48e-4f5d-936f-fe57e84941b0")) {                    Plotly.newPlot(                        "72127121-a48e-4f5d-936f-fe57e84941b0",                        [{"hovertemplate":"variable=general_trust\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"hQ0CCDxS4r+z6Elssl\u002fwPwwDOJJJi\u002fW\u002fKM36yNys7D\u002fy93CJgOLlv6gSZr3qUPo\u002fxQYmcfn84b9pYr35CEfLv36KMmW50wFAgyolpm\u002fp1b9jW3SZ6OraP\u002fD9kcoBW\u002fW\u002fHHVXpEHc5r8gYpl7H9O0v0sdvkMp3ti\u002fBEKZ9PcV2b+PgJcn8UiYP38VCEZxi7g\u002fGDBf\u002fvQ1878eIDtesjbwv\u002fJi34w+bOS\u002fl5TZ8ULZ6b9K+xNqmCb5P2RwH+3UIvU\u002fzBhH7B2IAUB9qoLFu+n0v410cUL4G9a\u002fWLCz9Urg57+xNC00DMPsv2lCl3stUce\u002fgh8avODo5b+k9P6A43Tgv2Xr5uVI7L4\u002faEQbrjZY\u002fz\u002fhbbd3RSH0PzTFj3QfKNI\u002fE++QSMe58L8AAAAAAAD4f6bfCgoVido\u002fAPPCgSH84T8="},"xaxis":"x5","y":{"dtype":"f8","bdata":"AAAAAABAeUCO4ziO4zh\u002fQI7jOI7j2HhAx3Ecx3EcgEByHMdxHGd7QAAAAAAAAPh\u002fjuM4juOYfUByHMdxHMd+QKuqqqqqKn9AOY7jOI6TfkDkOI7jOA5\u002fQAAAAAAAAPh\u002fchzHcRwXfEAAAAAAAAD4fzmO4ziO43dAjuM4juM4fUCrqqqqqvp9QHIcx3EcR3pAAAAAAAAA+H8cx3Ecx5F6QMdxHMdxzHlAq6qqqqqidkDHcRzHcQx\u002fQAAAAAAAUH9Ax3Ecx3G8fkBVVVVVVfV4QAAAAAAAcH9A5DiO4ziOfkA5juM4jvN6QFVVVVVVbX5AVVVVVVWle0AAAAAAAAD4fwAAAAAAPn5AOY7jOI7zfkDHcRzHcUx\u002fQDmO4ziOc3lAjuM4juMYfEAAAAAAAPB6QDmO4ziOM39Aq6qqqqqqfkA="},"yaxis":"y5","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003episa_score = 26.975 * value + 459.791\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.401231\u003cbr\u003e\u003cbr\u003evariable=general_trust\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"DAM4kkmL9b99qoLFu+n0vxPvkEjHufC\u002fHiA7XrI28L+xNC00DMPsv5eU2fFC2em\u002fWLCz9Urg578cdVekQdzmv4IfGrzg6OW\u002f8vdwiYDi5b\u002fyYt+MPmzkv4UNAgg8UuK\u002fxQYmcfn84b8EQpn09xXZv0sdvkMp3ti\u002fjXRxQvgb1r+DKiWmb+nVv2livfkIR8u\u002faUKXey1Rx7+PgJcn8UiYP38VCEZxi7g\u002fZevm5Ujsvj80xY90HyjSP6bfCgoVido\u002fY1t0mejq2j8A88KBIfzhPyjN+sjcrOw\u002fs+hJbLJf8D\u002fhbbd3RSH0P2RwH+3UIvU\u002fSvsTapgm+T9oRBuuNlj\u002fP8wYR+wdiAFAfooyZbnTAUA="},"xaxis":"x5","y":{"dtype":"f8","bdata":"wCEV3oB3ekCiDIjKhoh6QNj8KdN6+XpAqWZrwkoHe0DWNSO4ujh7QJ9KyIYFYHtA4oR\u002fTaB6e0DnpZ+MU4h7QFD1ah8mlXtAvPS4HXyVe0DweQHtM6l7QIBIYliMxXtAR6L7SgrKe0A4X8PDexN8QHFRyh30FHxAS6SjgI4nfECILgxK4yh8QIKLoAauYHxAj36+oQhufECtEF1V5MZ8QKB6ZH4J5nxAjt5CXsrwfEBOHonQGTd9QCRQR+iab31ADIsPoC5yfUAUWQ9NOq99QEj9DAdqP35Ae4CXMVd2fkChrHS0qdt+QBHMU2jN9n5Alu9KYBljf0DGMJu\u002fFgWAQLK4MSQ\u002fN4BASJznpjY\u002fgEA="},"yaxis":"y5","type":"scatter"},{"hovertemplate":"variable=GPS_trust\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"glTbSY5q67+p0ajwEJTyP1oHM3YIy6W\u002fhEXBQNlM7j9g62qM1UnXv6QYaD5hZAFAs3B4upTO2D+HjLnTc0j9vwAAAAAAAPh\u002fGxmtGiAm5r81aRzG5TDgv+Uy3eOoTeq\u002fO0LujHXz9r8MMuCHmRDrv7PEW6DiUfA\u002fjFSsV3B7z7+++tmnbB\u002fVv7OKJI+BguI\u002fSArI8pZ4+78AAAAAAAD4f9xiKstwTve\u002f+QW7NA0a2b\u002fkGKfGGYXyPwAAAAAAAPh\u002fAAAAAAAA+H\u002fStAiByMnav98eO\u002fafy+O\u002fgVeor7AN0z\u002flpaEWtbvsv5ceAeRdReS\u002fQVJu+5h55b9Kz1CUDVXmv9Nm2yuFwu0\u002fuzMpTCMW8z\u002frXnGXI4LUP8QxwjKRvPU\u002fFI3zaDrv3j+GzxYr393\u002fP6tEVTs88+w\u002fk80w\u002fXUu4j8="},"xaxis":"x6","y":{"dtype":"f8","bdata":"AAAAAABAeUCO4ziO4zh\u002fQI7jOI7j2HhAx3Ecx3EcgEByHMdxHGd7QAAAAAAAAPh\u002fjuM4juOYfUByHMdxHMd+QKuqqqqqKn9AOY7jOI6TfkDkOI7jOA5\u002fQAAAAAAAAPh\u002fchzHcRwXfEAAAAAAAAD4fzmO4ziO43dAjuM4juM4fUCrqqqqqvp9QHIcx3EcR3pAAAAAAAAA+H8cx3Ecx5F6QMdxHMdxzHlAq6qqqqqidkDHcRzHcQx\u002fQAAAAAAAUH9Ax3Ecx3G8fkBVVVVVVfV4QAAAAAAAcH9A5DiO4ziOfkA5juM4jvN6QFVVVVVVbX5AVVVVVVWle0AAAAAAAAD4fwAAAAAAPn5AOY7jOI7zfkDHcRzHcUx\u002fQDmO4ziOc3lAjuM4juMYfEAAAAAAAPB6QDmO4ziOM39Aq6qqqqqqfkA="},"yaxis":"y6","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003episa_score = 5.56595 * value + 457.316\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.014921\u003cbr\u003e\u003cbr\u003evariable=GPS_trust\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"h4y503NI\u002fb\u002fcYirLcE73vztC7ox18\u002fa\u002f5aWhFrW77L+CVNtJjmrrvxsZrRogJua\u002fQVJu+5h55b+XHgHkXUXkv98eO\u002fafy+O\u002fNWkcxuUw4L\u002fStAiByMnav\u002fkFuzQNGtm\u002fYOtqjNVJ17+++tmnbB\u002fVv4xUrFdwe8+\u002fWgczdgjLpb+BV6ivsA3TP+tecZcjgtQ\u002fs3B4upTO2D8UjfNoOu\u002feP5PNMP11LuI\u002fs4okj4GC4j+rRFU7PPPsP9Nm2yuFwu0\u002fhEXBQNlM7j+zxFug4lHwP+QYp8YZhfI\u002fqdGo8BCU8j+7MylMIxbzP8QxwjKRvPU\u002fhs8WK9\u002fd\u002fz8="},"xaxis":"x6","y":{"dtype":"f8","bdata":"XmKx+BLye0B0cpbxVhN8QBhWhldRFXxAEwKzGxlFfECmjJNkw0h8QJjtzgpsV3xA+ljYLkxZfECrTmH7pVx8QPDEaMn4XXxAcbzvtgBofECGTIZXyW98QKjcXBcicnxAX5lQC6h0fEAQ7ah\u002fq3d8QHQUAY8of3xAzgBReEWRfEDiM54ck698QDBDsF6ZsXxATiMgn5S3fEAYJhFgG8B8QFYYAR6px3xAg1NRA5PIfEBCCGcnoeV8QOzc2QXi53xApDvS\u002fGLpfECT0tHF5e98QGPBSJok\u002fHxAU+Rb5nf8fEAUiWnfS\u002f98QEKzPfoLDn1AtUyRL25GfUA="},"yaxis":"y6","type":"scatter"},{"hovertemplate":"variable=general_morality\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"R54u+K\u002ff2L9m0JdCM7f1Py865HS9\u002fuW\u002fHZpK\u002fEuP4D+vldNaIXrWP3aD8j4RoPS\u002fuDHytx4aob+djkJcJmXuv6jGCoFmkfU\u002fwMFqfA0l8z+nt2nOFhXjPx5Da90BkLu\u002fA8JyX6EJAMDYLoL+QobLv34Uwh5X4\u002fu\u002fTuzOfI7N9D+CDC8UFvfcv9ImU7VB7vO\u002fAAAAAAAA+H9PSvtFw\u002f7RP17UIRE1beC\u002f2YXRN46O5r96q+JmY4L3Pzp6P7xmz\u002fM\u002fbA0bXkg+0T84IxRIJZHWvz5Ua+VqZvA\u002fOXp3uZOt078x6Xtq08jvv7lhtaT3POO\u002f9eW4Bg9g8b+kNS855ZbivybBikK3FMg\u002fPl2YfXR4AEAlojkfl7X5P8f929\u002ficfS\u002fTBlBSWR31L8AAAAAAAD4fz9SojH9pfA\u002f5EMZCoowhD8="},"xaxis":"x7","y":{"dtype":"f8","bdata":"AAAAAABAeUCO4ziO4zh\u002fQI7jOI7j2HhAx3Ecx3EcgEByHMdxHGd7QAAAAAAAAPh\u002fjuM4juOYfUByHMdxHMd+QKuqqqqqKn9AOY7jOI6TfkDkOI7jOA5\u002fQAAAAAAAAPh\u002fchzHcRwXfEAAAAAAAAD4fzmO4ziO43dAjuM4juM4fUCrqqqqqvp9QHIcx3EcR3pAAAAAAAAA+H8cx3Ecx5F6QMdxHMdxzHlAq6qqqqqidkDHcRzHcQx\u002fQAAAAAAAUH9Ax3Ecx3G8fkBVVVVVVfV4QAAAAAAAcH9A5DiO4ziOfkA5juM4jvN6QFVVVVVVbX5AVVVVVVWle0AAAAAAAAD4fwAAAAAAPn5AOY7jOI7zfkDHcRzHcUx\u002fQDmO4ziOc3lAjuM4juMYfEAAAAAAAPB6QDmO4ziOM39Aq6qqqqqqfkA="},"yaxis":"y7","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003episa_score = 26.8582 * value + 459.238\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.435017\u003cbr\u003e\u003cbr\u003evariable=general_morality\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"A8JyX6EJAMB+FMIeV+P7v8f929\u002ficfS\u002f0iZTtUHu87\u002f15bgGD2DxvzHpe2rTyO+\u002fnY5CXCZl7r\u002fZhdE3jo7mvy865HS9\u002fuW\u002fuWG1pPc8479e1CERNW3gv4IMLxQW99y\u002fR54u+K\u002ff2L84IxRIJZHWv0wZQUlkd9S\u002fOXp3uZOt07+4MfK3Hhqhv+RDGQqKMIQ\u002fJsGKQrcUyD9sDRteSD7RP09K+0XD\u002ftE\u002fr5XTWiF61j8dmkr8S4\u002fgP6e3ac4WFeM\u002fPlRr5Wpm8D8\u002fUqIx\u002faXwP8DBanwNJfM\u002fOno\u002fvGbP8z9O7M58js30P6jGCoFmkfU\u002fZtCXQjO39T96q+JmY4L3PyWiOR+Xtfk\u002fPl2YfXR4AEA="},"xaxis":"x7","y":{"dtype":"f8","bdata":"9ThRMlNWeUDzmPoTycZ5QN1XJzKyjnpA83FIiIGcekAQpUQhJOF6QO8oBL74CHtAKZLSJ6Ebe0DgJCDw44R7QJLFlkBvjHtAlU1tJ3Wxe0DGnr3kNtd7QAUhAxVS8XtAbISw5soMfECUNI8gSBx8QCCW+ediKnxAWF+aAK4vfEA\u002fMQh1dKV8QDzi8ZwLuHxAf+ocxKcEfUD9geMMlyd9QH5nCXijLH1Aegh2iLtKfUAkNrwYMZJ9QJ2Xo4MRtH1AnCRhJklsfkDzXCiR9HJ+QPNa5q4Atn5A9MkB8t\u002fHfkBEOAQbiuJ+QPRahB8W935At4IGXA37fkC8nRpWOit\u002fQC\u002fzt\u002fFQZn9AEo0aDkYUgEA="},"yaxis":"y7","type":"scatter"},{"hovertemplate":"variable=MFQ_genmorality\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"tjKCoegi4D\u002fLlz7fsT7cP1zHBizlneU\u002fDfhm\u002fFOw0L\u002fim5uSaPmuP4Cd5KQm1wHAWeZX9SEX8j+YbjCxhS\u002fUv8FCS0QrrtQ\u002fKpobj3oG6T+jBH0QWsjyPwAAAAAAAPh\u002fa7ygTjWp5z\u002fXlALRNqHUv+hY4YYesPm\u002faZeuED818b8JSw+DmibsPwAAAAAAAPh\u002fvfyxmVhu9r86CtE4Cu\u002ffv+kVvTr5euI\u002fAAAAAAAA+H\u002f2V4kUmLDoP1H5qc21R9s\u002fLJsTM2oRcj9QaS0TPOMEwEXTo1wSwuE\u002fQuAWEk9i2z82amu2n8vBP\u002fB\u002fJH+8tuO\u002fAAAAAAAA+H8DyhWIRuPeP+WJR68hZ+c\u002fuNsKgOE\u002fsL+OSdSIc0S7P5uTzhQhefm\u002fN7+wAJFi\u002fz8AAAAAAAD4fwLaYh09kOw\u002fJc9SnzwZ878="},"xaxis":"x8","y":{"dtype":"f8","bdata":"AAAAAABAeUCO4ziO4zh\u002fQI7jOI7j2HhAx3Ecx3EcgEByHMdxHGd7QAAAAAAAAPh\u002fjuM4juOYfUByHMdxHMd+QKuqqqqqKn9AOY7jOI6TfkDkOI7jOA5\u002fQAAAAAAAAPh\u002fchzHcRwXfEAAAAAAAAD4fzmO4ziO43dAjuM4juM4fUCrqqqqqvp9QHIcx3EcR3pAAAAAAAAA+H8cx3Ecx5F6QMdxHMdxzHlAq6qqqqqidkDHcRzHcQx\u002fQAAAAAAAUH9Ax3Ecx3G8fkBVVVVVVfV4QAAAAAAAcH9A5DiO4ziOfkA5juM4jvN6QFVVVVVVbX5AVVVVVVWle0AAAAAAAAD4fwAAAAAAPn5AOY7jOI7zfkDHcRzHcUx\u002fQDmO4ziOc3lAjuM4juMYfEAAAAAAAPB6QDmO4ziOM39Aq6qqqqqqfkA="},"yaxis":"y8","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003episa_score = 15.0683 * value + 464.378\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.132591\u003cbr\u003e\u003cbr\u003evariable=MFQ_genmorality\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"UGktEzzjBMDoWOGGHrD5v5uTzhQhefm\u002fJc9SnzwZ879pl64QPzXxv\u002fB\u002fJH+8tuO\u002fOgrROArv37+YbjCxhS\u002fUvw34ZvxTsNC\u002fuNsKgOE\u002fsL8smxMzahFyP+Kbm5Jo+a4\u002fjknUiHNEuz82amu2n8vBP8FCS0QrrtQ\u002fUfmpzbVH2z9C4BYST2LbP8uXPt+xPtw\u002ftjKCoegi4D9F06NcEsLhP+kVvTr5euI\u002fXMcGLOWd5T\u002fliUevIWfnP2u8oE41qec\u002f9leJFJiw6D8qmhuPegbpPwlLD4OaJuw\u002fAtpiHT2Q7D9Z5lf1IRfyP6MEfRBayPI\u002fN7+wAJFi\u002fz8="},"xaxis":"x8","y":{"dtype":"f8","bdata":"Ez99VJKQekDKZfPV+oJ7QPR8BnE3hntApwxJRkXme0BfrT8vwgJ8QMEDYeCGcXxA7PjCwMGNfEABV9tKA7p8QGrS7I0vx3xAJmtLFcD2fEBXx0H7HQd9QDY1Wo+jFH1AX7DqsbsffUA\u002f5ltpkid9QFQ35D\u002f1U31AIk3339FsfUCugPkSNm19QONRu0h0cH1At\u002fo4maB\u002ffUAyQFp\u002f2It9QFDALZNJkX1AN9F85+qofUDwykPKX7Z9QD7TCp9RuH1AgUw6AhLAfUA2ZZQTmcJ9QFeehFUl2n1A8\u002fxyNEHdfUBaKp\u002f9pBZ+QMn3iGETIX5AiXmF7fjefkA="},"yaxis":"y8","type":"scatter"},{"hovertemplate":"variable=civic_cooperation\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"piV097a2y78Qj3wALWvvP4OnfU292+W\u002fbE9qqjnQ0T+v7jhks2j3v6uvZ4dRxcI\u002fifGRzAmq579JF8mHHoX3v8wFC\u002ffVj\u002fY\u002fhgJssiH57b9wRvJVjcHoPxeVDNFfet0\u002faGrSehDy5T8xI9ERdu\u002fhP0IHX6uU1b6\u002fAAAAAAAA+H9HTpCc3ATvP2IqPVd53Pa\u002fAAAAAAAA+H8PJ87BhNz\u002fv2WjHkMkhQPA7NC+tSFg8T9yp3h6AzfxP25iCdCy9ew\u002fFXr1zKgE8D+cwHVUtkbwv3rGp9My8Ns\u002fh6dlZJVA5j8G37PPnTbmP5WctQzoIva\u002fd3nTK2lO679sShRh0\u002f\u002flv903iQPEEcM\u002fpfPvw9S32j\u002fkvJKoRfroP+a8JBTmOOS\u002fXLvnHDXJ9D8AAAAAAAD4fz5pHAftW+k\u002fDJmKr7ap3T8="},"xaxis":"x","y":{"dtype":"f8","bdata":"AAAAAABAeUCO4ziO4zh\u002fQI7jOI7j2HhAx3Ecx3EcgEByHMdxHGd7QAAAAAAAAPh\u002fjuM4juOYfUByHMdxHMd+QKuqqqqqKn9AOY7jOI6TfkDkOI7jOA5\u002fQAAAAAAAAPh\u002fchzHcRwXfEAAAAAAAAD4fzmO4ziO43dAjuM4juM4fUCrqqqqqvp9QHIcx3EcR3pAAAAAAAAA+H8cx3Ecx5F6QMdxHMdxzHlAq6qqqqqidkDHcRzHcQx\u002fQAAAAAAAUH9Ax3Ecx3G8fkBVVVVVVfV4QAAAAAAAcH9A5DiO4ziOfkA5juM4jvN6QFVVVVVVbX5AVVVVVVWle0AAAAAAAAD4fwAAAAAAPn5AOY7jOI7zfkDHcRzHcUx\u002fQDmO4ziOc3lAjuM4juMYfEAAAAAAAPB6QDmO4ziOM39Aq6qqqqqqfkA="},"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003episa_score = 16.0492 * value + 461.004\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.156191\u003cbr\u003e\u003cbr\u003evariable=civic_cooperation\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"ZaMeQySFA8APJ87BhNz\u002fv0kXyYcehfe\u002fr+44ZLNo979iKj1Xedz2v5WctQzoIva\u002fnMB1VLZG8L+GAmyyIfntv3d50ytpTuu\u002fifGRzAmq57+Dp31Nvdvlv+a8JBTmOOS\u002fpiV097a2y79CB1+rlNW+v903iQPEEcM\u002fbE9qqjnQ0T+l8+\u002fD1LfaP3rGp9My8Ns\u002fDJmKr7ap3T9oatJ6EPLlPwbfs8+dNuY\u002fh6dlZJVA5j9wRvJVjcHoP+S8kqhF+ug\u002fPmkcB+1b6T9uYgnQsvXsP0dOkJzcBO8\u002fEI98AC1r7z8VevXMqATwP3KneHoDN\u002fE\u002f7NC+tSFg8T9cu+ccNcn0P8wFC\u002ffVj\u002fY\u002f"},"xaxis":"x","y":{"dtype":"f8","bdata":"WacdpIBdekDIUwdXt9B6QICo8NeWVntA9YBH8F5Ye0BvYCl4KWF7QNfmQK\u002fLbHtAeYuAo9jKe0Bzk407i997QC6ca83x9HtAvfINuysSfEBARtx\u002fqSB8QKUNq4jKLXxABF4+DniYfED9fBZGI7F8QJ8zcbVS9nxAlTDQKIoXfUCSvtaiRDt9QOcrKfMpQH1A4IaJcRVHfUA9s6DtK4B9QJTnNQhSgn1AEl2oA6KCfUBu0MuJuZZ9QKrswbGAmH1AnUwBVJCbfUD8Uycydbh9QBtLE3r7yH1As7DagTDMfUCg9RGLJdF9QFnMcUpa5H1AYb1MNO7mfUD3ItVkqh1+QP\u002fQedMqOn5A"},"yaxis":"y","type":"scatter"},{"hovertemplate":"variable=GPS_posrecip\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"xj0L969t4D\u002fDWynqN4jOP3lp7ZyNkvE\u002fvQV5FxYO5D\u002forbg\u002f+R26P8qyxN+b1Pc\u002f2uFeLg1B4z8a4QHho6zsvwAAAAAAAPh\u002fQplxMUZB1r+wR1Zn7efLv1WFrVDevOS\u002fI0vEk9SZu7\u002f4lPzK78H1v5DNjY6uB94\u002fXhQ+o5iWcr+ef\u002fJwZxDiP2T48KBA4+4\u002fE8gDpcdK7r8AAAAAAAD4f6bnsQfIJQnArQevkqBv+z\u002fxQvLXiFjbvwAAAAAAAPh\u002fAAAAAAAA+H\u002fz4L6IZqDOvxMA6CypYt6\u002ffDaApDMK4z9qm\u002fOjnE\u002fVv5IMGL5PmdC\u002fSEAddXzN8j\u002fZ\u002fs4qYSsEwM70vaD4sO8\u002fHE+zTgkSrr8QR6X5XxzaP16VTUWtj+4\u002fjVikHL889b\u002fZ2caa\u002f+nPP2n2+DTzWLe\u002fMTXXR4S55D8="},"xaxis":"x2","y":{"dtype":"f8","bdata":"AAAAAABAeUCO4ziO4zh\u002fQI7jOI7j2HhAx3Ecx3EcgEByHMdxHGd7QAAAAAAAAPh\u002fjuM4juOYfUByHMdxHMd+QKuqqqqqKn9AOY7jOI6TfkDkOI7jOA5\u002fQAAAAAAAAPh\u002fchzHcRwXfEAAAAAAAAD4fzmO4ziO43dAjuM4juM4fUCrqqqqqvp9QHIcx3EcR3pAAAAAAAAA+H8cx3Ecx5F6QMdxHMdxzHlAq6qqqqqidkDHcRzHcQx\u002fQAAAAAAAUH9Ax3Ecx3G8fkBVVVVVVfV4QAAAAAAAcH9A5DiO4ziOfkA5juM4jvN6QFVVVVVVbX5AVVVVVVWle0AAAAAAAAD4fwAAAAAAPn5AOY7jOI7zfkDHcRzHcUx\u002fQDmO4ziOc3lAjuM4juMYfEAAAAAAAPB6QDmO4ziOM39Aq6qqqqqqfkA="},"yaxis":"y2","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003episa_score = -7.52476 * value + 458.627\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.024596\u003cbr\u003e\u003cbr\u003evariable=GPS_posrecip\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"puexB8glCcCNWKQcvzz1vxrhAeGjrOy\u002fEwDoLKli3r\u002fxQvLXiFjbv0KZcTFGQda\u002fapvzo5xP1b+SDBi+T5nQv\u002fPgvohmoM6\u002fsEdWZ+3ny78jS8ST1Jm7v2n2+DTzWLe\u002fHE+zTgkSrr9eFD6jmJZyv+ituD\u002f5Hbo\u002fw1sp6jeIzj\u002fZ2caa\u002f+nPPxBHpflfHNo\u002fkM2Njq4H3j\u002fGPQv3r23gP55\u002f8nBnEOI\u002ffDaApDMK4z\u002fa4V4uDUHjP70FeRcWDuQ\u002fMTXXR4S55D9elU1FrY\u002fuP2T48KBA4+4\u002fzvS9oPiw7z95ae2cjZLxP0hAHXV8zfI\u002frQevkqBv+z8="},"xaxis":"x2","y":{"dtype":"f8","bdata":"XPZJTHwkfkCwpYYC1Ul9QOugQRTpFX1A3FHY8S\u002fjfEDy4UskeN18QJfuVXbk03xAsdeD2R3SfEArsviRQMl8QBoGHHPVxnxARH\u002fGWUbEfECOoRDaAbd8QMRXGMEBtXxADzxb\u002fhixfEBopMiukqp8QDRLN2q+nXxA7JXB6k6NfEAonkQnAox8QF1WSDzoeHxAS5w404hxfEAvBvhrN2x8QAUtCQ0QZnxApW6uN2RifECiURjalWF8QDDT7m6SXnxAKMh3cg1cfEBGK80sCzd8QDpzXLvQNXxAsPxyvcoyfED6Z+pJzCV8QLeMj36KHHxApAr9t5Pbe0A="},"yaxis":"y2","type":"scatter"},{"hovertemplate":"variable=GPS_altruism\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"0nefphXc0T+1uBh2jeDlP\u002ftluyzWkfo\u002fbRVT0Cld7T+KrB3uQizCv4Eml\u002fnQnfw\u002fBrhFWXI4oL+JfQVyBTkGwAAAAAAAAPh\u002fR8xfVpIF179e3n6Z2A+gP25JPYfSZeE\u002fyaMt83Cj1r8PZ0jE9ejkv5C366tjk+A\u002feKXvgL\u002fZ6r8FrhysEZT0PyGYr2doqec\u002fIT8dOpbn6b8AAAAAAAD4f9IBcRHTBQPAomp\u002fQ9Bb\u002fz+rfAVztCDavwAAAAAAAPh\u002fAAAAAAAA+H8BeOTPVg3Nv6DjZlZ+R++\u002faq53635L1j\u002fkOejx4Abiv\u002fIZpu0\u002f65q\u002fzlYB76rY6b8SVj3vLFLqvz80+APlm8u\u002f8zt+SNZu1b8Plx2IDn3fP96VwcM8WtG\u002fT1I5hfgO5r\u002f6qWSuxsLlP3pNVQ9AFdI\u002fXkx+zLKj9z8="},"xaxis":"x3","y":{"dtype":"f8","bdata":"AAAAAABAeUCO4ziO4zh\u002fQI7jOI7j2HhAx3Ecx3EcgEByHMdxHGd7QAAAAAAAAPh\u002fjuM4juOYfUByHMdxHMd+QKuqqqqqKn9AOY7jOI6TfkDkOI7jOA5\u002fQAAAAAAAAPh\u002fchzHcRwXfEAAAAAAAAD4fzmO4ziO43dAjuM4juM4fUCrqqqqqvp9QHIcx3EcR3pAAAAAAAAA+H8cx3Ecx5F6QMdxHMdxzHlAq6qqqqqidkDHcRzHcQx\u002fQAAAAAAAUH9Ax3Ecx3G8fkBVVVVVVfV4QAAAAAAAcH9A5DiO4ziOfkA5juM4jvN6QFVVVVVVbX5AVVVVVVWle0AAAAAAAAD4fwAAAAAAPn5AOY7jOI7zfkDHcRzHcUx\u002fQDmO4ziOc3lAjuM4juMYfEAAAAAAAPB6QDmO4ziOM39Aq6qqqqqqfkA="},"yaxis":"y3","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003episa_score = -6.72287 * value + 457.649\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.025420\u003cbr\u003e\u003cbr\u003evariable=GPS_altruism\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"iX0FcgU5BsDSAXER0wUDwKDjZlZ+R++\u002feKXvgL\u002fZ6r\u002fOVgHvqtjpv09SOYX4Dua\u002f5Dno8eAG4r+rfAVztCDav0fMX1aSBde\u002fyaMt83Cj1r\u002fzO35I1m7Vv96VwcM8WtG\u002fAXjkz1YNzb8\u002fNPgD5ZvLv4qsHe5CLMK\u002fBrhFWXI4oL\u002fyGabtP+uav17efpnYD6A\u002f0nefphXc0T96TVUPQBXSP2qud+t+S9Y\u002fD5cdiA593z+Qt+urY5PgP\u002fqpZK7GwuU\u002ftbgYdo3g5T8hmK9naKnnP20VU9ApXe0\u002fBa4crBGU9D9eTH7MsqP3P\u002ftluyzWkfo\u002fomp\u002fQ9Bb\u002fz8="},"xaxis":"x3","y":{"dtype":"f8","bdata":"z2wjGS\u002fFfUDC4hVjKJp9QNS5yKWGA31AcTRxoqP0fEAwua55Q\u002fF8QA7MoeaH5HxA6I3QlvrWfEDaXM3LS8Z8QPQct2YTwXxAvGq+eG7AfECpfofLZ758QEuODh6Mt3xAVf\u002f9AMyyfEBR766JlbF8QEZZ4omnqXxA0lbmWsqdfEDZgurbNZ18QJ\u002flmhwCl3xAxndElV18fEA\u002favOA\u002fXt8QEEd4UbpdHxAuBqwmnVlfEBKavAVqmJ8QJxA4yg8UXxATfRlEdhQfECyGs9g2Ep8QPdpyYCtN3xAsUR0aQkQfECpOd4rdft7QJGagxbC53tA9UJfAJDHe0A="},"yaxis":"y3","type":"scatter"},{"hovertemplate":"variable=stranger1\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":{"dtype":"f8","bdata":"Q1lCvHmltb81DuU91u7xPzaqTwEn19G\u002fbJLO\u002fUYK8j85KM\u002fWl2Pqv1bZ\u002fzdxW7q\u002fqoW1\u002ffe12b8AAAAAAAD4f\u002fCKHE++Yfc\u002fMY7ptwnCpz\u002f2KuHRD3bwPxZOgTqp390\u002fU3nopItD8L\u002fAMwQlmP7Zvzqc\u002fYDkjvW\u002fFlTkxGktxL8k1cF9eejrvxx3f+hlPN8\u002fQdyjlH3P5L9EvbpBtgf4v2qavj4mevi\u002fkwg6tHaV4r8HZMN4HzX2P4mGT8ftCvk\u002f0atoGw7fAkB19umgPmv4v2yfBvzKqNe\u002fsAl53sb\u002fmT+0HaFfCLLbv6ErCBKPzNc\u002f2MgTe5eFzj9r9bo2mnnwv7\u002fnbdaV2d4\u002fUMVDo+sw3D\u002fUYgXa49bwPzH5FexbnQLAlFu3PHSR2L8nGOqCtLfxP5id8zmubOA\u002fOKsyVBpR4T8="},"xaxis":"x4","y":{"dtype":"f8","bdata":"AAAAAABAeUCO4ziO4zh\u002fQI7jOI7j2HhAx3Ecx3EcgEByHMdxHGd7QAAAAAAAAPh\u002fjuM4juOYfUByHMdxHMd+QKuqqqqqKn9AOY7jOI6TfkDkOI7jOA5\u002fQAAAAAAAAPh\u002fchzHcRwXfEAAAAAAAAD4fzmO4ziO43dAjuM4juM4fUCrqqqqqvp9QHIcx3EcR3pAAAAAAAAA+H8cx3Ecx5F6QMdxHMdxzHlAq6qqqqqidkDHcRzHcQx\u002fQAAAAAAAUH9Ax3Ecx3G8fkBVVVVVVfV4QAAAAAAAcH9A5DiO4ziOfkA5juM4jvN6QFVVVVVVbX5AVVVVVVWle0AAAAAAAAD4fwAAAAAAPn5AOY7jOI7zfkDHcRzHcUx\u002fQDmO4ziOc3lAjuM4juMYfEAAAAAAAPB6QDmO4ziOM39Aq6qqqqqqfkA="},"yaxis":"y4","type":"scatter"},{"hovertemplate":"\u003cb\u003eOLS trendline\u003c\u002fb\u003e\u003cbr\u003episa_score = 26.6018 * value + 457.815\u003cbr\u003eR\u003csup\u003e2\u003c\u002fsup\u003e=0.442986\u003cbr\u003e\u003cbr\u003evariable=stranger1\u003cbr\u003evalue=%{x}\u003cbr\u003episa_score=%{y} \u003cb\u003e(trend)\u003c\u002fb\u003e\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":{"dtype":"f8","bdata":"MfkV7FudAsBqmr4+Jnr4v3X26aA+a\u002fi\u002fRL26QbYH+L86nP2A5I71v1N56KSLQ\u002fC\u002fJNXBfXno6785KM\u002fWl2Pqv5MIOrR2leK\u002ftB2hXwiy27+qhbX997XZv5Rbtzx0kdi\u002fbJ8G\u002fMqo1782qk8BJ9fRvxZU5MRpLcS\u002fQ1lCvHmltb+wCXnexv+ZPzGO6bcJwqc\u002f2MgTe5eFzj+hKwgSj8zXP1DFQ6PrMNw\u002fv+dt1pXZ3j8cd3\u002foZTzfP5id8zmubOA\u002fOKsyVBpR4T\u002f2KuHRD3bwP9RiBdrj1vA\u002fJxjqgrS38T81DuU91u7xP2ySzv1GCvI\u002fB2TDeB819j\u002fwihxPvmH3P4mGT8ftCvk\u002f0atoGw7fAkA="},"xaxis":"x4","y":{"dtype":"f8","bdata":"\u002fzfNKK2+eEAdqVu56BF6QBX\u002fzzd1E3pALn\u002fQ+MwdekDPCvkij196QJxjKuBl7HpACaxZxNcpe0DeSPU\u002fDD57QEXf8DfdpXtAdzCQ49vke0Bxw9O\u002fDvJ7QGGGZxuo+XtAOyFEabP\u002fe0BI7Zk1ZiZ8QAVI7bDzWXxAl8ROig55fEDEIhti2qd8QAYY3u3LsHxAssDM4YkCfUB8C2Q3Ujt9QJ+TnL2HWH1A8Tr8eTZqfUBCIIygx2x9QHlHvAWCd31Az131P2CDfUCRMhK48VJ+QC9zjIcBXX5Ag4u1Bl50fkDTdAiiGHp+QIa8XJnyfH5AF5NOqs7rfkAT36u5Cwt\u002fQIkCnXE6N39AfICj8IhEgEA="},"yaxis":"y4","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"#C8D4E3","linecolor":"#C8D4E3","minorgridcolor":"#C8D4E3","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"white","polar":{"bgcolor":"white","angularaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""},"radialaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":""}},"ternary":{"bgcolor":"white","aaxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"baxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""},"caxis":{"gridcolor":"#DFE8F3","linecolor":"#A2B1C6","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"#EBF0F8","linecolor":"#EBF0F8","ticks":"","title":{"standoff":15},"zerolinecolor":"#EBF0F8","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8","gridwidth":2},"yaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8","gridwidth":2},"zaxis":{"backgroundcolor":"white","gridcolor":"#DFE8F3","linecolor":"#EBF0F8","showbackground":true,"ticks":"","zerolinecolor":"#EBF0F8","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"white","subunitcolor":"#C8D4E3","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,0.20500000000000002],"title":{"text":"value"},"showline":true,"linecolor":"darkgray"},"yaxis":{"anchor":"x","domain":[0.0,0.425],"title":{"text":"pisa_score"},"showline":true,"linecolor":"darkgray"},"xaxis2":{"anchor":"y2","domain":[0.265,0.47000000000000003],"matches":"x","title":{"text":"value"},"showline":true,"linecolor":"darkgray"},"yaxis2":{"anchor":"x2","domain":[0.0,0.425],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis3":{"anchor":"y3","domain":[0.53,0.7350000000000001],"matches":"x","title":{"text":"value"},"showline":true,"linecolor":"darkgray"},"yaxis3":{"anchor":"x3","domain":[0.0,0.425],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis4":{"anchor":"y4","domain":[0.7949999999999999,1.0],"matches":"x","title":{"text":"value"},"showline":true,"linecolor":"darkgray"},"yaxis4":{"anchor":"x4","domain":[0.0,0.425],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis5":{"anchor":"y5","domain":[0.0,0.20500000000000002],"matches":"x","showticklabels":false,"showline":true,"linecolor":"darkgray"},"yaxis5":{"anchor":"x5","domain":[0.575,1.0],"matches":"y","title":{"text":"pisa_score"},"showline":true,"linecolor":"darkgray"},"xaxis6":{"anchor":"y6","domain":[0.265,0.47000000000000003],"matches":"x","showticklabels":false,"showline":true,"linecolor":"darkgray"},"yaxis6":{"anchor":"x6","domain":[0.575,1.0],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis7":{"anchor":"y7","domain":[0.53,0.7350000000000001],"matches":"x","showticklabels":false,"showline":true,"linecolor":"darkgray"},"yaxis7":{"anchor":"x7","domain":[0.575,1.0],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"xaxis8":{"anchor":"y8","domain":[0.7949999999999999,1.0],"matches":"x","showticklabels":false,"showline":true,"linecolor":"darkgray"},"yaxis8":{"anchor":"x8","domain":[0.575,1.0],"matches":"y","showticklabels":false,"showline":true,"linecolor":"darkgray"},"annotations":[{"font":{},"showarrow":false,"text":"civic_cooperation (N=33)","x":0.10250000000000001,"xanchor":"center","xref":"paper","y":0.425,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"GPS_posrecip (N=31)","x":0.36750000000000005,"xanchor":"center","xref":"paper","y":0.425,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"GPS_altruism (N=31)","x":0.6325000000000001,"xanchor":"center","xref":"paper","y":0.425,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"stranger1 (N=34)","x":0.8975,"xanchor":"center","xref":"paper","y":0.425,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"general_trust (N=34)","x":0.10250000000000001,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"GPS_trust (N=31)","x":0.36750000000000005,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"general_morality (N=34)","x":0.6325000000000001,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{},"showarrow":false,"text":"MFQ_genmorality (N=31)","x":0.8975,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"}],"legend":{"tracegroupgap":0},"margin":{"t":60}},                        {"responsive": true}                    )                };            </script>        </div></div></div>
+</div>
+</section>
+<section id="pisa-as-a-predictor-of-economic-and-institutional-performance">
+<h2>PISA as a Predictor of Economic and Institutional Performance<a class="headerlink" href="#pisa-as-a-predictor-of-economic-and-institutional-performance" title="Link to this heading">#</a></h2>
+<p>To address the second topic of the Tannenbaum paper, we ask how well do PISA scores (as compared to lost wallet reporting rates) explain variation in economic development?</p>
+<p>There are four measures of “Economic and Institutional Performance” in the second part of the paper: GDP per capita (<code class="docutils literal notranslate"><span class="pre">log_gdp</span></code>), productivity(<code class="docutils literal notranslate"><span class="pre">log_tfp</span></code>), government effectiveness (<code class="docutils literal notranslate"><span class="pre">gee</span></code>), and letter grade efficiency (<code class="docutils literal notranslate"><span class="pre">letter_grading</span></code>). If PISA scores are considered a fifth measure of the same sort, we find that wallet reporting rates are an equally effective predictor. When combined with any other measure of social capital, the coefficient for wallet reporting rates are always statistically significant with p&lt;0.01 and with <span class="math notranslate nohighlight">\(R^2\)</span> greater than most of the other fit models.</p>
+<section id="regression-results">
+<h3>Regression Results<a class="headerlink" href="#regression-results" title="Link to this heading">#</a></h3>
+<p>The table below seeks to replicate part of Table 2 from <strong>Tannenbaum</strong> and adds two new columns (Model 9 and Model 10) which contain the respective OLS model results where PISA scores are predicted. Models 7 and 8 are recreated here to show that the table is generated with the same process that generated Table 2 in <strong>Tannenbaum</strong>.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">great_tables</span> <span class="kn">import</span> <span class="n">GT</span>
+
+<span class="c1"># Data import</span>
+<span class="n">survey_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;general_trust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_trust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;general_morality&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MFQ_genmorality&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;civic_cooperation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_posrecip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPS_altruism&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;stranger1&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">econ_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;log_gdp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;log_tfp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gee&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;letter_grading&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">&quot;../data/tannenbaum_data.csv&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Add PISA data</span>
+<span class="n">pisa</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/pisa_data.csv&quot;</span><span class="p">)</span>
+<span class="n">pisa</span> <span class="o">=</span> <span class="n">pisa</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">pisa</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2015</span><span class="p">]</span>
+<span class="n">pisa</span> <span class="o">=</span> <span class="n">pisa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)[</span><span class="s1">&#39;pisa_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pisa</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;country&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># p-value stars to award to each parameter coef estimate.</span>
+<span class="k">def</span> <span class="nf">stars</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">elif</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;*&quot;</span>
+    <span class="k">elif</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;**&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;***&quot;</span>
+
+
+<span class="c1"># Run regression for each survey measure.</span>
+<span class="k">def</span> <span class="nf">get_model_results_no_pred</span><span class="p">(</span><span class="n">survey_measure</span><span class="p">,</span> <span class="n">econ_measure</span><span class="p">):</span>
+    <span class="n">regression_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">)[[</span><span class="n">econ_measure</span><span class="p">,</span> <span class="n">survey_measure</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[</span><span class="n">econ_measure</span><span class="p">]</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[[</span><span class="n">survey_measure</span><span class="p">]]</span>
+
+    <span class="c1"># Standardize predictors</span>
+    <span class="n">X_std</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    <span class="n">X_std</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X_std</span><span class="p">)</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X_std</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cov_type</span><span class="o">=</span><span class="s2">&quot;HC1&quot;</span><span class="p">)</span>  <span class="c1"># Robust standard errors same as in Tannenbaum</span>
+    <span class="n">result_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+                    <span class="p">[</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}{</span><span class="n">stars</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">results</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+                    <span class="p">],</span>
+                    <span class="n">index</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span>
+                <span class="p">),</span>
+                <span class="s2">&quot;se&quot;</span><span class="p">:</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">),</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span> <span class="s2">&quot;se&quot;</span><span class="p">:</span> <span class="nb">object</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">result_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s2">&quot;&lt;i&gt;N&lt;i&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">result_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s2">&quot;&lt;i&gt;R&lt;i&gt;&lt;sup&gt;2&lt;/sup&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">results</span><span class="o">.</span><span class="n">rsquared</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">result_df</span> <span class="o">=</span> <span class="n">result_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">result_df</span><span class="p">[</span><span class="s2">&quot;measure&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">survey_measure</span>
+
+    <span class="k">return</span> <span class="n">result_df</span>
+
+
+<span class="c1"># Run regression for each survey measure with predictor variable.</span>
+<span class="k">def</span> <span class="nf">get_model_results</span><span class="p">(</span><span class="n">survey_measure</span><span class="p">,</span> <span class="n">econ_measure</span><span class="p">):</span>
+    <span class="n">regression_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;country&quot;</span><span class="p">)[[</span><span class="s2">&quot;response&quot;</span><span class="p">,</span> <span class="n">econ_measure</span><span class="p">,</span> <span class="n">survey_measure</span><span class="p">]]</span>
+        <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="p">)</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[</span><span class="n">econ_measure</span><span class="p">]</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">regression_df</span><span class="p">[[</span><span class="n">survey_measure</span><span class="p">,</span> <span class="s2">&quot;response&quot;</span><span class="p">]]</span>
+
+    <span class="c1"># Standardize predictors</span>
+    <span class="n">X_std</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    <span class="n">X_std</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X_std</span><span class="p">)</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X_std</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cov_type</span><span class="o">=</span><span class="s2">&quot;HC1&quot;</span><span class="p">)</span>  <span class="c1"># Robust standard errors same as in Tannenbaum</span>
+
+    <span class="n">result_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+                    <span class="p">[</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}{</span><span class="n">stars</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                        <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">results</span><span class="o">.</span><span class="n">pvalues</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+                    <span class="p">],</span>
+                    <span class="n">index</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span>
+                <span class="p">),</span>
+                <span class="s2">&quot;se&quot;</span><span class="p">:</span> <span class="n">results</span><span class="o">.</span><span class="n">bse</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">),</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;param&quot;</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span> <span class="s2">&quot;se&quot;</span><span class="p">:</span> <span class="nb">object</span><span class="p">})</span>
+        <span class="o">.</span><span class="n">stack</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">result_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s2">&quot;&lt;i&gt;N&lt;i&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">result_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s2">&quot;&lt;i&gt;R&lt;i&gt;&lt;sup&gt;2&lt;/sup&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">results</span><span class="o">.</span><span class="n">rsquared</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">result_df</span> <span class="o">=</span> <span class="n">result_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">result_df</span><span class="p">[</span><span class="s2">&quot;measure&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">survey_measure</span>
+
+    <span class="k">return</span> <span class="n">result_df</span>
+
+
+<span class="n">model_7_results</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">get_model_results_no_pred</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="s2">&quot;letter_grading&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span>
+<span class="p">]</span>
+<span class="n">model_7</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">model_7_results</span><span class="p">)</span>
+<span class="n">model_7</span> <span class="o">=</span> <span class="n">model_7</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Model 7&quot;</span><span class="p">})</span>
+
+<span class="n">model_8_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_model_results</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="s2">&quot;letter_grading&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span><span class="p">]</span>
+<span class="n">model_8</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">model_8_results</span><span class="p">)</span>
+<span class="n">model_8</span> <span class="o">=</span> <span class="n">model_8</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Model 8&quot;</span><span class="p">})</span>
+
+<span class="n">model_9_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_model_results_no_pred</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="s2">&quot;pisa_score&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span><span class="p">]</span>
+<span class="n">model_9</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">model_9_results</span><span class="p">)</span>
+<span class="n">model_9</span> <span class="o">=</span> <span class="n">model_9</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Model 9&quot;</span><span class="p">})</span>
+
+<span class="n">model_10_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_model_results</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="s2">&quot;pisa_score&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">survey_cols</span><span class="p">]</span>
+<span class="n">model_10</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">model_10_results</span><span class="p">)</span>
+<span class="n">model_10</span> <span class="o">=</span> <span class="n">model_10</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Model 10&quot;</span><span class="p">})</span>
+
+<span class="c1"># Combine results and make pretty.</span>
+<span class="n">display_df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">model_7</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">model_8</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;level_0&quot;</span><span class="p">,</span> <span class="s2">&quot;level_1&quot;</span><span class="p">,</span> <span class="s2">&quot;measure&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">model_9</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;level_0&quot;</span><span class="p">,</span> <span class="s2">&quot;level_1&quot;</span><span class="p">,</span> <span class="s2">&quot;measure&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">model_10</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;level_0&quot;</span><span class="p">,</span> <span class="s2">&quot;level_1&quot;</span><span class="p">,</span> <span class="s2">&quot;measure&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="p">)</span>
+
+<span class="n">display_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;level_0&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">display_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;level_0&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+    <span class="n">display_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;level_0&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">display_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;level_0&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(),</span> <span class="s2">&quot;&quot;</span>
+<span class="p">)</span>
+
+<span class="n">display_df</span>
+<span class="p">(</span>
+    <span class="n">GT</span><span class="p">(</span><span class="n">display_df</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">tab_header</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;TABLE 2.—PREDICTIVE VALUE OF WALLET REPORTING RATES&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">tab_stub</span><span class="p">(</span><span class="n">rowname_col</span><span class="o">=</span><span class="s2">&quot;level_0&quot;</span><span class="p">,</span> <span class="n">groupname_col</span><span class="o">=</span><span class="s2">&quot;measure&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">tab_spanner</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Letter grade efficiency&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Model 7&quot;</span><span class="p">,</span> <span class="s2">&quot;Model 8&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">tab_spanner</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;PISA Score&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Model 9&quot;</span><span class="p">,</span> <span class="s2">&quot;Model 10&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">tab_options</span><span class="p">(</span>
+        <span class="n">table_body_hlines_style</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">cols_align</span><span class="p">(</span><span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Model 7&quot;</span><span class="p">,</span> <span class="s2">&quot;Model 8&quot;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="mgjqyrqxrh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>
+#mgjqyrqxrh table {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+#mgjqyrqxrh thead, tbody, tfoot, tr, td, th { border-style: none; }
+ tr { background-color: transparent; }
+#mgjqyrqxrh p { margin: 0; padding: 0; }
+ #mgjqyrqxrh .gt_table { display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; }
+ #mgjqyrqxrh .gt_caption { padding-top: 4px; padding-bottom: 4px; }
+ #mgjqyrqxrh .gt_title { color: #333333; font-size: 125%; font-weight: initial; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; border-bottom-color: #FFFFFF; border-bottom-width: 0; }
+ #mgjqyrqxrh .gt_subtitle { color: #333333; font-size: 85%; font-weight: initial; padding-top: 3px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-top-color: #FFFFFF; border-top-width: 0; }
+ #mgjqyrqxrh .gt_heading { background-color: #FFFFFF; text-align: center; border-bottom-color: #FFFFFF; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #mgjqyrqxrh .gt_bottom_border { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #mgjqyrqxrh .gt_col_headings { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; }
+ #mgjqyrqxrh .gt_col_heading { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; overflow-x: hidden; }
+ #mgjqyrqxrh .gt_column_spanner_outer { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: normal; text-transform: inherit; padding-top: 0; padding-bottom: 0; padding-left: 4px; padding-right: 4px; }
+ #mgjqyrqxrh .gt_column_spanner_outer:first-child { padding-left: 0; }
+ #mgjqyrqxrh .gt_column_spanner_outer:last-child { padding-right: 0; }
+ #mgjqyrqxrh .gt_column_spanner { border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: bottom; padding-top: 5px; padding-bottom: 5px; overflow-x: hidden; display: inline-block; width: 100%; }
+ #mgjqyrqxrh .gt_spanner_row { border-bottom-style: hidden; }
+ #mgjqyrqxrh .gt_group_heading { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; text-align: left; }
+ #mgjqyrqxrh .gt_empty_group_heading { padding: 0.5px; color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; vertical-align: middle; }
+ #mgjqyrqxrh .gt_from_md> :first-child { margin-top: 0; }
+ #mgjqyrqxrh .gt_from_md> :last-child { margin-bottom: 0; }
+ #mgjqyrqxrh .gt_row { padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: none; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; }
+ #mgjqyrqxrh .gt_stub { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; }
+ #mgjqyrqxrh .gt_stub_row_group { color: #333333; background-color: #FFFFFF; font-size: 100%; font-weight: initial; text-transform: inherit; border-right-style: solid; border-right-width: 2px; border-right-color: #D3D3D3; padding-left: 5px; padding-right: 5px; vertical-align: top; }
+ #mgjqyrqxrh .gt_row_group_first td { border-top-width: 2px; }
+ #mgjqyrqxrh .gt_row_group_first th { border-top-width: 2px; }
+ #mgjqyrqxrh .gt_striped { background-color: rgba(128,128,128,0.05); }
+ #mgjqyrqxrh .gt_table_body { border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; }
+ #mgjqyrqxrh .gt_sourcenotes { color: #333333; background-color: #FFFFFF; border-bottom-style: none; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; }
+ #mgjqyrqxrh .gt_sourcenote { font-size: 90%; padding-top: 4px; padding-bottom: 4px; padding-left: 5px; padding-right: 5px; text-align: left; }
+ #mgjqyrqxrh .gt_left { text-align: left; }
+ #mgjqyrqxrh .gt_center { text-align: center; }
+ #mgjqyrqxrh .gt_right { text-align: right; font-variant-numeric: tabular-nums; }
+ #mgjqyrqxrh .gt_font_normal { font-weight: normal; }
+ #mgjqyrqxrh .gt_font_bold { font-weight: bold; }
+ #mgjqyrqxrh .gt_font_italic { font-style: italic; }
+ #mgjqyrqxrh .gt_super { font-size: 65%; }
+ #mgjqyrqxrh .gt_footnote_marks { font-size: 75%; vertical-align: 0.4em; position: initial; }
+ #mgjqyrqxrh .gt_asterisk { font-size: 100%; vertical-align: 0; }
+ 
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+
+  <tr class="gt_heading">
+    <td colspan="5" class="gt_heading gt_title gt_font_normal">TABLE 2.—PREDICTIVE VALUE OF WALLET REPORTING RATES</td>
+  </tr>
+<tr class="gt_col_headings gt_spanner_row">
+  <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id=""></th>
+  <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Letter-grade-efficiency">
+    <span class="gt_column_spanner">Letter grade efficiency</span>
+  </th>
+  <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="PISA-Score">
+    <span class="gt_column_spanner">PISA Score</span>
+  </th>
+</tr>
+<tr class="gt_col_headings">
+  <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Model-7">Model 7</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Model-8">Model 8</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Model-9">Model 9</th>
+  <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Model-10">Model 10</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">general_trust</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">general_trust</th>
+    <td class="gt_row gt_center">0.077*</td>
+    <td class="gt_row gt_center">-0.013</td>
+    <td class="gt_row gt_right">26.665***</td>
+    <td class="gt_row gt_right">9.099</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.041)</td>
+    <td class="gt_row gt_center">(0.040)</td>
+    <td class="gt_row gt_right">(4.461)</td>
+    <td class="gt_row gt_right">(6.632)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.148***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">24.956***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.050)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(5.819)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">39</td>
+    <td class="gt_row gt_center">39</td>
+    <td class="gt_row gt_right">32</td>
+    <td class="gt_row gt_right">32</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.078</td>
+    <td class="gt_row gt_center">0.263</td>
+    <td class="gt_row gt_right">0.455</td>
+    <td class="gt_row gt_right">0.656</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">GPS_trust</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">GPS_trust</th>
+    <td class="gt_row gt_center">-0.016</td>
+    <td class="gt_row gt_center">-0.018</td>
+    <td class="gt_row gt_right">3.309</td>
+    <td class="gt_row gt_right">4.477</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.050)</td>
+    <td class="gt_row gt_center">(0.039)</td>
+    <td class="gt_row gt_right">(7.499)</td>
+    <td class="gt_row gt_right">(3.642)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.125***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">31.574***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.041)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.851)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_right">29</td>
+    <td class="gt_row gt_right">29</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.003</td>
+    <td class="gt_row gt_center">0.213</td>
+    <td class="gt_row gt_right">0.007</td>
+    <td class="gt_row gt_right">0.628</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">general_morality</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">general_morality</th>
+    <td class="gt_row gt_center">0.080**</td>
+    <td class="gt_row gt_center">-0.012</td>
+    <td class="gt_row gt_right">25.366***</td>
+    <td class="gt_row gt_right">9.868**</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.036)</td>
+    <td class="gt_row gt_center">(0.047)</td>
+    <td class="gt_row gt_right">(4.857)</td>
+    <td class="gt_row gt_right">(4.125)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.150***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">25.321***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.055)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.718)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">38</td>
+    <td class="gt_row gt_center">38</td>
+    <td class="gt_row gt_right">32</td>
+    <td class="gt_row gt_right">32</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.083</td>
+    <td class="gt_row gt_center">0.268</td>
+    <td class="gt_row gt_right">0.412</td>
+    <td class="gt_row gt_right">0.669</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">MFQ_genmorality</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">MFQ_genmorality</th>
+    <td class="gt_row gt_center">0.118***</td>
+    <td class="gt_row gt_center">0.069*</td>
+    <td class="gt_row gt_right">13.271*</td>
+    <td class="gt_row gt_right">2.465</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.041)</td>
+    <td class="gt_row gt_center">(0.041)</td>
+    <td class="gt_row gt_right">(7.993)</td>
+    <td class="gt_row gt_right">(3.818)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.107***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">31.432***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.032)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.616)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">35</td>
+    <td class="gt_row gt_center">35</td>
+    <td class="gt_row gt_right">31</td>
+    <td class="gt_row gt_right">31</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.219</td>
+    <td class="gt_row gt_center">0.360</td>
+    <td class="gt_row gt_right">0.110</td>
+    <td class="gt_row gt_right">0.656</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">civic_cooperation</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">civic_cooperation</th>
+    <td class="gt_row gt_center">0.089*</td>
+    <td class="gt_row gt_center">0.038</td>
+    <td class="gt_row gt_right">19.470***</td>
+    <td class="gt_row gt_right">2.093</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.045)</td>
+    <td class="gt_row gt_center">(0.059)</td>
+    <td class="gt_row gt_right">(5.560)</td>
+    <td class="gt_row gt_right">(4.312)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.130**</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">30.727***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.054)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(4.505)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">37</td>
+    <td class="gt_row gt_center">37</td>
+    <td class="gt_row gt_right">31</td>
+    <td class="gt_row gt_right">31</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.100</td>
+    <td class="gt_row gt_center">0.283</td>
+    <td class="gt_row gt_right">0.235</td>
+    <td class="gt_row gt_right">0.633</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">GPS_posrecip</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">GPS_posrecip</th>
+    <td class="gt_row gt_center">0.009</td>
+    <td class="gt_row gt_center">0.003</td>
+    <td class="gt_row gt_right">3.255</td>
+    <td class="gt_row gt_right">1.411</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.040)</td>
+    <td class="gt_row gt_center">(0.044)</td>
+    <td class="gt_row gt_right">(7.924)</td>
+    <td class="gt_row gt_right">(4.321)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.125***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">31.325***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.042)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.888)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_right">29</td>
+    <td class="gt_row gt_right">29</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.001</td>
+    <td class="gt_row gt_center">0.209</td>
+    <td class="gt_row gt_right">0.007</td>
+    <td class="gt_row gt_right">0.617</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">GPS_altruism</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">GPS_altruism</th>
+    <td class="gt_row gt_center">-0.033</td>
+    <td class="gt_row gt_center">-0.006</td>
+    <td class="gt_row gt_right">0.699</td>
+    <td class="gt_row gt_right">3.908</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.037)</td>
+    <td class="gt_row gt_center">(0.037)</td>
+    <td class="gt_row gt_right">(8.108)</td>
+    <td class="gt_row gt_right">(5.177)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.124***</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">31.803***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.040)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(3.547)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_center">36</td>
+    <td class="gt_row gt_right">29</td>
+    <td class="gt_row gt_right">29</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.015</td>
+    <td class="gt_row gt_center">0.209</td>
+    <td class="gt_row gt_right">0.000</td>
+    <td class="gt_row gt_right">0.625</td>
+  </tr>
+  <tr class="gt_group_heading_row">
+    <th class="gt_group_heading" colspan="5">stranger1</th>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">stranger1</th>
+    <td class="gt_row gt_center">0.091**</td>
+    <td class="gt_row gt_center">0.001</td>
+    <td class="gt_row gt_right">28.408***</td>
+    <td class="gt_row gt_right">12.071***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center">(0.036)</td>
+    <td class="gt_row gt_center">(0.062)</td>
+    <td class="gt_row gt_right">(4.186)</td>
+    <td class="gt_row gt_right">(4.536)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub">response</th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">0.140**</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">23.480***</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"></th>
+    <td class="gt_row gt_center"><NA></td>
+    <td class="gt_row gt_center">(0.061)</td>
+    <td class="gt_row gt_right"><NA></td>
+    <td class="gt_row gt_right">(4.237)</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>N<i></th>
+    <td class="gt_row gt_center">39</td>
+    <td class="gt_row gt_center">39</td>
+    <td class="gt_row gt_right">32</td>
+    <td class="gt_row gt_right">32</td>
+  </tr>
+  <tr>
+    <th class="gt_row gt_left gt_stub"><i>R<i><sup>2</sup></th>
+    <td class="gt_row gt_center">0.110</td>
+    <td class="gt_row gt_center">0.263</td>
+    <td class="gt_row gt_right">0.508</td>
+    <td class="gt_row gt_right">0.687</td>
+  </tr>
+</tbody>
+
+
+</table>
+
+</div>
+        </div></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="introduction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pisa_ml.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Machine Learning Stuff</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pisa-vs-survey-data">PISA vs. Survey Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pisa-as-a-predictor-of-economic-and-institutional-performance">PISA as a Predictor of Economic and Institutional Performance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-results">Regression Results</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By John Sherrill
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

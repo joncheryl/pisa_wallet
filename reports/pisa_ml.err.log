@@ -1,0 +1,174 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gussie/Library/Python/3.12/lib/python/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Define features for this model
+numeric_features_ml1 = survey_cols
+categorical_features_ml1 = cat_cols
+
+# Numeric feature pipeline
+numeric_transformer = Pipeline(
+    steps=[
+        ("imputer", SimpleImputer(strategy="mean")),
+        ("scaler", StandardScaler()),
+    ]
+)
+
+# Categorical feature pipeline
+categorical_transformer = Pipeline(
+    steps=[
+        (
+            "imputer",
+            SimpleImputer(strategy="most_frequent"),
+        ),
+        ("encoder", OneHotEncoder(handle_unknown="ignore")),
+        # SelectPercentile for categorical features after OHE might be 
+        # less common than for numeric.
+        # Chi2 requires non-negative features, which OHE provides.
+        # ("selector", SelectPercentile(chi2, percentile=50)),
+    ]
+)
+
+preprocessor1 = ColumnTransformer(
+    transformers=[
+        ("num", numeric_transformer, numeric_features_ml1),
+        ("cat", categorical_transformer, categorical_features_ml1),
+    ]
+)
+
+# Target variable:
+# 'response' categories are '0' and '100'. We map them to 0 and 1 with .cat.codes
+y = df["response"].cat.codes
+X = df.drop(columns="response")
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.2,
+    random_state=12,
+    stratify=y,  # Stratify by y for classification
+)
+
+
+# Classifier pipeline.
+clf1 = Pipeline(
+    steps=[
+        ("preprocessor", preprocessor1),
+        # ("classifier", SVC(random_state=123, class_weight="balanced")),
+        # ("classifier", KNeighborsClassifier(n_neighbors=50))
+        # ("classifier", LogisticRegression(max_iter=10000, random_state=123))
+        # ("classifier", RidgeClassifier(alpha=5))
+        # ("classifier", GaussianNB())
+        # ("classifier", tree.DecisionTreeClassifier())
+        # ("classifier", RandomForestClassifier(class_weight='balanced', random_state=43)),
+        # could try xgboost,
+    ]
+)
+
+# Weighting observations. This was an experiment; its effectiveness can vary.
+weight_cols = ["security_guard", "no_english", "coworkers"]
+cond_counts = X_train[weight_cols].value_counts(normalize=True)
+weights = X_train[weight_cols].apply(
+    lambda row: 1 / cond_counts.get(tuple(row), 1.0), axis=1
+)
+
+clf1.fit(X_train, y_train, classifier__sample_weight=weights)
+score1 = clf1.score(X_test, y_test)
+print(f"Model 1 (without PISA) score: {score1:.3f}")
+
+########################################################################
+# XGBOOST
+########################################################################
+
+# Transform the training and test data
+X_train_transformed = preprocessor1.transform(X_train)
+X_test_transformed = preprocessor1.transform(X_test)
+
+from xgboost import XGBClassifier
+
+model = XGBClassifier(max_depth=40, learning_rate=0.11, objective="binary:logistic")
+model.fit(X_train_transformed, y_train)
+preds = model.predict(X_test_transformed)
+
+from sklearn.metrics import accuracy_score
+
+accuracy = accuracy_score(y_test, preds)
+print(f"Accuracy with XGBoost: {accuracy:.3f}")
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+Cell [0;32mIn[5], line 71[0m
+[1;32m     66[0m cond_counts [38;5;241m=[39m X_train[weight_cols][38;5;241m.[39mvalue_counts(normalize[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[1;32m     67[0m weights [38;5;241m=[39m X_train[weight_cols][38;5;241m.[39mapply(
+[1;32m     68[0m     [38;5;28;01mlambda[39;00m row: [38;5;241m1[39m [38;5;241m/[39m cond_counts[38;5;241m.[39mget([38;5;28mtuple[39m(row), [38;5;241m1.0[39m), axis[38;5;241m=[39m[38;5;241m1[39m
+[1;32m     69[0m )
+[0;32m---> 71[0m [43mclf1[49m[38;5;241;43m.[39;49m[43mfit[49m[43m([49m[43mX_train[49m[43m,[49m[43m [49m[43my_train[49m[43m,[49m[43m [49m[43mclassifier__sample_weight[49m[38;5;241;43m=[39;49m[43mweights[49m[43m)[49m
+[1;32m     72[0m score1 [38;5;241m=[39m clf1[38;5;241m.[39mscore(X_test, y_test)
+[1;32m     73[0m [38;5;28mprint[39m([38;5;124mf[39m[38;5;124m"[39m[38;5;124mModel 1 (without PISA) score: [39m[38;5;132;01m{[39;00mscore1[38;5;132;01m:[39;00m[38;5;124m.3f[39m[38;5;132;01m}[39;00m[38;5;124m"[39m)
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sklearn/base.py:1473[0m, in [0;36m_fit_context.<locals>.decorator.<locals>.wrapper[0;34m(estimator, *args, **kwargs)[0m
+[1;32m   1466[0m     estimator[38;5;241m.[39m_validate_params()
+[1;32m   1468[0m [38;5;28;01mwith[39;00m config_context(
+[1;32m   1469[0m     skip_parameter_validation[38;5;241m=[39m(
+[1;32m   1470[0m         prefer_skip_nested_validation [38;5;129;01mor[39;00m global_skip_validation
+[1;32m   1471[0m     )
+[1;32m   1472[0m ):
+[0;32m-> 1473[0m     [38;5;28;01mreturn[39;00m [43mfit_method[49m[43m([49m[43mestimator[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sklearn/pipeline.py:468[0m, in [0;36mPipeline.fit[0;34m(self, X, y, **params)[0m
+[1;32m    421[0m [38;5;129m@_fit_context[39m(
+[1;32m    422[0m     [38;5;66;03m# estimators in Pipeline.steps are not validated yet[39;00m
+[1;32m    423[0m     prefer_skip_nested_validation[38;5;241m=[39m[38;5;28;01mFalse[39;00m
+[1;32m    424[0m )
+[1;32m    425[0m [38;5;28;01mdef[39;00m [38;5;21mfit[39m([38;5;28mself[39m, X, y[38;5;241m=[39m[38;5;28;01mNone[39;00m, [38;5;241m*[39m[38;5;241m*[39mparams):
+[1;32m    426[0m [38;5;250m    [39m[38;5;124;03m"""Fit the model.[39;00m
+[1;32m    427[0m 
+[1;32m    428[0m [38;5;124;03m    Fit all the transformers one after the other and sequentially transform the[39;00m
+[0;32m   (...)[0m
+[1;32m    466[0m [38;5;124;03m        Pipeline with fitted steps.[39;00m
+[1;32m    467[0m [38;5;124;03m    """[39;00m
+[0;32m--> 468[0m     routed_params [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_check_method_params[49m[43m([49m[43mmethod[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43mfit[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43mprops[49m[38;5;241;43m=[39;49m[43mparams[49m[43m)[49m
+[1;32m    469[0m     Xt [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_fit(X, y, routed_params)
+[1;32m    470[0m     [38;5;28;01mwith[39;00m _print_elapsed_time([38;5;124m"[39m[38;5;124mPipeline[39m[38;5;124m"[39m, [38;5;28mself[39m[38;5;241m.[39m_log_message([38;5;28mlen[39m([38;5;28mself[39m[38;5;241m.[39msteps) [38;5;241m-[39m [38;5;241m1[39m)):
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sklearn/pipeline.py:374[0m, in [0;36mPipeline._check_method_params[0;34m(self, method, props, **kwargs)[0m
+[1;32m    366[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[1;32m    367[0m         [38;5;124m"[39m[38;5;124mPipeline.fit does not accept the [39m[38;5;132;01m{}[39;00m[38;5;124m parameter. [39m[38;5;124m"[39m
+[1;32m    368[0m         [38;5;124m"[39m[38;5;124mYou can pass parameters to specific steps of your [39m[38;5;124m"[39m
+[0;32m   (...)[0m
+[1;32m    371[0m         [38;5;124m"[39m[38;5;124m=sample_weight)`.[39m[38;5;124m"[39m[38;5;241m.[39mformat(pname)
+[1;32m    372[0m     )
+[1;32m    373[0m step, param [38;5;241m=[39m pname[38;5;241m.[39msplit([38;5;124m"[39m[38;5;124m__[39m[38;5;124m"[39m, [38;5;241m1[39m)
+[0;32m--> 374[0m [43mfit_params_steps[49m[43m[[49m[43mstep[49m[43m][49m[[38;5;124m"[39m[38;5;124mfit[39m[38;5;124m"[39m][param] [38;5;241m=[39m pval
+[1;32m    375[0m [38;5;66;03m# without metadata routing, fit_transform and fit_predict[39;00m
+[1;32m    376[0m [38;5;66;03m# get all the same params and pass it to the last fit.[39;00m
+[1;32m    377[0m fit_params_steps[step][[38;5;124m"[39m[38;5;124mfit_transform[39m[38;5;124m"[39m][param] [38;5;241m=[39m pval
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sklearn/utils/_bunch.py:39[0m, in [0;36mBunch.__getitem__[0;34m(self, key)[0m
+[1;32m     34[0m [38;5;28;01mif[39;00m key [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39m[38;5;18m__dict__[39m[38;5;241m.[39mget([38;5;124m"[39m[38;5;124m_deprecated_key_to_warnings[39m[38;5;124m"[39m, {}):
+[1;32m     35[0m     warnings[38;5;241m.[39mwarn(
+[1;32m     36[0m         [38;5;28mself[39m[38;5;241m.[39m_deprecated_key_to_warnings[key],
+[1;32m     37[0m         [38;5;167;01mFutureWarning[39;00m,
+[1;32m     38[0m     )
+[0;32m---> 39[0m [38;5;28;01mreturn[39;00m [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[38;5;21;43m__getitem__[39;49m[43m([49m[43mkey[49m[43m)[49m
+
+[0;31mKeyError[0m: 'classifier'
+

@@ -18,38 +18,60 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Columns we want to see correlations for.
-cols_for_country_avg_corr = ['response', 'pisa_score'] + numeric_features_initial + sc_measures
+import pandas as pd
+import plotly.express as px
+# import plotly.io as pio
 
-df_corr = df.copy().astype({'response': int})
+# pio.templates.default = "plotly_white"
 
-# Calculate country averages for these measures
-country_avg_data = df_corr.groupby("country")[cols_for_country_avg_corr].mean()
+# import statsmodels.api as sm
 
-# Compute the correlation matrix
-comprehensive_corr_matrix = country_avg_data.corr()
+# cat_cols = [
+#     "country",
+#     "response",
+#     "male",
+#     "above40",
+#     "computer",
+#     "coworkers",
+#     "other_bystanders",
+#     "institution",
+#     "cond",
+#     "security_cam",
+#     "security_guard",
+#     "local_recipient",
+#     "no_english",
+#     "understood_situation",
+# ]
 
-fig_comp_corr = px.imshow(
-    comprehensive_corr_matrix,
-    labels=dict(color="Correlation"),
-    color_continuous_scale="RdBu_r",
-    zmin=-1,
-    zmax=1,
-    title="Correlation Matrix: Wallet Response, PISA, Survey & SC Measures (Country Averages)",
-    # text_auto=True # Show correlation values on heatmap
-)
-fig_comp_corr.update_layout(height=800)
-fig_comp_corr.show()
+# # Import Tannenbaum data
+# df = pd.read_csv(
+#     "../data/tannenbaum_data.csv",
+#     dtype={col: "category" for col in cat_cols},
+# )
+
+# # Import PISA data
+# pisa = pd.read_csv("../data/pisa_data.csv").rename(columns={"mean_score": "pisa_score"})
+# df = df.merge(pisa, how="left", on="country")
+
+# wallet_pisa = (
+#     df.astype({"response": int})
+#     .groupby(["country"])[["response", "pisa_score"]]
+#     .mean()
+# )
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[2], line 2[0m
-[1;32m      1[0m [38;5;66;03m# Columns we want to see correlations for.[39;00m
-[0;32m----> 2[0m cols_for_country_avg_corr [38;5;241m=[39m [[38;5;124m'[39m[38;5;124mresponse[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mpisa_score[39m[38;5;124m'[39m] [38;5;241m+[39m [43mnumeric_features_initial[49m [38;5;241m+[39m sc_measures
-[1;32m      4[0m df_corr [38;5;241m=[39m df[38;5;241m.[39mcopy()[38;5;241m.[39mastype({[38;5;124m'[39m[38;5;124mresponse[39m[38;5;124m'[39m: [38;5;28mint[39m})
-[1;32m      6[0m [38;5;66;03m# Calculate country averages for these measures[39;00m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mexpress[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpx[39;00m
+[1;32m      3[0m [38;5;66;03m# import plotly.io as pio[39;00m
+[1;32m      4[0m 
+[1;32m      5[0m [38;5;66;03m# pio.templates.default = "plotly_white"[39;00m
+[0;32m   (...)[0m
+[1;32m     39[0m [38;5;66;03m#     .mean()[39;00m
+[1;32m     40[0m [38;5;66;03m# )[39;00m
 
-[0;31mNameError[0m: name 'numeric_features_initial' is not defined
+[0;31mModuleNotFoundError[0m: No module named 'plotly'
 

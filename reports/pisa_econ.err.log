@@ -1,0 +1,206 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gussie/Library/Python/3.12/lib/python/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pandas as pd
+import statsmodels.api as sm
+from great_tables import GT, html
+
+# Data import
+survey_cols = [
+    "general_trust",
+    "GPS_trust",
+    "general_morality",
+    "MFQ_genmorality",
+    "civic_cooperation",
+    "GPS_posrecip",
+    "GPS_altruism",
+    "stranger1",
+]
+
+survery_cols = [
+    "log_gdp",
+    "log_tfp",
+    "gee",
+    "letter_grading",
+]
+
+df = pd.read_csv(
+    "../data/tannenbaum_data.csv",
+)
+
+# Add PISA data
+pisa = pd.read_csv("../data/pisa_data.csv").rename(columns={"mean_score": "pisa_score"})
+df = df.merge(pisa, how="left", on="country")
+
+
+# p-value stars to award to each parameter coef estimate.
+def stars(p):
+    if p > 0.1:
+        return ""
+    elif p > 0.05:
+        return "*"
+    elif p > 0.01:
+        return "**"
+    else:
+        return "***"
+
+
+# Run regression for each survey measure.
+def get_model_results_no_pred(survey_measure, econ_measure):
+    regression_df = (
+        df.groupby("country")[[econ_measure, survey_measure]].mean().dropna()
+    )
+
+    y = regression_df[econ_measure]
+    X = regression_df[[survey_measure]]
+
+    # Standardize predictors
+    X_std = (X - X.mean()) / X.std()
+    X_std = sm.add_constant(X_std)
+
+    model = sm.OLS(y, X_std)
+    results = model.fit(cov_type="HC1")  # Robust standard errors same as in Tannenbaum
+    result_df = (
+        pd.DataFrame(
+            {
+                "param": pd.Series(
+                    [
+                        f"{v:.3f}{stars(p)}"
+                        for v, p in zip(results.params[1:], results.pvalues[1:])
+                    ],
+                    index=results.params.index[1:],
+                ),
+                "se": results.bse[1:].apply(lambda x: f"({x:.3f})"),
+            }
+        )
+        .astype({"param": object, "se": object})
+        .stack()
+    )
+    result_df.loc[("<i>N<i>", "")] = X.shape[0]
+    result_df.loc[("<i>R<i><sup>2</sup>", "")] = f"{results.rsquared:.3f}"
+    result_df = result_df.reset_index()
+    result_df["measure"] = survey_measure
+
+    return result_df
+
+
+# Run regression for each survey measure with predictor variable.
+def get_model_results(survey_measure, econ_measure):
+    regression_df = (
+        df.groupby("country")[["response", econ_measure, survey_measure]]
+        .mean()
+        .dropna()
+    )
+
+    y = regression_df[econ_measure]
+    # y = (y - y.mean()) / y.std()
+    X = regression_df[[survey_measure, "response"]]
+
+    # Standardize predictors
+    X_std = (X - X.mean()) / X.std()
+    X_std = sm.add_constant(X_std)
+
+    model = sm.OLS(y, X_std)
+    results = model.fit(cov_type="HC1")  # Robust standard errors same as in Tannenbaum
+
+    result_df = (
+        pd.DataFrame(
+            {
+                "param": pd.Series(
+                    [
+                        f"{v:.3f}{stars(p)}"
+                        for v, p in zip(results.params[1:], results.pvalues[1:])
+                    ],
+                    index=results.params.index[1:],
+                ),
+                "se": results.bse[1:].apply(lambda x: f"({x:.3f})"),
+            }
+        )
+        .astype({"param": object, "se": object})
+        .stack()
+    )
+    result_df.loc[("<i>N<i>", "")] = X.shape[0]
+    result_df.loc[("<i>R<i><sup>2</sup>", "")] = f"{results.rsquared:.3f}"
+    result_df = result_df.reset_index()
+    result_df["measure"] = survey_measure
+
+    return result_df
+
+
+model_7_results = [
+    get_model_results_no_pred(col, "letter_grading") for col in survey_cols
+]
+model_7 = pd.concat(model_7_results)
+model_7 = model_7.rename(columns={0: "Model 7"})
+
+model_8_results = [get_model_results(col, "letter_grading") for col in survey_cols]
+model_8 = pd.concat(model_8_results)
+model_8 = model_8.rename(columns={0: "Model 8"})
+
+model_9_results = [get_model_results_no_pred(col, "pisa_score") for col in survey_cols]
+model_9 = pd.concat(model_9_results)
+model_9 = model_9.rename(columns={0: "Model 9"})
+
+model_10_results = [get_model_results(col, "pisa_score") for col in survey_cols]
+model_10 = pd.concat(model_10_results)
+model_10 = model_10.rename(columns={0: "Model 10"})
+
+display_df = (
+    model_7.merge(model_8, on=["level_0", "level_1", "measure"], how="right")
+    .merge(model_9, on=["level_0", "level_1", "measure"], how="left")
+    .merge(model_10, on=["level_0", "level_1", "measure"], how="right")
+    .iloc[:, [0, 2, 3, 4, 5, 6]]
+)
+
+display_df.loc[:, "level_0"] = display_df.loc[:, "level_0"].where(
+    display_df.loc[:, "level_0"] != display_df.loc[:, "level_0"].shift(), ""
+)
+
+display_df
+(
+    GT(display_df)
+    .tab_header(title="TABLE 2.—PREDICTIVE VALUE OF WALLET REPORTING RATES")
+    .tab_stub(rowname_col="level_0", groupname_col="measure")
+    .tab_spanner(label="Letter grade efficiency", columns=["Model 7", "Model 8"])
+    .tab_spanner(label="PISA Score", columns=["Model 9", "Model 10"])
+    .tab_options(
+        table_body_hlines_style="none",
+    )
+    .cols_align(align="center", columns=["Model 7", "Model 8"])
+)
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 3[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m [38;5;28;01mas[39;00m [38;5;21;01msm[39;00m
+[0;32m----> 3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mgreat_tables[39;00m [38;5;28;01mimport[39;00m GT, html
+[1;32m      5[0m [38;5;66;03m# Data import[39;00m
+[1;32m      6[0m survey_cols [38;5;241m=[39m [
+[1;32m      7[0m     [38;5;124m"[39m[38;5;124mgeneral_trust[39m[38;5;124m"[39m,
+[1;32m      8[0m     [38;5;124m"[39m[38;5;124mGPS_trust[39m[38;5;124m"[39m,
+[0;32m   (...)[0m
+[1;32m     14[0m     [38;5;124m"[39m[38;5;124mstranger1[39m[38;5;124m"[39m,
+[1;32m     15[0m ]
+
+[0;31mModuleNotFoundError[0m: No module named 'great_tables'
+
