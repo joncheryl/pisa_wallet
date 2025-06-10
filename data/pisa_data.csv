@@ -1,244 +1,705 @@
-mean_score,country,subject
-575.0,Singapore,math
-552.0,Macao (China),math
-547.0,Chinese Taipei,math
-540.0,Hong Kong (China)*,math
-536.0,Japan,math
-527.0,Korea,math
-510.0,Estonia,math
-508.0,Switzerland,math
-497.0,Canada,math
-493.0,Netherlands,math
-492.0,Ireland*,math
-489.0,Belgium,math
-489.0,Denmark,math
-489.0,UK,math
-489.0,Poland,math
-487.0,Austria,math
-487.0,Australia,math
-487.0,Czech Republic,math
-485.0,Slovenia,math
-484.0,Finland,math
-483.0,Latvia*,math
-482.0,Sweden,math
-479.0,New Zealand,math
-475.0,Lithuania,math
-475.0,Germany,math
-474.0,France,math
-473.0,Spain,math
-473.0,Hungary,math
-472.0,Portugal,math
-471.0,Italy,math
-469.0,Viet Nam,math
-468.0,Norway,math
-466.0,Malta,math
-465.0,USA,math
-464.0,Slovak Republic,math
-463.0,Croatia,math
-459.0,Iceland,math
-458.0,Israel,math
-453.0,Türkiye,math
-442.0,Brunei Darussalam,math
-441.0,Ukrainian regions (18 of 27),math
-440.0,Serbia,math
-431.0,UAE,math
-430.0,Greece,math
-428.0,Romania,math
-425.0,Kazakhstan,math
-425.0,Mongolia,math
-418.0,Cyprus,math
-417.0,Bulgaria,math
-414.0,Moldova,math
-414.0,Qatar,math
-412.0,Chile,math
-409.0,Uruguay,math
-409.0,Malaysia,math
-406.0,Montenegro,math
-397.0,Baku (Azerbaijan),math
-395.0,Mexico,math
-394.0,Thailand,math
-391.0,Peru,math
-390.0,Georgia,math
-389.0,Saudi Arabia,math
-389.0,North Macedonia,math
-385.0,Costa Rica,math
-383.0,Colombia,math
-379.0,Brazil,math
-378.0,Argentina,math
-377.0,Jamaica*,math
-368.0,Albania,math
-366.0,Palestinian Authority,math
-366.0,Indonesia,math
-365.0,Morocco,math
-364.0,Uzbekistan,math
-361.0,Jordan,math
-357.0,Panama*,math
-355.0,Kosovo,math
-355.0,Philippines,math
-344.0,Guatemala,math
-343.0,El Salvador,math
-339.0,Dominican Republic,math
-338.0,Paraguay,math
-336.0,Cambodia,math
-543.0,Singapore,reading
-516.0,Ireland*,reading
-516.0,Japan,reading
-515.0,Korea,reading
-515.0,Chinese Taipei,reading
-511.0,Estonia,reading
-510.0,Macao (China),reading
-507.0,Canada,reading
-504.0,USA,reading
-501.0,New Zealand,reading
-500.0,Hong Kong (China)*,reading
-498.0,Australia,reading
-494.0,UK,reading
-490.0,Finland,reading
-489.0,Denmark,reading
-489.0,Poland,reading
-489.0,Czech Republic,reading
-487.0,Sweden,reading
-483.0,Switzerland,reading
-482.0,Italy,reading
-480.0,Austria,reading
-480.0,Germany,reading
-479.0,Belgium,reading
-477.0,Portugal,reading
-477.0,Norway,reading
-475.0,Croatia,reading
-475.0,Latvia*,reading
-474.0,Spain,reading
-474.0,France,reading
-474.0,Israel,reading
-473.0,Hungary,reading
-472.0,Lithuania,reading
-469.0,Slovenia,reading
-462.0,Viet Nam**,reading
-459.0,Netherlands,reading
-456.0,Türkiye,reading
-448.0,Chile,reading
-447.0,Slovak Republic,reading
-445.0,Malta,reading
-440.0,Serbia,reading
-438.0,Greece,reading
-436.0,Iceland,reading
-430.0,Uruguay,reading
-429.0,Brunei Darussalam,reading
-428.0,Romania,reading
-428.0,Ukrainian regions (18 of 27),reading
-419.0,Qatar,reading
-417.0,UAE,reading
-415.0,Mexico,reading
-415.0,Costa Rica,reading
-411.0,Moldova,reading
-410.0,Brazil,reading
-410.0,Jamaica*,reading
-409.0,Colombia,reading
-408.0,Peru,reading
-405.0,Montenegro,reading
-404.0,Bulgaria,reading
-401.0,Argentina,reading
-392.0,Panama*,reading
-388.0,Malaysia,reading
-386.0,Kazakhstan,reading
-383.0,Saudi Arabia,reading
-381.0,Cyprus,reading
-379.0,Thailand,reading
-378.0,Mongolia,reading
-374.0,Guatemala,reading
-374.0,Georgia,reading
-373.0,Paraguay,reading
-365.0,Baku (Azerbaijan),reading
-365.0,El Salvador,reading
-359.0,Indonesia,reading
-359.0,North Macedonia,reading
-358.0,Albania,reading
-351.0,Dominican Republic,reading
-349.0,Palestinian Authority,reading
-347.0,Philippines,reading
-342.0,Kosovo,reading
-342.0,Jordan,reading
-339.0,Morocco,reading
-336.0,Uzbekistan,reading
-329.0,Cambodia,reading
-561.0,Singapore,science
-547.0,Japan,science
-543.0,Macao (China),science
-537.0,Chinese Taipei,science
-528.0,Korea,science
-526.0,Estonia,science
-520.0,Hong Kong (China)*,science
-515.0,Canada,science
-511.0,Finland,science
-507.0,Australia,science
-504.0,New Zealand,science
-504.0,Ireland*,science
-503.0,Switzerland,science
-500.0,Slovenia,science
-500.0,UK,science
-499.0,USA,science
-499.0,Poland,science
-498.0,Czech Republic,science
-494.0,Latvia*,science
-494.0,Denmark,science
-494.0,Sweden,science
-492.0,Germany,science
-491.0,Austria,science
-491.0,Belgium,science
-488.0,Netherlands,science
-487.0,France,science
-486.0,Hungary,science
-485.0,Spain,science
-484.0,Lithuania,science
-484.0,Portugal,science
-483.0,Croatia,science
-478.0,Norway,science
-477.0,Italy,science
-476.0,Türkiye,science
-472.0,Viet Nam,science
-466.0,Malta,science
-465.0,Israel,science
-462.0,Slovak Republic,science
-450.0,Ukrainian regions (18 of 27),science
-447.0,Serbia,science
-447.0,Iceland,science
-446.0,Brunei Darussalam,science
-444.0,Chile,science
-441.0,Greece,science
-435.0,Uruguay,science
-432.0,Qatar,science
-432.0,UAE,science
-428.0,Romania,science
-423.0,Kazakhstan,science
-421.0,Bulgaria,science
-417.0,Moldova,science
-416.0,Malaysia,science
-412.0,Mongolia,science
-411.0,Colombia,science
-411.0,Costa Rica,science
-411.0,Cyprus,science
-410.0,Mexico,science
-409.0,Thailand,science
-408.0,Peru,science
-406.0,Argentina,science
-403.0,Montenegro,science
-403.0,Brazil,science
-403.0,Jamaica*,science
-390.0,Saudi Arabia,science
-388.0,Panama*,science
-384.0,Georgia,science
-383.0,Indonesia,science
-380.0,Baku (Azerbaijan),science
-380.0,North Macedonia,science
-376.0,Albania,science
-375.0,Jordan,science
-373.0,El Salvador,science
-373.0,Guatemala,science
-369.0,Palestinian Authority,science
-368.0,Paraguay,science
-365.0,Morocco,science
-360.0,Dominican Republic,science
-357.0,Kosovo,science
-356.0,Philippines,science
-355.0,Uzbekistan,science
-347.0,Cambodia,science
+country,subject,year,pisa_score
+International Average (OECD),math,2022,472
+International Average (OECD),math,2018,489
+International Average (OECD),math,2015,490
+International Average (OECD),science,2022,485
+International Average (OECD),science,2018,489
+International Average (OECD),science,2015,493
+International Average (OECD),reading,2022,476
+International Average (OECD),reading,2018,487
+International Average (OECD),reading,2015,493
+Albania,math,2022,368
+Albania,math,2018,437
+Albania,math,2015,413
+Albania,science,2022,376
+Albania,science,2018,417
+Albania,science,2015,427
+Albania,reading,2022,358
+Albania,reading,2018,405
+Albania,reading,2015,405
+Algeria,math,2015,360
+Algeria,science,2015,376
+Algeria,reading,2015,350
+Argentina,math,2022,378
+Argentina,math,2018,379
+Argentina,math,2015,409
+Argentina,science,2022,406
+Argentina,science,2018,404
+Argentina,science,2015,432
+Argentina,reading,2022,401
+Argentina,reading,2018,402
+Argentina,reading,2015,425
+Australia,math,2022,487
+Australia,math,2018,491
+Australia,math,2015,494
+Australia,science,2022,507
+Australia,science,2018,503
+Australia,science,2015,510
+Australia,reading,2022,498
+Australia,reading,2018,503
+Australia,reading,2015,503
+Austria,math,2022,487
+Austria,math,2018,499
+Austria,math,2015,497
+Austria,science,2022,491
+Austria,science,2018,490
+Austria,science,2015,495
+Austria,reading,2022,480
+Austria,reading,2018,484
+Austria,reading,2015,485
+B-S-J-G (China),math,2015,531
+B-S-J-G (China),science,2015,518
+B-S-J-G (China),reading,2015,494
+B-S-J-Z (China),math,2018,591
+B-S-J-Z (China),science,2018,590
+B-S-J-Z (China),reading,2018,555
+Baku (Azerbaijan),math,2022,397
+Baku (Azerbaijan),math,2018,420
+Baku (Azerbaijan),science,2022,380
+Baku (Azerbaijan),science,2018,398
+Baku (Azerbaijan),reading,2022,365
+Baku (Azerbaijan),reading,2018,389
+Belarus,math,2018,472
+Belarus,science,2018,471
+Belarus,reading,2018,474
+Belgium,math,2022,489
+Belgium,math,2018,508
+Belgium,math,2015,507
+Belgium,science,2022,491
+Belgium,science,2018,499
+Belgium,science,2015,502
+Belgium,reading,2022,479
+Belgium,reading,2018,493
+Belgium,reading,2015,499
+Bosnia and Herzegovina,math,2018,406
+Bosnia and Herzegovina,science,2018,398
+Bosnia and Herzegovina,reading,2018,403
+Brazil,math,2022,379
+Brazil,math,2018,384
+Brazil,math,2015,377
+Brazil,science,2022,403
+Brazil,science,2018,404
+Brazil,science,2015,401
+Brazil,reading,2022,410
+Brazil,reading,2018,413
+Brazil,reading,2015,407
+Brunei,math,2022,442
+Brunei,math,2018,430
+Brunei,science,2022,446
+Brunei,science,2018,431
+Brunei,reading,2022,429
+Brunei,reading,2018,408
+Bulgaria,math,2022,417
+Bulgaria,math,2018,436
+Bulgaria,math,2015,441
+Bulgaria,science,2022,421
+Bulgaria,science,2018,424
+Bulgaria,science,2015,446
+Bulgaria,reading,2022,404
+Bulgaria,reading,2018,420
+Bulgaria,reading,2015,432
+CABA (Argentina),math,2015,456
+CABA (Argentina),science,2015,475
+CABA (Argentina),reading,2015,475
+Cambodia,math,2022,336
+Cambodia,science,2022,347
+Cambodia,reading,2022,329
+Canada,math,2022,497
+Canada,math,2018,512
+Canada,math,2015,516
+Canada,science,2022,515
+Canada,science,2018,518
+Canada,science,2015,528
+Canada,reading,2022,507
+Canada,reading,2018,520
+Canada,reading,2015,527
+Chile,math,2022,412
+Chile,math,2018,417
+Chile,math,2015,423
+Chile,science,2022,444
+Chile,science,2018,444
+Chile,science,2015,447
+Chile,reading,2022,448
+Chile,reading,2018,452
+Chile,reading,2015,459
+Taiwan,math,2022,547
+Taiwan,math,2018,531
+Taiwan,math,2015,542
+Taiwan,science,2022,537
+Taiwan,science,2018,516
+Taiwan,science,2015,532
+Taiwan,reading,2022,515
+Taiwan,reading,2018,503
+Taiwan,reading,2015,497
+Colombia,math,2022,383
+Colombia,math,2018,391
+Colombia,math,2015,390
+Colombia,science,2022,411
+Colombia,science,2018,413
+Colombia,science,2015,416
+Colombia,reading,2022,409
+Colombia,reading,2018,412
+Colombia,reading,2015,425
+Costa Rica,math,2022,385
+Costa Rica,math,2018,402
+Costa Rica,math,2015,400
+Costa Rica,science,2022,411
+Costa Rica,science,2018,416
+Costa Rica,science,2015,420
+Costa Rica,reading,2022,415
+Costa Rica,reading,2018,426
+Costa Rica,reading,2015,427
+Croatia,math,2022,463
+Croatia,math,2018,464
+Croatia,math,2015,464
+Croatia,science,2022,483
+Croatia,science,2018,472
+Croatia,science,2015,475
+Croatia,reading,2022,475
+Croatia,reading,2018,479
+Croatia,reading,2015,487
+Cyprus,math,2022,418
+Cyprus,math,2018,451
+Cyprus,math,2015,437
+Cyprus,science,2022,411
+Cyprus,science,2018,439
+Cyprus,science,2015,433
+Cyprus,reading,2022,381
+Cyprus,reading,2018,424
+Cyprus,reading,2015,443
+Czech Republic,math,2022,487
+Czech Republic,math,2018,499
+Czech Republic,math,2015,492
+Czech Republic,science,2022,498
+Czech Republic,science,2018,497
+Czech Republic,science,2015,493
+Czech Republic,reading,2022,489
+Czech Republic,reading,2018,490
+Czech Republic,reading,2015,487
+Denmark,math,2022,489
+Denmark,math,2018,509
+Denmark,math,2015,511
+Denmark,science,2022,494
+Denmark,science,2018,493
+Denmark,science,2015,502
+Denmark,reading,2022,489
+Denmark,reading,2018,501
+Denmark,reading,2015,500
+Dominican Republic,math,2022,339
+Dominican Republic,math,2018,325
+Dominican Republic,math,2015,328
+Dominican Republic,science,2022,360
+Dominican Republic,science,2018,336
+Dominican Republic,science,2015,332
+Dominican Republic,reading,2022,351
+Dominican Republic,reading,2018,342
+Dominican Republic,reading,2015,358
+El Salvador,math,2022,343
+El Salvador,science,2022,373
+El Salvador,reading,2022,365
+Estonia,math,2022,510
+Estonia,math,2018,523
+Estonia,math,2015,520
+Estonia,science,2022,526
+Estonia,science,2018,530
+Estonia,science,2015,534
+Estonia,reading,2022,511
+Estonia,reading,2018,523
+Estonia,reading,2015,519
+Finland,math,2022,484
+Finland,math,2018,507
+Finland,math,2015,511
+Finland,science,2022,511
+Finland,science,2018,522
+Finland,science,2015,531
+Finland,reading,2022,490
+Finland,reading,2018,520
+Finland,reading,2015,526
+France,math,2022,474
+France,math,2018,495
+France,math,2015,493
+France,science,2022,487
+France,science,2018,493
+France,science,2015,495
+France,reading,2022,474
+France,reading,2018,493
+France,reading,2015,499
+Georgia,math,2022,390
+Georgia,math,2018,398
+Georgia,math,2015,404
+Georgia,science,2022,384
+Georgia,science,2018,383
+Georgia,science,2015,411
+Georgia,reading,2022,374
+Georgia,reading,2018,380
+Georgia,reading,2015,401
+Germany,math,2022,475
+Germany,math,2018,500
+Germany,math,2015,506
+Germany,science,2022,492
+Germany,science,2018,503
+Germany,science,2015,509
+Germany,reading,2022,480
+Germany,reading,2018,498
+Germany,reading,2015,509
+Greece,math,2022,430
+Greece,math,2018,451
+Greece,math,2015,454
+Greece,science,2022,441
+Greece,science,2018,452
+Greece,science,2015,455
+Greece,reading,2022,438
+Greece,reading,2018,457
+Greece,reading,2015,467
+Guatemala,math,2022,344
+Guatemala,science,2022,373
+Guatemala,reading,2022,374
+Hong Kong (China),math,2022,540
+Hong Kong (China),math,2018,551
+Hong Kong (China),math,2015,548
+Hong Kong (China),science,2022,520
+Hong Kong (China),science,2018,517
+Hong Kong (China),science,2015,523
+Hong Kong (China),reading,2022,500
+Hong Kong (China),reading,2018,524
+Hong Kong (China),reading,2015,527
+Hungary,math,2022,473
+Hungary,math,2018,481
+Hungary,math,2015,477
+Hungary,science,2022,486
+Hungary,science,2018,481
+Hungary,science,2015,477
+Hungary,reading,2022,473
+Hungary,reading,2018,476
+Hungary,reading,2015,470
+Iceland,math,2022,459
+Iceland,math,2018,495
+Iceland,math,2015,488
+Iceland,science,2022,447
+Iceland,science,2018,475
+Iceland,science,2015,473
+Iceland,reading,2022,436
+Iceland,reading,2018,474
+Iceland,reading,2015,482
+Indonesia,math,2022,366
+Indonesia,math,2018,379
+Indonesia,math,2015,386
+Indonesia,science,2022,383
+Indonesia,science,2018,396
+Indonesia,science,2015,403
+Indonesia,reading,2022,359
+Indonesia,reading,2018,371
+Indonesia,reading,2015,397
+Ireland,math,2022,492
+Ireland,math,2018,500
+Ireland,math,2015,504
+Ireland,science,2022,504
+Ireland,science,2018,496
+Ireland,science,2015,503
+Ireland,reading,2022,516
+Ireland,reading,2018,518
+Ireland,reading,2015,521
+Israel,math,2022,458
+Israel,math,2018,463
+Israel,math,2015,470
+Israel,science,2022,465
+Israel,science,2018,462
+Israel,science,2015,467
+Israel,reading,2022,474
+Israel,reading,2018,470
+Israel,reading,2015,479
+Italy,math,2022,471
+Italy,math,2018,487
+Italy,math,2015,490
+Italy,science,2022,477
+Italy,science,2018,468
+Italy,science,2015,481
+Italy,reading,2022,482
+Italy,reading,2018,476
+Italy,reading,2015,485
+Jamaica,math,2022,377
+Jamaica,science,2022,403
+Jamaica,reading,2022,410
+Japan,math,2022,536
+Japan,math,2018,527
+Japan,math,2015,532
+Japan,science,2022,547
+Japan,science,2018,529
+Japan,science,2015,538
+Japan,reading,2022,516
+Japan,reading,2018,504
+Japan,reading,2015,516
+Jordan,math,2022,361
+Jordan,math,2018,400
+Jordan,math,2015,380
+Jordan,science,2022,375
+Jordan,science,2018,429
+Jordan,science,2015,409
+Jordan,reading,2022,342
+Jordan,reading,2018,419
+Jordan,reading,2015,408
+Kazakhstan,math,2022,425
+Kazakhstan,math,2018,423
+Kazakhstan,math,2015,460
+Kazakhstan,science,2022,423
+Kazakhstan,science,2018,397
+Kazakhstan,science,2015,456
+Kazakhstan,reading,2022,386
+Kazakhstan,reading,2018,387
+Kazakhstan,reading,2015,427
+South Korea,math,2022,527
+South Korea,math,2018,526
+South Korea,math,2015,524
+South Korea,science,2022,528
+South Korea,science,2018,519
+South Korea,science,2015,516
+South Korea,reading,2022,515
+South Korea,reading,2018,514
+South Korea,reading,2015,517
+Kosovo,math,2022,355
+Kosovo,math,2018,366
+Kosovo,math,2015,362
+Kosovo,science,2022,357
+Kosovo,science,2018,365
+Kosovo,science,2015,378
+Kosovo,reading,2022,342
+Kosovo,reading,2018,353
+Kosovo,reading,2015,347
+Latvia,math,2022,483
+Latvia,math,2018,496
+Latvia,math,2015,482
+Latvia,science,2022,494
+Latvia,science,2018,487
+Latvia,science,2015,490
+Latvia,reading,2022,475
+Latvia,reading,2018,479
+Latvia,reading,2015,488
+Lebanon,math,2018,393
+Lebanon,math,2015,396
+Lebanon,science,2018,384
+Lebanon,science,2015,386
+Lebanon,reading,2018,353
+Lebanon,reading,2015,347
+Lithuania,math,2022,475
+Lithuania,math,2018,481
+Lithuania,math,2015,478
+Lithuania,science,2022,484
+Lithuania,science,2018,482
+Lithuania,science,2015,475
+Lithuania,reading,2022,472
+Lithuania,reading,2018,476
+Lithuania,reading,2015,472
+Luxembourg,math,2018,483
+Luxembourg,math,2015,486
+Luxembourg,science,2018,477
+Luxembourg,science,2015,483
+Luxembourg,reading,2018,470
+Luxembourg,reading,2015,481
+Macao (China),math,2022,552
+Macao (China),math,2018,558
+Macao (China),math,2015,544
+Macao (China),science,2022,543
+Macao (China),science,2018,544
+Macao (China),science,2015,529
+Macao (China),reading,2022,510
+Macao (China),reading,2018,525
+Macao (China),reading,2015,509
+Malaysia,math,2022,409
+Malaysia,math,2018,440
+Malaysia,math,2015,446
+Malaysia,science,2022,416
+Malaysia,science,2018,438
+Malaysia,science,2015,443
+Malaysia,reading,2022,388
+Malaysia,reading,2018,415
+Malaysia,reading,2015,431
+Malta,math,2022,466
+Malta,math,2018,472
+Malta,math,2015,479
+Malta,science,2022,466
+Malta,science,2018,457
+Malta,science,2015,465
+Malta,reading,2022,445
+Malta,reading,2018,448
+Malta,reading,2015,447
+Mexico,math,2022,395
+Mexico,math,2018,409
+Mexico,math,2015,408
+Mexico,science,2022,410
+Mexico,science,2018,419
+Mexico,science,2015,416
+Mexico,reading,2022,415
+Mexico,reading,2018,420
+Mexico,reading,2015,423
+Moldova,math,2022,414
+Moldova,math,2018,421
+Moldova,math,2015,420
+Moldova,science,2022,417
+Moldova,science,2018,428
+Moldova,science,2015,428
+Moldova,reading,2022,411
+Moldova,reading,2018,424
+Moldova,reading,2015,416
+Mongolia,math,2022,425
+Mongolia,science,2022,412
+Mongolia,reading,2022,378
+Montenegro,math,2022,406
+Montenegro,math,2018,430
+Montenegro,math,2015,418
+Montenegro,science,2022,403
+Montenegro,science,2018,415
+Montenegro,science,2015,411
+Montenegro,reading,2022,405
+Montenegro,reading,2018,421
+Montenegro,reading,2015,427
+Morocco,math,2022,365
+Morocco,math,2018,368
+Morocco,science,2022,365
+Morocco,science,2018,377
+Morocco,reading,2022,339
+Morocco,reading,2018,359
+Netherlands,math,2022,493
+Netherlands,math,2018,519
+Netherlands,math,2015,512
+Netherlands,science,2022,488
+Netherlands,science,2018,503
+Netherlands,science,2015,509
+Netherlands,reading,2022,459
+Netherlands,reading,2018,485
+Netherlands,reading,2015,503
+New Zealand,math,2022,479
+New Zealand,math,2018,494
+New Zealand,math,2015,495
+New Zealand,science,2022,504
+New Zealand,science,2018,508
+New Zealand,science,2015,513
+New Zealand,reading,2022,501
+New Zealand,reading,2018,506
+New Zealand,reading,2015,509
+North Macedonia,math,2022,389
+North Macedonia,math,2018,394
+North Macedonia,math,2015,371
+North Macedonia,science,2022,380
+North Macedonia,science,2018,413
+North Macedonia,science,2015,384
+North Macedonia,reading,2022,359
+North Macedonia,reading,2018,393
+North Macedonia,reading,2015,352
+Norway,math,2022,468
+Norway,math,2018,501
+Norway,math,2015,502
+Norway,science,2022,478
+Norway,science,2018,490
+Norway,science,2015,498
+Norway,reading,2022,477
+Norway,reading,2018,499
+Norway,reading,2015,513
+Palestinian Authority,math,2022,366
+Palestinian Authority,science,2022,369
+Palestinian Authority,reading,2022,349
+Panama,math,2022,357
+Panama,math,2018,353
+Panama,science,2022,388
+Panama,science,2018,365
+Panama,reading,2022,392
+Panama,reading,2018,377
+Paraguay,math,2022,338
+Paraguay,science,2022,368
+Paraguay,reading,2022,373
+Peru,math,2022,391
+Peru,math,2018,400
+Peru,math,2015,387
+Peru,science,2022,408
+Peru,science,2018,404
+Peru,science,2015,397
+Peru,reading,2022,408
+Peru,reading,2018,401
+Peru,reading,2015,398
+Philippines,math,2022,355
+Philippines,math,2018,353
+Philippines,science,2022,356
+Philippines,science,2018,357
+Philippines,reading,2022,347
+Philippines,reading,2018,340
+Poland,math,2022,489
+Poland,math,2018,516
+Poland,math,2015,504
+Poland,science,2022,499
+Poland,science,2018,511
+Poland,science,2015,501
+Poland,reading,2022,489
+Poland,reading,2018,512
+Poland,reading,2015,506
+Portugal,math,2022,472
+Portugal,math,2018,492
+Portugal,math,2015,492
+Portugal,science,2022,484
+Portugal,science,2018,492
+Portugal,science,2015,501
+Portugal,reading,2022,477
+Portugal,reading,2018,492
+Portugal,reading,2015,498
+Qatar,math,2022,414
+Qatar,math,2018,414
+Qatar,math,2015,402
+Qatar,science,2022,432
+Qatar,science,2018,419
+Qatar,science,2015,418
+Qatar,reading,2022,419
+Qatar,reading,2018,407
+Qatar,reading,2015,402
+Romania,math,2022,428
+Romania,math,2018,430
+Romania,math,2015,444
+Romania,science,2022,428
+Romania,science,2018,426
+Romania,science,2015,435
+Romania,reading,2022,428
+Romania,reading,2018,428
+Romania,reading,2015,434
+Russia,math,2018,488
+Russia,math,2015,494
+Russia,science,2018,478
+Russia,science,2015,487
+Russia,reading,2018,479
+Russia,reading,2015,495
+Serbia,math,2022,440
+Serbia,math,2018,448
+Serbia,science,2022,447
+Serbia,science,2018,440
+Serbia,reading,2022,440
+Serbia,reading,2018,439
+Saudi Arabia,math,2022,389
+Saudi Arabia,math,2018,373
+Saudi Arabia,science,2022,390
+Saudi Arabia,science,2018,386
+Saudi Arabia,reading,2022,383
+Saudi Arabia,reading,2018,399
+Singapore,math,2022,575
+Singapore,math,2018,569
+Singapore,math,2015,564
+Singapore,science,2022,561
+Singapore,science,2018,551
+Singapore,science,2015,556
+Singapore,reading,2022,543
+Singapore,reading,2018,549
+Singapore,reading,2015,535
+Slovakia,math,2022,464
+Slovakia,math,2018,486
+Slovakia,math,2015,475
+Slovakia,science,2022,462
+Slovakia,science,2018,464
+Slovakia,science,2015,461
+Slovakia,reading,2022,447
+Slovakia,reading,2018,458
+Slovakia,reading,2015,453
+Slovenia,math,2022,485
+Slovenia,math,2018,509
+Slovenia,math,2015,510
+Slovenia,science,2022,500
+Slovenia,science,2018,507
+Slovenia,science,2015,513
+Slovenia,reading,2022,469
+Slovenia,reading,2018,495
+Slovenia,reading,2015,505
+Spain,math,2022,473
+Spain,math,2018,481
+Spain,math,2015,486
+Spain,science,2022,485
+Spain,science,2018,483
+Spain,science,2015,493
+Spain,reading,2022,474
+Spain,reading,2015,496
+Sweden,math,2022,482
+Sweden,math,2018,502
+Sweden,math,2015,494
+Sweden,science,2022,494
+Sweden,science,2018,499
+Sweden,science,2015,493
+Sweden,reading,2022,487
+Sweden,reading,2018,506
+Sweden,reading,2015,500
+Switzerland,math,2022,508
+Switzerland,math,2018,515
+Switzerland,math,2015,521
+Switzerland,science,2022,503
+Switzerland,science,2018,495
+Switzerland,science,2015,506
+Switzerland,reading,2022,483
+Switzerland,reading,2018,484
+Switzerland,reading,2015,492
+Thailand,math,2022,394
+Thailand,math,2018,419
+Thailand,math,2015,415
+Thailand,science,2022,409
+Thailand,science,2018,426
+Thailand,science,2015,421
+Thailand,reading,2022,379
+Thailand,reading,2018,393
+Thailand,reading,2015,409
+Trinidad and Tobago,math,2015,417
+Trinidad and Tobago,science,2015,425
+Trinidad and Tobago,reading,2015,427
+Tunisia,math,2015,367
+Tunisia,science,2015,386
+Tunisia,reading,2015,361
+Turkey,math,2022,453
+Turkey,math,2018,454
+Turkey,math,2015,420
+Turkey,science,2022,476
+Turkey,science,2018,468
+Turkey,science,2015,425
+Turkey,reading,2022,456
+Turkey,reading,2018,466
+Turkey,reading,2015,428
+Ukraine,math,2022,441
+Ukraine,math,2018,453
+Ukraine,science,2022,450
+Ukraine,science,2018,469
+Ukraine,reading,2022,428
+Ukraine,reading,2018,466
+UAE,math,2022,431
+UAE,math,2018,435
+UAE,math,2015,427
+UAE,science,2022,432
+UAE,science,2018,434
+UAE,science,2015,437
+UAE,reading,2022,417
+UAE,reading,2018,432
+UAE,reading,2015,434
+UK,math,2022,489
+UK,math,2018,502
+UK,math,2015,492
+UK,science,2022,500
+UK,science,2018,505
+UK,science,2015,509
+UK,reading,2022,494
+UK,reading,2018,504
+UK,reading,2015,498
+USA,math,2022,465
+USA,math,2018,478
+USA,math,2015,470
+USA,science,2022,499
+USA,science,2018,502
+USA,science,2015,496
+USA,reading,2022,504
+USA,reading,2018,505
+USA,reading,2015,497
+Uruguay,math,2022,409
+Uruguay,math,2018,418
+Uruguay,math,2015,418
+Uruguay,science,2022,435
+Uruguay,science,2018,426
+Uruguay,science,2015,435
+Uruguay,reading,2022,430
+Uruguay,reading,2018,427
+Uruguay,reading,2015,437
+Uzbekistan,math,2022,364
+Uzbekistan,science,2022,355
+Uzbekistan,reading,2022,336
+Vietnam,math,2022,469
+Vietnam,math,2015,495
+Vietnam,science,2022,472
+Vietnam,science,2015,525
+Vietnam,reading,2022,462
+Vietnam,reading,2015,487
